@@ -2,16 +2,16 @@
   "version": 3,
   "pages404": true,
   "caseSensitive": false,
-  "basePath": "/App",
+  "basePath": "/My-App",
   "redirects": [
     {
-      "source": "/App/",
-      "destination": "/App",
+      "source": "/My-App/",
+      "destination": "/My-App",
       "basePath": false,
       "internal": true,
       "priority": true,
       "statusCode": 308,
-      "regex": "^/App/$"
+      "regex": "^/My-App/$"
     },
     {
       "source": "/:path+/",
