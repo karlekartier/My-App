@@ -1,0 +1,126 @@
+"use client";
+
+import * as React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { cn } from "@/utils/cn";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { BASE_PATH } from "@/utils/constants";
+
+const navItems = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/#about" },
+    { name: "Services", href: "/#services" },
+    { name: "Portfolio", href: "/#portfolio" },
+    { name: "Contact", href: "/contact" },
+];
+
+export function Navbar() {
+    const [isOpen, setIsOpen] = React.useState(false);
+    const [scrolled, setScrolled] = React.useState(false);
+    const [isVersionOpen, setIsVersionOpen] = React.useState(false);
+
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    return (
+        <header
+            className={cn(
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+                scrolled
+                    ? "bg-background/80 backdrop-blur-md border-b border-border/40 shadow-sm"
+                    : "bg-transparent"
+            )}
+        >
+            <div className="container flex h-16 items-center justify-between">
+                <Link href="/" className="flex items-center gap-2 font-bold text-xl">
+                    <Image
+                        src={`${BASE_PATH}/assets/favicon/kk_logo.svg`}
+                        alt="Logo"
+                        width={32}
+                        height={32}
+                        className="h-8 w-8"
+                    />
+                    <span>KarthickKishore</span>
+                </Link>
+
+                {/* Desktop Nav */}
+                <nav className="hidden md:flex items-center gap-6">
+                    {navItems.map((item) => (
+                        <Link
+                            key={item.name}
+                            href={item.href}
+                            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                        >
+                            {item.name}
+                        </Link>
+                    ))}
+
+                    {/* Version Switcher */}
+                    <div className="relative">
+                        <button
+                            onClick={() => setIsVersionOpen(!isVersionOpen)}
+                            className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                        >
+                            v2.0 <ChevronDown className="h-4 w-4" />
+                        </button>
+
+                        {isVersionOpen && (
+                            <div className="absolute top-full right-0 mt-2 w-40 bg-card border border-border rounded-md shadow-lg py-1 overflow-hidden">
+                                <div className="px-4 py-2 text-sm font-medium text-primary bg-primary/10 flex items-center justify-between">
+                                    v2.0
+                                    <span className="text-[10px] bg-primary text-primary-foreground px-1.5 py-0.5 rounded-full">Current</span>
+                                </div>
+                                <a
+                                    href="https://karlekartier.github.io/portfolio/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                                >
+                                    v1.0 (Legacy)
+                                </a>
+                            </div>
+                        )}
+                    </div>
+
+                    <ThemeToggle />
+                </nav>
+
+                {/* Mobile Nav Toggle */}
+                <div className="flex items-center gap-4 md:hidden">
+                    <ThemeToggle />
+                    <button
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="p-2 text-muted-foreground hover:text-foreground"
+                    >
+                        {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                    </button>
+                </div>
+            </div>
+
+            {/* Mobile Nav Menu */}
+            {isOpen && (
+                <div className="md:hidden border-t border-border/40 bg-background">
+                    <div className="container py-4 flex flex-col gap-4">
+                        {navItems.map((item) => (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                onClick={() => setIsOpen(false)}
+                                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                            >
+                                {item.name}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            )}
+        </header>
+    );
+}
