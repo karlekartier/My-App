@@ -8,3 +8,5 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:08:07.068] Server  LOG      ✓ Compiled in 28ms
 [00:08:09.052] Server  LOG      ✓ Compiled in 26ms
 [00:08:11.062] Server  LOG      ✓ Compiled in 28ms
+[00:13:08.201] Browser WARN    Image with src "/assets/images/svg/light/5184408light.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
