@@ -1507,7 +1507,7 @@ function Artwork() {
         className: "relative py-20 min-h-[600px] overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 -z-10",
+                className: "absolute inset-0 -z-10 hidden dark:block",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
                     mode: "popLayout",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1533,30 +1533,37 @@ function Artwork() {
                                 priority: true
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Artwork.tsx",
-                                lineNumber: 53,
+                                lineNumber: 54,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute inset-0 bg-black/60"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Artwork.tsx",
-                                lineNumber: 60,
+                                lineNumber: 61,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, slides[currentSlide].background, true, {
                         fileName: "[project]/src/components/Artwork.tsx",
-                        lineNumber: 45,
+                        lineNumber: 46,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/Artwork.tsx",
-                    lineNumber: 44,
+                    lineNumber: 45,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Artwork.tsx",
-                lineNumber: 43,
+                lineNumber: 44,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-0 -z-10 dark:hidden bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
+            }, void 0, false, {
+                fileName: "[project]/src/components/Artwork.tsx",
+                lineNumber: 67,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1565,50 +1572,50 @@ function Artwork() {
                     className: "grid lg:grid-cols-2 gap-12 items-center",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "text-white",
+                            className: "text-foreground dark:text-white",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                     className: "text-4xl font-bold mb-6",
                                     children: "ArtWork & Design"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Artwork.tsx",
-                                    lineNumber: 68,
+                                    lineNumber: 72,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-lg text-white/80 mb-8",
+                                    className: "text-lg text-muted-foreground dark:text-white/80 mb-8",
                                     children: [
                                         "With the perfect synergy of ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                             children: "technical precision in Illustrator & artistic flexibility in Canva,"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Artwork.tsx",
-                                            lineNumber: 70,
+                                            lineNumber: 74,
                                             columnNumber: 57
                                         }, this),
                                         " I bring concepts to life with compelling visuals & a keen eye for design aesthetics."
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Artwork.tsx",
-                                    lineNumber: 69,
+                                    lineNumber: 73,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "px-8 py-3 rounded-full border border-white/30 hover:bg-white hover:text-black transition-colors font-medium",
+                                    className: "px-8 py-3 rounded-full border border-input dark:border-white/30 hover:bg-accent hover:text-accent-foreground dark:hover:bg-white dark:hover:text-black transition-colors font-medium",
                                     children: "Check My Gallery"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Artwork.tsx",
-                                    lineNumber: 72,
+                                    lineNumber: 76,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Artwork.tsx",
-                            lineNumber: 67,
+                            lineNumber: 71,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-card/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-white/10",
+                            className: "bg-card/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-border dark:border-white/10",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex justify-between items-center mb-6",
@@ -1623,12 +1630,12 @@ function Artwork() {
                                                         className: "w-5 h-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Artwork.tsx",
-                                                        lineNumber: 85,
+                                                        lineNumber: 89,
                                                         columnNumber: 37
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Artwork.tsx",
-                                                    lineNumber: 81,
+                                                    lineNumber: 85,
                                                     columnNumber: 33
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1638,18 +1645,18 @@ function Artwork() {
                                                         className: "w-5 h-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/Artwork.tsx",
-                                                        lineNumber: 91,
+                                                        lineNumber: 95,
                                                         columnNumber: 37
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Artwork.tsx",
-                                                    lineNumber: 87,
+                                                    lineNumber: 91,
                                                     columnNumber: 33
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/Artwork.tsx",
-                                            lineNumber: 80,
+                                            lineNumber: 84,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1658,18 +1665,18 @@ function Artwork() {
                                                     className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$cn$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("w-2 h-2 rounded-full transition-all", currentSlide === index ? "bg-primary w-6" : "bg-muted")
                                                 }, slide.id, false, {
                                                     fileName: "[project]/src/components/Artwork.tsx",
-                                                    lineNumber: 96,
+                                                    lineNumber: 100,
                                                     columnNumber: 37
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Artwork.tsx",
-                                            lineNumber: 94,
+                                            lineNumber: 98,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Artwork.tsx",
-                                    lineNumber: 79,
+                                    lineNumber: 83,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1701,7 +1708,7 @@ function Artwork() {
                                                     className: "w-16 h-16 mb-6"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Artwork.tsx",
-                                                    lineNumber: 116,
+                                                    lineNumber: 120,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1709,7 +1716,7 @@ function Artwork() {
                                                     children: slides[currentSlide].title
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Artwork.tsx",
-                                                    lineNumber: 123,
+                                                    lineNumber: 127,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1717,7 +1724,7 @@ function Artwork() {
                                                     children: slides[currentSlide].description
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Artwork.tsx",
-                                                    lineNumber: 124,
+                                                    lineNumber: 128,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1725,7 +1732,7 @@ function Artwork() {
                                                     children: slides[currentSlide].details
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Artwork.tsx",
-                                                    lineNumber: 127,
+                                                    lineNumber: 131,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1733,40 +1740,40 @@ function Artwork() {
                                                     children: "View Artwork"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/Artwork.tsx",
-                                                    lineNumber: 130,
+                                                    lineNumber: 134,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, currentSlide, true, {
                                             fileName: "[project]/src/components/Artwork.tsx",
-                                            lineNumber: 109,
+                                            lineNumber: 113,
                                             columnNumber: 33
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Artwork.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 112,
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Artwork.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 111,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Artwork.tsx",
-                            lineNumber: 78,
+                            lineNumber: 82,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Artwork.tsx",
-                    lineNumber: 66,
+                    lineNumber: 70,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Artwork.tsx",
-                lineNumber: 65,
+                lineNumber: 69,
                 columnNumber: 13
             }, this)
         ]

@@ -2687,6 +2687,52 @@
   .dark\:rotate-0:is(.dark *) {
     rotate: none;
   }
+
+  .dark\:border-white\/10:is(.dark *) {
+    border-color: #ffffff1a;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .dark\:border-white\/10:is(.dark *) {
+      border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+    }
+  }
+
+  .dark\:border-white\/30:is(.dark *) {
+    border-color: #ffffff4d;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .dark\:border-white\/30:is(.dark *) {
+      border-color: color-mix(in oklab, var(--color-white) 30%, transparent);
+    }
+  }
+
+  .dark\:text-white:is(.dark *) {
+    color: var(--color-white);
+  }
+
+  .dark\:text-white\/80:is(.dark *) {
+    color: #fffc;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .dark\:text-white\/80:is(.dark *) {
+      color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    }
+  }
+
+  @media (hover: hover) {
+    .dark\:hover\:bg-white:is(.dark *):hover {
+      background-color: var(--color-white);
+    }
+  }
+
+  @media (hover: hover) {
+    .dark\:hover\:text-black:is(.dark *):hover {
+      color: var(--color-black);
+    }
+  }
 }
 
 @property --tw-animation-delay {

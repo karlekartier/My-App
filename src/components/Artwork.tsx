@@ -40,7 +40,8 @@ export function Artwork() {
     return (
         <section id="artwork" className="relative py-20 min-h-[600px] overflow-hidden">
             {/* Background Images */}
-            <div className="absolute inset-0 -z-10">
+            {/* Background Images */}
+            <div className="absolute inset-0 -z-10 hidden dark:block">
                 <AnimatePresence mode="popLayout">
                     <motion.div
                         key={slides[currentSlide].background}
@@ -62,20 +63,23 @@ export function Artwork() {
                 </AnimatePresence>
             </div>
 
+            {/* Day Mode Background */}
+            <div className="absolute inset-0 -z-10 dark:hidden bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
             <div className="container relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="text-white">
+                    <div className="text-foreground dark:text-white">
                         <h2 className="text-4xl font-bold mb-6">ArtWork & Design</h2>
-                        <p className="text-lg text-white/80 mb-8">
+                        <p className="text-lg text-muted-foreground dark:text-white/80 mb-8">
                             With the perfect synergy of <strong>technical precision in Illustrator & artistic flexibility in Canva,</strong> I bring concepts to life with compelling visuals & a keen eye for design aesthetics.
                         </p>
-                        <button className="px-8 py-3 rounded-full border border-white/30 hover:bg-white hover:text-black transition-colors font-medium">
+                        <button className="px-8 py-3 rounded-full border border-input dark:border-white/30 hover:bg-accent hover:text-accent-foreground dark:hover:bg-white dark:hover:text-black transition-colors font-medium">
                             Check My Gallery
                         </button>
                     </div>
 
                     {/* Slider Card */}
-                    <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-white/10">
+                    <div className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-border dark:border-white/10">
                         <div className="flex justify-between items-center mb-6">
                             <div className="flex gap-2">
                                 <button

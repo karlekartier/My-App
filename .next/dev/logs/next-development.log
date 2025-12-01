@@ -1,22 +1,5 @@
-[00:00:00.999] Server  LOG      ✓ Ready in 730ms
-[00:00:06.320] Browser WARN    Image with src "/assets/images/svg/light/5184408light.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:00:00.691] Server  LOG      ✓ Ready in 490ms
+[00:00:06.453] Browser WARN    Image with src "/assets/images/svg/light/5184408light.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:07:39.046] Server  LOG      ✓ Compiled in 36ms
-[00:07:41.342] Server  LOG      ✓ Compiled in 39ms
-[00:07:43.373] Server  LOG      ✓ Compiled in 34ms
-[00:08:05.042] Server  LOG      ✓ Compiled in 30ms
-[00:08:07.068] Server  LOG      ✓ Compiled in 28ms
-[00:08:09.052] Server  LOG      ✓ Compiled in 26ms
-[00:08:11.062] Server  LOG      ✓ Compiled in 28ms
-[00:13:08.201] Browser WARN    Image with src "/assets/images/svg/light/5184408light.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:28:24.956] Server  LOG      ✓ Compiled in 32ms
-[00:29:24.781] Server  LOG      ✓ Compiled in 27ms
-[00:32:32.663] Server  LOG      ✓ Compiled in 31ms
-[00:33:15.490] Server  LOG      ✓ Compiled in 32ms
-[00:33:19.535] Server  LOG      ✓ Compiled in 29ms
-[00:33:21.470] Server  LOG      ✓ Compiled in 33ms
-[00:34:10.690] Server  LOG      ✓ Compiled in 28ms
-[00:34:20.887] Server  LOG      ✓ Compiled in 30ms
-[00:34:27.387] Server  LOG      ✓ Compiled in 30ms
-[00:34:40.575] Server  LOG      ✓ Compiled in 27ms
+[00:00:31.138] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:03:53.652] Server  LOG      ✓ Compiled in 71ms
