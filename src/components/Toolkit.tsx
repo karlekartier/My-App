@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { PenTool, TrendingUp, Layout, Brain, CheckCircle2 } from "lucide-react";
 import { cn } from "@/utils/cn";
-import { BASE_PATH } from "@/utils/constants";
+import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
 
 const tabs = [
     {
@@ -24,7 +24,7 @@ const tabs = [
                     </p>
                 </>
             ),
-            image: `/assets/images/svg/Adobe.svg`,
+            image: `${ASSETS_PREFIX}/assets/images/svg/Adobe.svg`,
         },
     },
     {
@@ -49,8 +49,8 @@ const tabs = [
                     </div>
                 </div>
             ),
-            image: `/assets/images/svg/light/digitalmarketing.svg`,
-            darkImage: `/assets/images/svg/dark/digitalmarketingdark.svg`,
+            image: `${ASSETS_PREFIX}/assets/images/svg/light/digitalmarketing.svg`,
+            darkImage: `${ASSETS_PREFIX}/assets/images/svg/dark/digitalmarketingdark.svg`,
         },
     },
     {
@@ -64,7 +64,7 @@ const tabs = [
                     Crafting seamless, responsive, & user-friendly web experiences <strong>using HTML, CSS, Bootstrap 5, & SASS.</strong> With a focus on clean code & modern UI/UX principles, I ensure visually stunning & high-performing websites that enhance user engagement.
                 </p>
             ),
-            image: `/assets/images/vs_deploy.webp`,
+            image: `${ASSETS_PREFIX}/assets/images/vs_deploy.webp`,
         },
     },
     {
@@ -85,7 +85,7 @@ const tabs = [
                     </div>
                 </div>
             ),
-            image: `/assets/images/svg/aibot.svg`,
+            image: `${ASSETS_PREFIX}/assets/images/svg/aibot.svg`,
         },
     },
 ];

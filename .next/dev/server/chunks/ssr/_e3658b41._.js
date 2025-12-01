@@ -75,10 +75,13 @@ __turbopack_context__.n(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$c
 "use strict";
 
 __turbopack_context__.s([
+    "ASSETS_PREFIX",
+    ()=>ASSETS_PREFIX,
     "BASE_PATH",
     ()=>BASE_PATH
 ]);
 const BASE_PATH = ("TURBOPACK compile-time value", "") || "";
+const ASSETS_PREFIX = ("TURBOPACK compile-time falsy", 0) ? "TURBOPACK unreachable" : "";
 }),
 "[project]/src/app/not-found.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -174,7 +177,7 @@ function NotFound() {
                                 className: "relative w-full max-w-md lg:max-w-lg h-auto",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                        src: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/svg/404errorlight.svg`,
+                                        src: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/svg/404errorlight.svg`,
                                         alt: "404 Error",
                                         width: 500,
                                         height: 500,
@@ -185,7 +188,7 @@ function NotFound() {
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                        src: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/svg/404errordark.svg`,
+                                        src: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/svg/404errordark.svg`,
                                         alt: "404 Error",
                                         width: 500,
                                         height: 500,

@@ -3,24 +3,24 @@
 import * as React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { BASE_PATH } from "@/utils/constants";
+import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
 
 const skills = [
     {
         title: "Adobe Creative Suite",
-        icon: `/assets/images/icons/adobe_icons/adobe-creative-cloud.svg`,
+        icon: `${ASSETS_PREFIX}/assets/images/icons/adobe_icons/adobe-creative-cloud.svg`,
     },
     {
         title: "Analytics & Optimization",
-        icon: `/assets/images/icons/google-ads.svg`,
+        icon: `${ASSETS_PREFIX}/assets/images/icons/google-ads.svg`,
     },
     {
         title: "Development & Coding Tools",
-        icon: `/assets/images/icons/vs-code.svg`,
+        icon: `${ASSETS_PREFIX}/assets/images/icons/vs-code.svg`,
     },
     {
         title: "ChatGPT & AI Tools",
-        icon: `/assets/images/icons/chatgpt.svg`,
+        icon: `${ASSETS_PREFIX}/assets/images/icons/chatgpt.svg`,
     },
 ];
 

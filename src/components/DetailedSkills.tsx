@@ -5,19 +5,19 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { FileCode, Palette, FileJson, Code, Layers } from "lucide-react";
 import { cn } from "@/utils/cn";
-import { BASE_PATH } from "@/utils/constants";
+import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
 
 const skills = [
     {
         title: "HTML 5",
-        icon: `/assets/images/icons/html-5.svg`,
+        icon: `${ASSETS_PREFIX}/assets/images/icons/html-5.svg`,
         progress: 90,
         color: "bg-orange-500",
         description: "Developing structured, SEO-friendly, and accessible web pages using VS Code, ensuring fast performance, cross-browser compatibility, and modern semantic elements.",
     },
     {
         title: "CSS 3",
-        icon: `/assets/images/icons/css3.svg`,
+        icon: `${ASSETS_PREFIX}/assets/images/icons/css3.svg`,
         progress: 87,
         color: "bg-blue-500",
         description: "Designing responsive, visually engaging layouts with Flexbox, Grid, animations, and transitions, optimized using SASS for scalability and maintainability.",
@@ -31,14 +31,14 @@ const skills = [
     },
     {
         title: "Sass",
-        icon: `/assets/images/icons/sass.svg`,
+        icon: `${ASSETS_PREFIX}/assets/images/icons/sass.svg`,
         progress: 55,
         color: "bg-pink-500",
         description: "Optimizing CSS workflow with SASS, utilizing variables, mixins, and nesting to create maintainable, scalable, and performance-driven stylesheets.",
     },
     {
         title: "Adobe Suite",
-        icon: `/assets/images/icons/adobe_icons/adobe-creative-cloud.svg`,
+        icon: `${ASSETS_PREFIX}/assets/images/icons/adobe_icons/adobe-creative-cloud.svg`,
         progress: 80,
         color: "bg-red-500",
         description: "Crafting detailed vector illustrations, editing photos, and designing layouts using Adobe Creative Cloud tools like Illustrator, Photoshop, and InDesign.",

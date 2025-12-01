@@ -6,7 +6,7 @@ import Image from "next/image";
 import { cn } from "@/utils/cn";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { BASE_PATH } from "@/utils/constants";
+import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
 
 const navItems = [
     { name: "Home", href: "/" },
@@ -41,7 +41,7 @@ export function Navbar() {
             <div className="container flex h-16 items-center justify-between">
                 <Link href="/" className="flex items-center gap-2 font-bold text-xl">
                     <Image
-                        src="/assets/favicon/kk_logo.svg"
+                        src={`${ASSETS_PREFIX}/assets/favicon/kk_logo.svg`}
                         alt="Logo"
                         width={32}
                         height={32}

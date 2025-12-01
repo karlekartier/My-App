@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowDown, Download, Mail } from "lucide-react";
 import { cn } from "@/utils/cn";
-import { BASE_PATH } from "@/utils/constants";
+import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
 
 export function Hero() {
     return (
@@ -67,14 +67,14 @@ export function Hero() {
                     <div className="relative w-full h-auto">
                         {/* Using the SVG from the original site if available, or a placeholder for now */}
                         <Image
-                            src="/assets/images/svg/light/5184408light.svg"
+                            src={`${ASSETS_PREFIX}/assets/images/svg/light/5184408light.svg`}
                             alt="Hero Illustration"
                             width={600}
                             height={600}
                             className="dark:hidden w-full h-full object-contain drop-shadow-2xl"
                         />
                         <Image
-                            src="/assets/images/svg/dark/5184408dark.svg"
+                            src={`${ASSETS_PREFIX}/assets/images/svg/dark/5184408dark.svg`}
                             alt="Hero Illustration"
                             width={600}
                             height={600}

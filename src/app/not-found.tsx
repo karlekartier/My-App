@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ArrowLeft } from "lucide-react";
-import { BASE_PATH } from "@/utils/constants";
+import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
 
 export default function NotFound() {
     return (
@@ -32,14 +32,14 @@ export default function NotFound() {
                     <div className="flex justify-center lg:justify-end order-1 lg:order-2">
                         <div className="relative w-full max-w-md lg:max-w-lg h-auto">
                             <Image
-                                src={`/assets/images/svg/404errorlight.svg`}
+                                src={`${ASSETS_PREFIX}/assets/images/svg/404errorlight.svg`}
                                 alt="404 Error"
                                 width={500}
                                 height={500}
                                 className="dark:hidden w-full h-full object-contain"
                             />
                             <Image
-                                src={`/assets/images/svg/404errordark.svg`}
+                                src={`${ASSETS_PREFIX}/assets/images/svg/404errordark.svg`}
                                 alt="404 Error"
                                 width={500}
                                 height={500}

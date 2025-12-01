@@ -56,10 +56,13 @@ function ThemeToggle({ className }) {
 "use strict";
 
 __turbopack_context__.s([
+    "ASSETS_PREFIX",
+    ()=>ASSETS_PREFIX,
     "BASE_PATH",
     ()=>BASE_PATH
 ]);
 const BASE_PATH = ("TURBOPACK compile-time value", "") || "";
+const ASSETS_PREFIX = ("TURBOPACK compile-time falsy", 0) ? "TURBOPACK unreachable" : "";
 }),
 "[project]/src/components/Navbar.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
@@ -131,7 +134,7 @@ function Navbar() {
                         className: "flex items-center gap-2 font-bold text-xl",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                src: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/favicon/kk_logo.svg`,
+                                src: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/favicon/kk_logo.svg`,
                                 alt: "Logo",
                                 width: 32,
                                 height: 32,
@@ -498,7 +501,7 @@ function Hero() {
                             className: "relative w-full h-auto",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                    src: "/assets/images/svg/light/5184408light.svg",
+                                    src: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/svg/light/5184408light.svg`,
                                     alt: "Hero Illustration",
                                     width: 600,
                                     height: 600,
@@ -509,7 +512,7 @@ function Hero() {
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                    src: "/assets/images/svg/dark/5184408dark.svg",
+                                    src: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/svg/dark/5184408dark.svg`,
                                     alt: "Hero Illustration",
                                     width: 600,
                                     height: 600,
@@ -959,7 +962,7 @@ const tabs = [
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true),
-            image: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/svg/Adobe.svg`
+            image: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/svg/Adobe.svg`
         }
     },
     {
@@ -1049,8 +1052,8 @@ const tabs = [
                 lineNumber: 37,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
-            image: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/svg/light/digitalmarketing.svg`,
-            darkImage: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/svg/dark/digitalmarketingdark.svg`
+            image: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/svg/light/digitalmarketing.svg`,
+            darkImage: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/svg/dark/digitalmarketingdark.svg`
         }
     },
     {
@@ -1076,7 +1079,7 @@ const tabs = [
                 lineNumber: 63,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
-            image: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/vs_deploy.webp`
+            image: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/vs_deploy.webp`
         }
     },
     {
@@ -1142,7 +1145,7 @@ const tabs = [
                 lineNumber: 77,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
-            image: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/svg/aibot.svg`
+            image: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/svg/aibot.svg`
         }
     }
 ];
@@ -1337,19 +1340,19 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e
 const skills = [
     {
         title: "Adobe Creative Suite",
-        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/icons/adobe_icons/adobe-creative-cloud.svg`
+        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/icons/adobe_icons/adobe-creative-cloud.svg`
     },
     {
         title: "Analytics & Optimization",
-        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/icons/google-ads.svg`
+        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/icons/google-ads.svg`
     },
     {
         title: "Development & Coding Tools",
-        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/icons/vs-code.svg`
+        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/icons/vs-code.svg`
     },
     {
         title: "ChatGPT & AI Tools",
-        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/icons/chatgpt.svg`
+        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/icons/chatgpt.svg`
     }
 ];
 function SkillsOverview() {
@@ -1477,18 +1480,18 @@ const slides = [
     {
         id: 0,
         title: "Adobe Illustrator",
-        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/icons/adobe_icons/illustrator.svg`,
+        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/icons/adobe_icons/illustrator.svg`,
         description: "Crafting detailed vector illustrations with precision, layer by layer.",
         details: "From structured layouts to fine-tuned elements, I ensure crisp, high-resolution designs with pixel-perfect clarity. Each artwork is carefully built, maintaining depth, balance, & scalability for any creative requirement.",
-        background: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/forestnight.webp`
+        background: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/forestnight.webp`
     },
     {
         id: 1,
         title: "Color Palette Expertise",
-        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/icons/canva.svg`,
+        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/icons/canva.svg`,
         description: "Elevating designs with an intuitive approach, leveraging its vast library & millions of color palettes.",
         details: "A special appreciation for its effortless blending of creativity & accessibility, allowing me to craft visually stunning marketing materials, presentations, & social media content with ease.",
-        background: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/forestdark.webp`
+        background: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/forestdark.webp`
     }
 ];
 function Artwork() {
@@ -1797,14 +1800,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e
 const skills = [
     {
         title: "HTML 5",
-        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/icons/html-5.svg`,
+        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/icons/html-5.svg`,
         progress: 90,
         color: "bg-orange-500",
         description: "Developing structured, SEO-friendly, and accessible web pages using VS Code, ensuring fast performance, cross-browser compatibility, and modern semantic elements."
     },
     {
         title: "CSS 3",
-        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/icons/css3.svg`,
+        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/icons/css3.svg`,
         progress: 87,
         color: "bg-blue-500",
         description: "Designing responsive, visually engaging layouts with Flexbox, Grid, animations, and transitions, optimized using SASS for scalability and maintainability."
@@ -1818,14 +1821,14 @@ const skills = [
     },
     {
         title: "Sass",
-        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/icons/sass.svg`,
+        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/icons/sass.svg`,
         progress: 55,
         color: "bg-pink-500",
         description: "Optimizing CSS workflow with SASS, utilizing variables, mixins, and nesting to create maintainable, scalable, and performance-driven stylesheets."
     },
     {
         title: "Adobe Suite",
-        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/images/icons/adobe_icons/adobe-creative-cloud.svg`,
+        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/icons/adobe_icons/adobe-creative-cloud.svg`,
         progress: 80,
         color: "bg-red-500",
         description: "Crafting detailed vector illustrations, editing photos, and designing layouts using Adobe Creative Cloud tools like Illustrator, Photoshop, and InDesign."
@@ -2208,7 +2211,7 @@ function Footer() {
                                     className: "flex items-center gap-4 mb-6",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            src: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["BASE_PATH"]}/assets/favicon/kk_logo.svg`,
+                                            src: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/favicon/kk_logo.svg`,
                                             alt: "Logo",
                                             width: 40,
                                             height: 40,
