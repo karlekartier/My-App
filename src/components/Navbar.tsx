@@ -41,7 +41,7 @@ export function Navbar() {
             <div className="container flex h-16 items-center justify-between">
                 <Link href="/" className="flex items-center gap-2 font-bold text-xl">
                     <Image
-                        src={`${BASE_PATH}/assets/favicon/kk_logo.svg`}
+                        src="/assets/favicon/kk_logo.svg"
                         alt="Logo"
                         width={32}
                         height={32}

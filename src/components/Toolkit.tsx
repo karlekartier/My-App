@@ -24,7 +24,7 @@ const tabs = [
                     </p>
                 </>
             ),
-            image: `${BASE_PATH}/assets/images/svg/Adobe.svg`,
+            image: `/assets/images/svg/Adobe.svg`,
         },
     },
     {
@@ -49,8 +49,8 @@ const tabs = [
                     </div>
                 </div>
             ),
-            image: `${BASE_PATH}/assets/images/svg/light/digitalmarketing.svg`,
-            darkImage: `${BASE_PATH}/assets/images/svg/dark/digitalmarketingdark.svg`,
+            image: `/assets/images/svg/light/digitalmarketing.svg`,
+            darkImage: `/assets/images/svg/dark/digitalmarketingdark.svg`,
         },
     },
     {
@@ -64,7 +64,7 @@ const tabs = [
                     Crafting seamless, responsive, & user-friendly web experiences <strong>using HTML, CSS, Bootstrap 5, & SASS.</strong> With a focus on clean code & modern UI/UX principles, I ensure visually stunning & high-performing websites that enhance user engagement.
                 </p>
             ),
-            image: `${BASE_PATH}/assets/images/vs_deploy.webp`,
+            image: `/assets/images/vs_deploy.webp`,
         },
     },
     {
@@ -85,7 +85,7 @@ const tabs = [
                     </div>
                 </div>
             ),
-            image: `${BASE_PATH}/assets/images/svg/aibot.svg`,
+            image: `/assets/images/svg/aibot.svg`,
         },
     },
 ];

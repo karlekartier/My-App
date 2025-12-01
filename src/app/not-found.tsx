@@ -32,14 +32,14 @@ export default function NotFound() {
                     <div className="flex justify-center lg:justify-end order-1 lg:order-2">
                         <div className="relative w-full max-w-md lg:max-w-lg h-auto">
                             <Image
-                                src={`${BASE_PATH}/assets/images/svg/404errorlight.svg`}
+                                src={`/assets/images/svg/404errorlight.svg`}
                                 alt="404 Error"
                                 width={500}
                                 height={500}
                                 className="dark:hidden w-full h-full object-contain"
                             />
                             <Image
-                                src={`${BASE_PATH}/assets/images/svg/404errordark.svg`}
+                                src={`/assets/images/svg/404errordark.svg`}
                                 alt="404 Error"
                                 width={500}
                                 height={500}

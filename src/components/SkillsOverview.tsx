@@ -8,19 +8,19 @@ import { BASE_PATH } from "@/utils/constants";
 const skills = [
     {
         title: "Adobe Creative Suite",
-        icon: `${BASE_PATH}/assets/images/icons/adobe_icons/adobe-creative-cloud.svg`,
+        icon: `/assets/images/icons/adobe_icons/adobe-creative-cloud.svg`,
     },
     {
         title: "Analytics & Optimization",
-        icon: `${BASE_PATH}/assets/images/icons/google-ads.svg`,
+        icon: `/assets/images/icons/google-ads.svg`,
     },
     {
         title: "Development & Coding Tools",
-        icon: `${BASE_PATH}/assets/images/icons/vs-code.svg`,
+        icon: `/assets/images/icons/vs-code.svg`,
     },
     {
         title: "ChatGPT & AI Tools",
-        icon: `${BASE_PATH}/assets/images/icons/chatgpt.svg`,
+        icon: `/assets/images/icons/chatgpt.svg`,
     },
 ];
 

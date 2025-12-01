@@ -13,7 +13,7 @@ export function Footer() {
                     {/* Brand & Subscribe */}
                     <div className="lg:col-span-4">
                         <div className="flex items-center gap-4 mb-6">
-                            <Image src={`${BASE_PATH}/assets/favicon/kk_logo.svg`} alt="Logo" width={40} height={40} className="w-10 h-10" />
+                            <Image src="/assets/favicon/kk_logo.svg" alt="Logo" width={40} height={40} className="w-10 h-10" />
                             <div className="flex items-center gap-4">
                                 <span className="font-bold text-lg">karthick-kishore</span>
                                 <div className="h-8 w-px bg-border" />

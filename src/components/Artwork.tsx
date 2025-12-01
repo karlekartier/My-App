@@ -11,18 +11,18 @@ const slides = [
     {
         id: 0,
         title: "Adobe Illustrator",
-        icon: `${BASE_PATH}/assets/images/icons/adobe_icons/illustrator.svg`,
+        icon: `/assets/images/icons/adobe_icons/illustrator.svg`,
         description: "Crafting detailed vector illustrations with precision, layer by layer.",
         details: "From structured layouts to fine-tuned elements, I ensure crisp, high-resolution designs with pixel-perfect clarity. Each artwork is carefully built, maintaining depth, balance, & scalability for any creative requirement.",
-        background: `${BASE_PATH}/assets/images/forestnight.webp`,
+        background: `/assets/images/forestnight.webp`,
     },
     {
         id: 1,
         title: "Color Palette Expertise",
-        icon: `${BASE_PATH}/assets/images/icons/canva.svg`,
+        icon: `/assets/images/icons/canva.svg`,
         description: "Elevating designs with an intuitive approach, leveraging its vast library & millions of color palettes.",
         details: "A special appreciation for its effortless blending of creativity & accessibility, allowing me to craft visually stunning marketing materials, presentations, & social media content with ease.",
-        background: `${BASE_PATH}/assets/images/forestdark.webp`,
+        background: `/assets/images/forestdark.webp`,
     },
 ];
 

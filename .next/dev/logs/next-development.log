@@ -1,5 +1,10 @@
-[00:00:00.690] Server  LOG      ✓ Ready in 488ms
-[00:00:07.043] Browser WARN    Image with src "/assets/images/svg/dark/5184408dark.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:00:00.999] Server  LOG      ✓ Ready in 730ms
+[00:00:06.320] Browser WARN    Image with src "/assets/images/svg/light/5184408light.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:03:58.181] Browser WARN    Image with src "/assets/images/svg/light/5184408light.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:07:39.046] Server  LOG      ✓ Compiled in 36ms
+[00:07:41.342] Server  LOG      ✓ Compiled in 39ms
+[00:07:43.373] Server  LOG      ✓ Compiled in 34ms
+[00:08:05.042] Server  LOG      ✓ Compiled in 30ms
+[00:08:07.068] Server  LOG      ✓ Compiled in 28ms
+[00:08:09.052] Server  LOG      ✓ Compiled in 26ms
+[00:08:11.062] Server  LOG      ✓ Compiled in 28ms
