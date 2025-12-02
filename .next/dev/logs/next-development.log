@@ -23,3 +23,4 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [00:53:15.742] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
 [01:58:06.837] Server  LOG      ✓ Compiled in 34ms
 [01:58:08.779] Server  LOG      ✓ Compiled in 49ms
+[02:00:09.233] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
