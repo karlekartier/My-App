@@ -7,14 +7,12 @@ import { Artwork } from "@/components/Artwork";
 import { DetailedSkills } from "@/components/DetailedSkills";
 import { ContactInfo } from "@/components/ContactInfo";
 import { Footer } from "@/components/Footer";
-import { Services } from "@/components/Services";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
-      <Services />
       <About />
       <Toolkit />
       <SkillsOverview />
