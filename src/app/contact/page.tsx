@@ -2,6 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ContactForm } from "@/components/ContactForm";
 import { ContactInfo } from "@/components/ContactInfo";
+import { SocialLinks } from "@/components/SocialLinks";
 
 export default function ContactPage() {
     return (
@@ -23,6 +24,7 @@ export default function ContactPage() {
                     </div>
                 </div>
             </div>
+            <SocialLinks />
             <ContactInfo />
             <Footer />
         </main>

@@ -8,12 +8,14 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
 
+import { Home, User, Briefcase, Mail, Layers } from "lucide-react";
+
 const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/#about" },
-    { name: "Services", href: "/services" },
-    { name: "Portfolio", href: "/#portfolio" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "/", icon: Home },
+    { name: "About", href: "/#about", icon: User },
+    { name: "Services", href: "/services", icon: Layers },
+    { name: "Portfolio", href: "/#portfolio", icon: Briefcase },
+    { name: "Contact", href: "/contact", icon: Mail },
 ];
 
 export function Navbar() {
@@ -56,8 +58,9 @@ export function Navbar() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                            className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
                         >
+                            <item.icon className="h-4 w-4" />
                             {item.name}
                         </Link>
                     ))}
@@ -113,8 +116,9 @@ export function Navbar() {
                                 key={item.name}
                                 href={item.href}
                                 onClick={() => setIsOpen(false)}
-                                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                                className="flex items-center gap-3 text-sm font-medium text-muted-foreground hover:text-primary transition-colors p-2 rounded-md hover:bg-muted"
                             >
+                                <item.icon className="h-5 w-5" />
                                 {item.name}
                             </Link>
                         ))}

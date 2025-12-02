@@ -13,11 +13,17 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
-      <About />
+      <div className="bg-muted/30">
+        <About />
+      </div>
       <Toolkit />
-      <SkillsOverview />
+      <div className="bg-muted/30">
+        <SkillsOverview />
+      </div>
       <Artwork />
-      <DetailedSkills />
+      <div className="bg-muted/30">
+        <DetailedSkills />
+      </div>
       <ContactInfo />
       <Footer />
     </main>

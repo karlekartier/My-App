@@ -1,14 +1,17 @@
-"use client";
-
 import * as React from "react";
 import Image from "next/image";
 import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, Send } from "lucide-react";
 import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
+import { GridBackground } from "@/components/ui/grid-background";
 
 export function Footer() {
     return (
-        <footer className="pt-12 pb-8 bg-background">
-            <div className="container">
+        <footer className="relative bg-background border-t border-border">
+            <div className="absolute inset-0 z-0">
+                <GridBackground gridSize="6:6" />
+            </div>
+
+            <div className="container relative z-10 pt-16 pb-8">
                 <div className="grid lg:grid-cols-12 gap-12 mb-12">
                     {/* Brand & Subscribe */}
                     <div className="lg:col-span-4">
@@ -27,7 +30,7 @@ export function Footer() {
                             <input
                                 type="email"
                                 placeholder="Your email"
-                                className="w-full h-12 pl-12 pr-32 rounded-lg border bg-background focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                                className="w-full h-12 pl-12 pr-32 rounded-lg border bg-background/50 backdrop-blur-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                             />
                             <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                             <button
@@ -102,22 +105,25 @@ export function Footer() {
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-sm text-muted-foreground text-center md:text-left">
-                        &copy; All rights reserved. Made by <a href="#" className="text-foreground font-medium hover:text-primary">karthick-kishore</a>
-                    </p>
-                    <div className="flex gap-4">
-                        <a href="https://www.facebook.com/share/18ftrrvcVq/" className="p-2 rounded-full bg-secondary text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all">
-                            <Facebook className="w-4 h-4" />
+                {/* Bottom Bar - Centered Icons */}
+                <div className="pt-8 border-t border-border/50 flex flex-col items-center gap-6">
+                    <div className="flex gap-6">
+                        <a href="https://www.facebook.com/share/18ftrrvcVq/" className="p-3 rounded-full bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:-translate-y-1">
+                            <Facebook className="w-5 h-5" />
                         </a>
-                        <a href="https://www.instagram.com/karlekartier?igsh=MXgyOTZwOWYxMjNoaw==" className="p-2 rounded-full bg-secondary text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all">
-                            <Instagram className="w-4 h-4" />
+                        <a href="https://www.instagram.com/karlekartier?igsh=MXgyOTZwOWYxMjNoaw==" className="p-3 rounded-full bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:-translate-y-1">
+                            <Instagram className="w-5 h-5" />
                         </a>
-                        <a href="https://x.com/karthickkisking" className="p-2 rounded-full bg-secondary text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all">
-                            <Twitter className="w-4 h-4" />
+                        <a href="https://x.com/karthickkisking" className="p-3 rounded-full bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:-translate-y-1">
+                            <Twitter className="w-5 h-5" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/karthick-kishore-b48985208/" className="p-3 rounded-full bg-secondary/50 hover:bg-primary hover:text-primary-foreground transition-all duration-300 transform hover:-translate-y-1">
+                            <Linkedin className="w-5 h-5" />
                         </a>
                     </div>
+                    <p className="text-sm text-muted-foreground text-center">
+                        &copy; {new Date().getFullYear()} All rights reserved. Made by <a href="#" className="text-foreground font-medium hover:text-primary">karthick-kishore</a>
+                    </p>
                 </div>
             </div>
         </footer>

@@ -55,7 +55,7 @@ export function ContactInfo() {
                         </div>
                     ))}
                 </div>
-                <div className="mt-16 border-t" />
+
             </div>
         </section>
     );
