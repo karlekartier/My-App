@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/utils/cn";
 import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
@@ -14,7 +14,7 @@ const slides = [
         icon: `${ASSETS_PREFIX}/assets/images/icons/adobe_icons/illustrator.svg`,
         description: "Crafting detailed vector illustrations with precision, layer by layer.",
         details: "From structured layouts to fine-tuned elements, I ensure crisp, high-resolution designs with pixel-perfect clarity. Each artwork is carefully built, maintaining depth, balance, & scalability for any creative requirement.",
-        background: `${ASSETS_PREFIX}/assets/images/forestnight.webp`,
+        background: `${ASSETS_PREFIX}/assets/images/forestnight.svg`,
     },
     {
         id: 1,
@@ -22,12 +22,19 @@ const slides = [
         icon: `${ASSETS_PREFIX}/assets/images/icons/canva.svg`,
         description: "Elevating designs with an intuitive approach, leveraging its vast library & millions of color palettes.",
         details: "A special appreciation for its effortless blending of creativity & accessibility, allowing me to craft visually stunning marketing materials, presentations, & social media content with ease.",
-        background: `${ASSETS_PREFIX}/assets/images/forestdark.webp`,
+        background: `${ASSETS_PREFIX}/assets/images/forestdark.svg`,
     },
 ];
 
 export function Artwork() {
     const [currentSlide, setCurrentSlide] = React.useState(0);
+    const containerRef = React.useRef<HTMLElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "end start"],
+    });
+
+    const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -38,10 +45,9 @@ export function Artwork() {
     };
 
     return (
-        <section id="artwork" className="relative py-20 min-h-[600px] overflow-hidden">
+        <section ref={containerRef} id="artwork" className="relative py-20 min-h-[600px] overflow-hidden">
             {/* Background Images */}
-            {/* Background Images */}
-            <div className="absolute inset-0 -z-10 hidden dark:block">
+            <div className="absolute inset-0 z-0 h-[120%] -top-[10%]">
                 <AnimatePresence mode="popLayout">
                     <motion.div
                         key={slides[currentSlide].background}
@@ -49,6 +55,7 @@ export function Artwork() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1 }}
+                        style={{ y }}
                         className="absolute inset-0"
                     >
                         <Image
@@ -63,17 +70,14 @@ export function Artwork() {
                 </AnimatePresence>
             </div>
 
-            {/* Day Mode Background */}
-            <div className="absolute inset-0 -z-10 dark:hidden bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-
             <div className="container relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    <div className="text-foreground dark:text-white">
+                    <div className="text-white">
                         <h2 className="text-4xl font-bold mb-6">ArtWork & Design</h2>
-                        <p className="text-lg text-muted-foreground dark:text-white/80 mb-8">
+                        <p className="text-lg text-white/80 mb-8">
                             With the perfect synergy of <strong>technical precision in Illustrator & artistic flexibility in Canva,</strong> I bring concepts to life with compelling visuals & a keen eye for design aesthetics.
                         </p>
-                        <button className="px-8 py-3 rounded-full border border-input dark:border-white/30 hover:bg-accent hover:text-accent-foreground dark:hover:bg-white dark:hover:text-black transition-colors font-medium">
+                        <button className="px-8 py-3 rounded-full border border-white/30 hover:bg-white hover:text-black transition-colors font-medium">
                             Check My Gallery
                         </button>
                     </div>
