@@ -4,12 +4,16 @@ import "./globals.css";
 import { cn } from "@/utils/cn";
 import { ThemeProvider } from "@/components/theme-provider";
 import { BackToTop } from "@/components/BackToTop";
+import { ASSETS_PREFIX } from "@/utils/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Karthick Kishore | Portfolio",
   description: "Digital Marketer & Motion Graphics Expert",
+  icons: {
+    icon: `${ASSETS_PREFIX}/assets/favicon/kk_logo.svg`,
+  },
 };
 
 export default function RootLayout({
