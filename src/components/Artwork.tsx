@@ -14,15 +14,15 @@ const slides = [
         icon: `${ASSETS_PREFIX}/assets/images/icons/adobe_icons/illustrator.svg`,
         description: "Crafting detailed vector illustrations with precision, layer by layer.",
         details: "From structured layouts to fine-tuned elements, I ensure crisp, high-resolution designs with pixel-perfect clarity. Each artwork is carefully built, maintaining depth, balance, & scalability for any creative requirement.",
-        background: `${ASSETS_PREFIX}/assets/images/forestnight.svg`,
+        background: `${ASSETS_PREFIX}/assets/images/forestnight.webp`,
     },
     {
         id: 1,
         title: "Color Palette Expertise",
         icon: `${ASSETS_PREFIX}/assets/images/icons/canva.svg`,
-        description: "Elevating designs with an intuitive approach, leveraging its vast library & millions of color palettes.",
+        description: "Elevating designs with an intuitive approach, leveraging & millions of color palettes.",
         details: "A special appreciation for its effortless blending of creativity & accessibility, allowing me to craft visually stunning marketing materials, presentations, & social media content with ease.",
-        background: `${ASSETS_PREFIX}/assets/images/forestdark.svg`,
+        background: `${ASSETS_PREFIX}/assets/images/forestdark.webp`,
     },
 ];
 

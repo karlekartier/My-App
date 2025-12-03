@@ -74,6 +74,7 @@ export function Hero() {
                             width={600}
                             height={600}
                             className="dark:hidden w-full h-full object-contain drop-shadow-2xl"
+                            priority
                         />
                         <Image
                             src={`${ASSETS_PREFIX}/assets/images/svg/dark/5184408dark.svg`}
@@ -81,6 +82,7 @@ export function Hero() {
                             width={600}
                             height={600}
                             className="hidden dark:block w-full h-full object-contain drop-shadow-2xl"
+                            priority
                         />
                     </div>
                 </motion.div>

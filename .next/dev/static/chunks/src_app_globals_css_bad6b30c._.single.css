@@ -93,20 +93,32 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --color-red-400: #ff6568;
     --color-red-500: #fb2c36;
     --color-red-600: #e40014;
+    --color-orange-400: #ff8b1a;
     --color-orange-500: #fe6e00;
     --color-yellow-400: #fac800;
     --color-yellow-500: #edb200;
+    --color-green-400: #05df72;
     --color-green-500: #00c758;
     --color-green-600: #00a544;
+    --color-cyan-400: #00d2ef;
     --color-sky-500: #00a5ef;
+    --color-blue-400: #54a2ff;
     --color-blue-500: #3080ff;
     --color-blue-600: #155dfc;
     --color-blue-700: #1447e6;
+    --color-indigo-400: #7d87ff;
+    --color-violet-400: #a685ff;
+    --color-purple-400: #c07eff;
     --color-purple-500: #ac4bff;
+    --color-fuchsia-400: #ec6cff;
+    --color-pink-400: #fb64b6;
     --color-pink-500: #f6339a;
     --color-pink-600: #e30076;
+    --color-rose-400: #ff667f;
+    --color-slate-700: #314158;
     --color-zinc-50: #fafafa;
     --color-zinc-100: #f4f4f5;
     --color-zinc-200: #e4e4e7;
@@ -169,20 +181,32 @@
 
   @supports (color: lab(0% 0 0)) {
     :root, :host {
+      --color-red-400: lab(63.7053% 60.7449 31.3109);
       --color-red-500: lab(55.4814% 75.0732 48.8528);
       --color-red-600: lab(48.4493% 77.4328 61.5452);
+      --color-orange-400: lab(70.0429% 42.5156 75.8207);
       --color-orange-500: lab(64.272% 57.1788 90.3583);
       --color-yellow-400: lab(83.2664% 8.65132 106.895);
       --color-yellow-500: lab(76.3898% 14.5258 98.4589);
+      --color-green-400: lab(78.503% -64.9265 39.7492);
       --color-green-500: lab(70.5521% -66.5147 45.8072);
       --color-green-600: lab(59.0978% -58.6621 41.2579);
+      --color-cyan-400: lab(76.6045% -40.9406 -29.6231);
       --color-sky-500: lab(63.3038% -18.433 -51.0407);
+      --color-blue-400: lab(65.0361% -1.42062 -56.9803);
       --color-blue-500: lab(54.1736% 13.3368 -74.6839);
       --color-blue-600: lab(44.0605% 29.0279 -86.0352);
       --color-blue-700: lab(36.9089% 35.0961 -85.6872);
+      --color-indigo-400: lab(59.866% 22.4833 -64.4485);
+      --color-violet-400: lab(62.8239% 34.9159 -60.0512);
+      --color-purple-400: lab(63.6946% 47.6127 -59.2066);
       --color-purple-500: lab(52.0183% 66.11 -78.2316);
+      --color-fuchsia-400: lab(66.1178% 66.0652 -52.4733);
+      --color-pink-400: lab(64.5597% 64.3615 -12.7988);
       --color-pink-500: lab(56.9303% 76.8162 -8.07021);
       --color-pink-600: lab(49.5493% 79.8381 2.31769);
+      --color-rose-400: lab(64.4124% 63.0291 19.2068);
+      --color-slate-700: lab(26.9569% -1.47018 -15.6993);
       --color-zinc-50: lab(98.26% 0 0);
       --color-zinc-100: lab(96.1634% .0993013 -.364029);
       --color-zinc-200: lab(90.6853% .399202 -1.45452);
@@ -541,10 +565,6 @@
     top: -10%;
   }
 
-  .-top-\[20\%\] {
-    top: -20%;
-  }
-
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -615,6 +635,10 @@
 
   .z-10 {
     z-index: 10;
+  }
+
+  .z-20 {
+    z-index: 20;
   }
 
   .z-50 {
@@ -841,6 +865,15 @@
     aspect-ratio: var(--aspect-video);
   }
 
+  .size-full {
+    width: 100%;
+    height: 100%;
+  }
+
+  .h-0\.5 {
+    height: calc(var(--spacing) * .5);
+  }
+
   .h-1\.5 {
     height: calc(var(--spacing) * 1.5);
   }
@@ -893,10 +926,6 @@
     height: 120%;
   }
 
-  .h-\[140\%\] {
-    height: 140%;
-  }
-
   .h-\[310px\] {
     height: 310px;
   }
@@ -927,6 +956,10 @@
 
   .min-h-screen {
     min-height: 100vh;
+  }
+
+  .w-0\.5 {
+    width: calc(var(--spacing) * .5);
   }
 
   .w-1\.5 {
@@ -1340,11 +1373,6 @@
     border-width: 1px;
   }
 
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
-
   .border-4 {
     border-style: var(--tw-border-style);
     border-width: 4px;
@@ -1451,8 +1479,14 @@
     }
   }
 
-  .border-red-500 {
-    border-color: var(--color-red-500);
+  .border-slate-700\/50 {
+    border-color: #31415880;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-slate-700\/50 {
+      border-color: color-mix(in oklab, var(--color-slate-700) 50%, transparent);
+    }
   }
 
   .border-transparent {
@@ -1503,6 +1537,10 @@
     }
   }
 
+  .bg-blue-400 {
+    background-color: var(--color-blue-400);
+  }
+
   .bg-blue-500 {
     background-color: var(--color-blue-500);
   }
@@ -1525,6 +1563,18 @@
     }
   }
 
+  .bg-cyan-400 {
+    background-color: var(--color-cyan-400);
+  }
+
+  .bg-fuchsia-400 {
+    background-color: var(--color-fuchsia-400);
+  }
+
+  .bg-green-400 {
+    background-color: var(--color-green-400);
+  }
+
   .bg-green-500 {
     background-color: var(--color-green-500);
   }
@@ -1537,6 +1587,10 @@
     .bg-green-500\/10 {
       background-color: color-mix(in oklab, var(--color-green-500) 10%, transparent);
     }
+  }
+
+  .bg-indigo-400 {
+    background-color: var(--color-indigo-400);
   }
 
   .bg-muted {
@@ -1553,8 +1607,16 @@
     }
   }
 
+  .bg-orange-400 {
+    background-color: var(--color-orange-400);
+  }
+
   .bg-orange-500 {
     background-color: var(--color-orange-500);
+  }
+
+  .bg-pink-400 {
+    background-color: var(--color-pink-400);
   }
 
   .bg-pink-500 {
@@ -1585,6 +1647,14 @@
     }
   }
 
+  .bg-purple-400 {
+    background-color: var(--color-purple-400);
+  }
+
+  .bg-red-400 {
+    background-color: var(--color-red-400);
+  }
+
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -1597,6 +1667,10 @@
     .bg-red-500\/10 {
       background-color: color-mix(in oklab, var(--color-red-500) 10%, transparent);
     }
+  }
+
+  .bg-rose-400 {
+    background-color: var(--color-rose-400);
   }
 
   .bg-secondary {
@@ -1635,6 +1709,10 @@
 
   .bg-transparent {
     background-color: #0000;
+  }
+
+  .bg-violet-400 {
+    background-color: var(--color-violet-400);
   }
 
   .bg-white\/5 {
@@ -2104,6 +2182,16 @@
   .inset-ring {
     --tw-inset-ring-shadow: inset 0 0 0 1px var(--tw-inset-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .shadow-cyan-400\/50 {
+    --tw-shadow-color: #00d2ef80;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .shadow-cyan-400\/50 {
+      --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-cyan-400) 50%, transparent) var(--tw-shadow-alpha), transparent);
+    }
   }
 
   .shadow-primary\/30 {

@@ -536,7 +536,8 @@ function Hero() {
                                     alt: "Hero Illustration",
                                     width: 600,
                                     height: 600,
-                                    className: "dark:hidden w-full h-full object-contain drop-shadow-2xl"
+                                    className: "dark:hidden w-full h-full object-contain drop-shadow-2xl",
+                                    priority: true
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Hero.tsx",
                                     lineNumber: 71,
@@ -547,10 +548,11 @@ function Hero() {
                                     alt: "Hero Illustration",
                                     width: 600,
                                     height: 600,
-                                    className: "hidden dark:block w-full h-full object-contain drop-shadow-2xl"
+                                    className: "hidden dark:block w-full h-full object-contain drop-shadow-2xl",
+                                    priority: true
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Hero.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 79,
                                     columnNumber: 25
                                 }, this)
                             ]
@@ -595,25 +597,25 @@ function Hero() {
                             children: "Scroll"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Hero.tsx",
-                            lineNumber: 100,
+                            lineNumber: 102,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowDown$3e$__["ArrowDown"], {
                             className: "h-5 w-5"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Hero.tsx",
-                            lineNumber: 101,
+                            lineNumber: 103,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Hero.tsx",
-                    lineNumber: 96,
+                    lineNumber: 98,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Hero.tsx",
-                lineNumber: 90,
+                lineNumber: 92,
                 columnNumber: 13
             }, this)
         ]
@@ -2217,6 +2219,195 @@ function ContactInfo() {
     }, this);
 }
 }),
+"[project]/src/components/ui/grid-background.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "GridBackground",
+    ()=>GridBackground
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$cn$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/utils/cn.ts [app-ssr] (ecmascript)");
+'use client';
+;
+;
+;
+;
+const DEFAULT_BEAM_COLORS = [
+    'bg-cyan-400',
+    'bg-purple-400',
+    'bg-fuchsia-400',
+    'bg-violet-400',
+    'bg-blue-400',
+    'bg-indigo-400',
+    'bg-green-400',
+    'bg-yellow-400',
+    'bg-orange-400',
+    'bg-red-400',
+    'bg-pink-400',
+    'bg-rose-400'
+];
+function GridBackground({ className, children, gridSize = '8:8', colors = {}, beams = {}, ...props }) {
+    const { background = 'bg-transparent', borderColor = 'border-slate-700/50', borderSize = '1px', borderStyle = 'solid' } = colors;
+    const { count = 12, colors: beamColors = DEFAULT_BEAM_COLORS, shadow = 'shadow-lg shadow-cyan-400/50 rounded-full', speed = 4 } = beams;
+    // Parse grid dimensions
+    const [cols, rows] = gridSize.split(':').map(Number);
+    // Use state for beams to ensure they are only generated on the client
+    // This prevents hydration mismatches caused by Math.random()
+    const [animatedBeams, setAnimatedBeams] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"]([]);
+    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"](()=>{
+        const beams = Array.from({
+            length: Math.min(count, 12)
+        }, (_, i)=>{
+            const direction = Math.random() > 0.5 ? 'horizontal' : 'vertical';
+            const startPosition = Math.random() > 0.5 ? 'start' : 'end';
+            return {
+                id: i,
+                color: beamColors[i % beamColors.length],
+                direction,
+                startPosition,
+                // For horizontal beams: choose a row index (1 to rows-1) - exclude edges
+                // For vertical beams: choose a column index (1 to cols-1) - exclude edges
+                gridLine: direction === 'horizontal' ? Math.floor(Math.random() * (rows - 1)) + 1 : Math.floor(Math.random() * (cols - 1)) + 1,
+                delay: Math.random() * 2,
+                duration: speed + Math.random() * 2
+            };
+        });
+        setAnimatedBeams(beams);
+    }, [
+        count,
+        beamColors,
+        speed,
+        cols,
+        rows
+    ]);
+    const gridStyle = {
+        '--border-style': borderStyle
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+        "data-slot": "grid-background",
+        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$cn$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])('relative size-full overflow-hidden', background, className),
+        style: gridStyle,
+        ...props,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$cn$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])('absolute inset-0 size-full', borderColor),
+                style: {
+                    display: 'grid',
+                    gridTemplateColumns: `repeat(${cols}, 1fr)`,
+                    gridTemplateRows: `repeat(${rows}, 1fr)`,
+                    borderRightWidth: borderSize,
+                    borderBottomWidth: borderSize,
+                    borderRightStyle: borderStyle,
+                    borderBottomStyle: borderStyle
+                },
+                children: Array.from({
+                    length: cols * rows
+                }).map((_, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$cn$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])('relative', borderColor),
+                        style: {
+                            borderTopWidth: borderSize,
+                            borderLeftWidth: borderSize,
+                            borderTopStyle: borderStyle,
+                            borderLeftStyle: borderStyle
+                        }
+                    }, index, false, {
+                        fileName: "[project]/src/components/ui/grid-background.tsx",
+                        lineNumber: 128,
+                        columnNumber: 21
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/grid-background.tsx",
+                lineNumber: 114,
+                columnNumber: 13
+            }, this),
+            animatedBeams.map((beam)=>{
+                // Calculate exact grid line positions as percentages
+                const horizontalPosition = beam.gridLine / rows * 100;
+                const verticalPosition = beam.gridLine / cols * 100;
+                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
+                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$cn$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])('absolute rounded-full backdrop-blur-sm z-20', beam.color, beam.direction === 'horizontal' ? 'w-6 h-0.5' : 'w-0.5 h-6', shadow),
+                    style: {
+                        ...beam.direction === 'horizontal' ? {
+                            // Position exactly on the horizontal grid line
+                            top: `${horizontalPosition}%`,
+                            left: beam.startPosition === 'start' ? '-12px' : 'calc(100% + 12px)',
+                            transform: 'translateY(-50%)'
+                        } : {
+                            // Position exactly on the vertical grid line
+                            left: `${verticalPosition}%`,
+                            top: beam.startPosition === 'start' ? '-12px' : 'calc(100% + 12px)',
+                            transform: 'translateX(-50%)'
+                        }
+                    },
+                    initial: {
+                        opacity: 0
+                    },
+                    animate: {
+                        opacity: [
+                            0,
+                            1,
+                            1,
+                            0
+                        ],
+                        ...beam.direction === 'horizontal' ? {
+                            // Move across the full width of the container
+                            x: beam.startPosition === 'start' ? [
+                                0,
+                                'calc(100vw + 24px)'
+                            ] : [
+                                0,
+                                'calc(-100vw - 24px)'
+                            ]
+                        } : {
+                            // Move across the full height of the container
+                            y: beam.startPosition === 'start' ? [
+                                0,
+                                'calc(100vh + 24px)'
+                            ] : [
+                                0,
+                                'calc(-100vh - 24px)'
+                            ]
+                        }
+                    },
+                    transition: {
+                        duration: beam.duration,
+                        delay: beam.delay,
+                        repeat: Infinity,
+                        repeatDelay: Math.random() * 3 + 2,
+                        ease: 'linear',
+                        times: [
+                            0,
+                            0.1,
+                            0.9,
+                            1
+                        ]
+                    }
+                }, beam.id, false, {
+                    fileName: "[project]/src/components/ui/grid-background.tsx",
+                    lineNumber: 148,
+                    columnNumber: 21
+                }, this);
+            }),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative z-10 size-full",
+                children: children
+            }, void 0, false, {
+                fileName: "[project]/src/components/ui/grid-background.tsx",
+                lineNumber: 199,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/ui/grid-background.tsx",
+        lineNumber: 107,
+        columnNumber: 9
+    }, this);
+}
+;
+}),
 ];
 
-//# sourceMappingURL=src_72324531._.js.map
+//# sourceMappingURL=src_b9ba14f9._.js.map
