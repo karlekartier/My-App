@@ -6,6 +6,9 @@ import { motion } from "motion/react";
 import { ArrowDown, Download, Mail } from "lucide-react";
 import { cn } from "@/utils/cn";
 import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
+import { TypingText } from "./magicui/typing-text";
+import { WordRotate } from "./magicui/word-rotate";
+import { SlidingNumber } from "./magicui/sliding-number";
 
 export function Hero() {
     return (
@@ -31,15 +34,29 @@ export function Hero() {
                     </div>
 
                     <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl">
-                        Hai I'm <span className="text-primary">Karthick Kishore</span>
+                        Hai I'm <TypingText text="Karthick Kishore" className="text-primary" speed={20} repeat={true} />
                     </h1>
 
-                    <p className="text-xl text-muted-foreground max-w-[600px]">
-                        A passionate Digital Marketer | Motion Graphic & Web Designer.
-                        <br />
-                        <strong>3+ years of experience</strong> in crafting visually
-                        compelling designs & digital experiences.
-                    </p>
+                    <div className="text-xl text-muted-foreground max-w-[600px] flex flex-col gap-2">
+                        <div className="flex flex-wrap gap-2 items-center justify-center lg:justify-start">
+                            <span>A Passionate</span>
+                            <WordRotate
+                                words={[
+                                    "Web Developer",
+                                    "UI/UX Designer",
+                                    "Motion Graphic Artist",
+                                    "SEO specialist",
+                                ]}
+                                className="font-bold text-foreground"
+                            />
+                        </div>
+                        <p>
+                            <strong>
+                                <SlidingNumber value={4} />+ years of experience
+                            </strong>{" "}
+                            in crafting visually compelling designs & digital experiences.
+                        </p>
+                    </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-4">
                         <a

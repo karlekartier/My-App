@@ -1,5 +1,5 @@
-[00:00:00.694] Server  LOG      ✓ Ready in 489ms
-[00:00:06.246] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:00.973] Server  LOG      ✓ Ready in 707ms
+[00:00:07.275] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -12,311 +12,855 @@ It can also happen if the client has a browser extension installed which messes 
 %s%s https://react.dev/link/hydration-mismatch 
 
   ...
-    <RedirectErrorBoundary router={{...}}>
-      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
-        <SegmentViewNode type="page" pagePath="page.tsx">
-          <SegmentTrieNode>
-          <Home>
-            <main className="min-h-scre...">
-              <Navbar>
-              <Hero>
-              <div>
-              <Toolkit>
-              <div>
-              <Artwork>
-              <div>
-              <ContactInfo>
-              <Footer>
-                <footer className="relative b...">
-                  <div className="absolute i...">
-                    <GridBackground gridSize="6:6">
-                      <motion.div data-slot="grid-backg..." className="relative s..." style={{...}}>
-                        <div data-slot="grid-backg..." className="relative s..." style={{...}} ...>
-                          <div>
-                          <motion.div className="absolute b..." style={{left:"33.3...", ...}} initial={{opacity:0}} ...>
-                            <div
-                              className="absolute backdrop-blur-sm z-20 bg-cyan-400 w-0.5 h-6 shadow-lg shadow-cyan-40..."
-                              style={{
-+                               left: "33.33333333333333%"
--                               left: "83.3333%"
-+                               top: "calc(100% + 12px)"
--                               top: "calc(100% + 12px)"
-+                               transform: "translateX(-50%)"
--                               transform: "translateX(-50%)"
-+                               opacity: 0
--                               opacity: "0"
-                              }}
-                              ref={function useMotionRef.useCallback}
-                            >
-                          <motion.div className="absolute b..." style={{top:"83.33...", ...}} initial={{opacity:0}} ...>
-                            <div
-+                             className="absolute backdrop-blur-sm z-20 bg-purple-400 w-6 h-0.5 shadow-lg shadow-cyan-..."
--                             className="absolute backdrop-blur-sm z-20 bg-purple-400 w-0.5 h-6 shadow-lg shadow-cyan-..."
-                              style={{
-+                               top: "83.33333333333334%"
--                               top: "calc(100% + 12px)"
-+                               left: "calc(100% + 12px)"
--                               left: "66.6667%"
-+                               transform: "translateY(-50%)"
--                               transform: "translateX(-50%)"
-+                               opacity: 0
--                               opacity: "0"
-                              }}
-                              ref={function useMotionRef.useCallback}
-                            >
-                          <motion.div className="absolute b..." style={{top:"50%", ...}} initial={{opacity:0}} ...>
-                            <div
-+                             className="absolute backdrop-blur-sm z-20 bg-fuchsia-400 w-6 h-0.5 shadow-lg shadow-cyan..."
--                             className="absolute backdrop-blur-sm z-20 bg-fuchsia-400 w-0.5 h-6 shadow-lg shadow-cyan..."
-                              style={{
-+                               top: "50%"
--                               top: "-12px"
-+                               left: "-12px"
--                               left: "33.3333%"
-+                               transform: "translateY(-50%)"
--                               transform: "translateX(-50%)"
-+                               opacity: 0
--                               opacity: "0"
-                              }}
-                              ref={function useMotionRef.useCallback}
-                            >
-                          <motion.div className="absolute b..." style={{top:"83.33...", ...}} initial={{opacity:0}} ...>
-                            <div
-+                             className="absolute backdrop-blur-sm z-20 bg-violet-400 w-6 h-0.5 shadow-lg shadow-cyan-..."
--                             className="absolute backdrop-blur-sm z-20 bg-violet-400 w-0.5 h-6 shadow-lg shadow-cyan-..."
-                              style={{
-+                               top: "83.33333333333334%"
--                               top: "-12px"
-+                               left: "calc(100% + 12px)"
--                               left: "33.3333%"
-+                               transform: "translateY(-50%)"
--                               transform: "translateX(-50%)"
-+                               opacity: 0
--                               opacity: "0"
-                              }}
-                              ref={function useMotionRef.useCallback}
-                            >
-                          <motion.div className="absolute b..." style={{left:"83.3...", ...}} initial={{opacity:0}} ...>
-                            <div
-+                             className="absolute backdrop-blur-sm z-20 bg-blue-400 w-0.5 h-6 shadow-lg shadow-cyan-40..."
--                             className="absolute backdrop-blur-sm z-20 bg-blue-400 w-6 h-0.5 shadow-lg shadow-cyan-40..."
-                              style={{
-+                               left: "83.33333333333334%"
--                               left: "-12px"
-+                               top: "calc(100% + 12px)"
--                               top: "66.6667%"
-+                               transform: "translateX(-50%)"
--                               transform: "translateY(-50%)"
-+                               opacity: 0
--                               opacity: "0"
-                              }}
-                              ref={function useMotionRef.useCallback}
-                            >
-                          <motion.div className="absolute b..." style={{top:"66.66...", ...}} initial={{opacity:0}} ...>
-                            <div
-                              className="absolute backdrop-blur-sm z-20 bg-indigo-400 w-6 h-0.5 shadow-lg shadow-cyan-..."
-                              style={{
-+                               top: "66.66666666666666%"
--                               top: "16.6667%"
-+                               left: "-12px"
--                               left: "-12px"
-+                               transform: "translateY(-50%)"
--                               transform: "translateY(-50%)"
-+                               opacity: 0
--                               opacity: "0"
-                              }}
-                              ref={function useMotionRef.useCallback}
-                            >
-                          <motion.div className="absolute b..." style={{top:"33.33...", ...}} initial={{opacity:0}} ...>
-                            <div
-                              className="absolute backdrop-blur-sm z-20 bg-green-400 w-6 h-0.5 shadow-lg shadow-cyan-4..."
-                              style={{
-+                               top: "33.33333333333333%"
--                               top: "83.3333%"
-+                               left: "-12px"
--                               left: "-12px"
-+                               transform: "translateY(-50%)"
--                               transform: "translateY(-50%)"
-+                               opacity: 0
--                               opacity: "0"
-                              }}
-                              ref={function useMotionRef.useCallback}
-                            >
-                          <motion.div className="absolute b..." style={{top:"50%", ...}} initial={{opacity:0}} ...>
-                            <div
-                              className="absolute backdrop-blur-sm z-20 bg-yellow-400 w-6 h-0.5 shadow-lg shadow-cyan-..."
-                              style={{
-+                               top: "50%"
--                               top: "16.6667%"
-+                               left: "-12px"
--                               left: "-12px"
-+                               transform: "translateY(-50%)"
--                               transform: "translateY(-50%)"
-+                               opacity: 0
--                               opacity: "0"
-                              }}
-                              ref={function useMotionRef.useCallback}
-                            >
-                          <motion.div className="absolute b..." style={{left:"83.3...", ...}} initial={{opacity:0}} ...>
-                            <div
-                              className="absolute backdrop-blur-sm z-20 bg-orange-400 w-0.5 h-6 shadow-lg shadow-cyan-..."
-                              style={{
-+                               left: "83.33333333333334%"
--                               left: "33.3333%"
-+                               top: "calc(100% + 12px)"
--                               top: "-12px"
-+                               transform: "translateX(-50%)"
--                               transform: "translateX(-50%)"
-+                               opacity: 0
--                               opacity: "0"
-                              }}
-                              ref={function useMotionRef.useCallback}
-                            >
-                          <motion.div className="absolute b..." style={{top:"66.66...", ...}} initial={{opacity:0}} ...>
-                            <div
-                              className="absolute backdrop-blur-sm z-20 bg-red-400 w-6 h-0.5 shadow-lg shadow-cyan-400..."
-                              style={{
-+                               top: "66.66666666666666%"
--                               top: "33.3333%"
-+                               left: "-12px"
--                               left: "-12px"
-+                               transform: "translateY(-50%)"
--                               transform: "translateY(-50%)"
-+                               opacity: 0
--                               opacity: "0"
-                              }}
-                              ref={function useMotionRef.useCallback}
-                            >
-                          <motion.div className="absolute b..." style={{top:"33.33...", ...}} initial={{opacity:0}} ...>
-                            <div
-                              className="absolute backdrop-blur-sm z-20 bg-pink-400 w-6 h-0.5 shadow-lg shadow-cyan-40..."
-                              style={{
-+                               top: "33.33333333333333%"
--                               top: "16.6667%"
-+                               left: "calc(100% + 12px)"
--                               left: "-12px"
-+                               transform: "translateY(-50%)"
--                               transform: "translateY(-50%)"
-+                               opacity: 0
--                               opacity: "0"
-                              }}
-                              ref={function useMotionRef.useCallback}
-                            >
-                          <motion.div className="absolute b..." style={{top:"66.66...", ...}} initial={{opacity:0}} ...>
-                            <div
-+                             className="absolute backdrop-blur-sm z-20 bg-rose-400 w-6 h-0.5 shadow-lg shadow-cyan-40..."
--                             className="absolute backdrop-blur-sm z-20 bg-rose-400 w-0.5 h-6 shadow-lg shadow-cyan-40..."
-                              style={{
-+                               top: "66.66666666666666%"
--                               top: "-12px"
-+                               left: "-12px"
--                               left: "16.6667%"
-+                               transform: "translateY(-50%)"
--                               transform: "translateX(-50%)"
-+                               opacity: 0
--                               opacity: "0"
-                              }}
-                              ref={function useMotionRef.useCallback}
-                            >
-                          ...
-                  ...
+    <ScrollAndFocusHandler segmentPath={[...]}>
+      <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+        <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+          <LoadingBoundary name="/" loading={[...]}>
+            <Suspense name="/" fallback={<Fragment>}>
+              <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+                <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+                  <RedirectBoundary>
+                    <RedirectErrorBoundary router={{...}}>
+                      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} ...>
+                        <SegmentViewNode type="page" pagePath="page.tsx">
+                          <SegmentTrieNode>
+                          <Home>
+                            <main className="min-h-scre...">
+                              <Navbar>
+                                <header className="fixed top-...">
+                                  <div
+                                    className="container flex h-16 items-center justify-between"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <LinkComponent>
+                                    <nav className="hidden md:...">
+                                      <LinkComponent>
+                                      <LinkComponent>
+                                      <LinkComponent>
+                                      <LinkComponent>
+                                      <LinkComponent>
+                                      <div
+                                        className="relative"
+-                                       bis_skin_checked="1"
+                                      >
+                                      ...
+                                    <div
+                                      className="flex items-center gap-4 md:hidden"
+-                                     bis_skin_checked="1"
+                                    >
+                              <Hero>
+                                <section id="home" className="relative m...">
+                                  <div
+                                    className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#80808012_1px,trans..."
+-                                   bis_skin_checked="1"
+                                  >
+                                  <div
+                                    className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-..."
+-                                   bis_skin_checked="1"
+                                  >
+                                  <div
+                                    className="container grid lg:grid-cols-2 gap-12 items-center"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <motion.div initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} ...>
+                                      <div
+                                        className="flex flex-col items-center lg:items-start text-center lg:text-left ..."
+                                        style={{opacity:0,transform:"translateY..."}}
+                                        ref={function useMotionRef.useCallback}
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-x..."
+-                                         bis_skin_checked="1"
+                                        >
+                                        <h1>
+                                        <p>
+                                        <div
+                                          className="flex flex-col sm:flex-row gap-4 pt-4"
+-                                         bis_skin_checked="1"
+                                        >
+                                    <motion.div initial={{opacity:0, ...}} animate={{opacity:1,scale:1}} ...>
+                                      <div
+                                        className="relative flex justify-center lg:justify-end"
+                                        style={{opacity:0,transform:"scale(0.9)"}}
+                                        ref={function useMotionRef.useCallback}
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="relative w-full h-auto"
+-                                         bis_skin_checked="1"
+                                        >
+                                  <motion.div initial={{opacity:0,y:10}} animate={{opacity:1,y:0}} ...>
+                                    <div
+                                      className="absolute bottom-8 left-1/2 -translate-x-1/2"
+                                      style={{opacity:0,transform:"translateY..."}}
+                                      ref={function useMotionRef.useCallback}
+-                                     bis_skin_checked="1"
+                                    >
+                              <div
+                                className="bg-muted/30"
+-                               bis_skin_checked="1"
+                              >
+                                <About>
+                                  <section id="about" className="py-20 bg-s...">
+                                    <div
+                                      className="container"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="grid lg:grid-cols-2 gap-12"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <motion.div initial={{opacity:0,x:-20}} whileInView={{opacity:1,x:0}} ...>
+                                          <div
+                                            style={{opacity:0,transform:"translateX..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <h2>
+                                            <p>
+                                            <p>
+                                            <div
+                                              className="bg-card p-6 rounded-xl border shadow-sm"
+-                                             bis_skin_checked="1"
+                                            >
+                                        <motion.div initial={{opacity:0,x:20}} whileInView={{opacity:1,x:0}} ...>
+                                          <div
+                                            style={{opacity:0,transform:"translateX..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <h3>
+                                            <div
+                                              className="space-y-8 border-l-2 border-primary/20 ml-3 pl-8 relative"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="relative"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="relative"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="relative"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="relative"
+-                                               bis_skin_checked="1"
+                                              >
+                              <Toolkit>
+                                <section id="toolkit" className="py-20">
+                                  <div
+                                    className="container"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="text-center max-w-3xl mx-auto mb-12"
+-                                     bis_skin_checked="1"
+                                    >
+                                    <div
+                                      className="flex flex-wrap justify-center gap-2 mb-8"
+-                                     bis_skin_checked="1"
+                                    >
+                                    <div
+                                      className="bg-secondary/20 rounded-2xl p-6 lg:p-12 min-h-[400px]"
+-                                     bis_skin_checked="1"
+                                    >
+                                      ...
+                                        <motion.div initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} ...>
+                                          <div
+                                            className="grid lg:grid-cols-2 gap-12 items-center"
+                                            style={{opacity:0,transform:"translateY..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="text-center lg:text-left"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <h3>
+                                              <div
+                                                className="text-muted-foreground leading-relaxed"
+-                                               bis_skin_checked="1"
+                                              >
+                                            <div
+                                              className="flex justify-center"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="relative w-full max-w-[500px] aspect-video lg:aspect-square..."
+-                                               bis_skin_checked="1"
+                                              >
+                              <div
+                                className="bg-muted/30"
+-                               bis_skin_checked="1"
+                              >
+                                <SkillsOverview>
+                                  <section className="py-12 bg-b...">
+                                    <div
+                                      className="container"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="grid lg:grid-cols-2 gap-8 mb-12"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+                                        className="grid grid-cols-2 md:grid-cols-4 gap-8"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} ...>
+                                          <div
+                                            className="flex flex-col items-center text-center group cursor-pointer"
+                                            style={{opacity:0,transform:"translateY..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="relative mb-4 transition-transform duration-300 group-hover:s..."
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                                        <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} ...>
+                                          <div
+                                            className="flex flex-col items-center text-center group cursor-pointer"
+                                            style={{opacity:0,transform:"translateY..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="relative mb-4 transition-transform duration-300 group-hover:s..."
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                                        <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} ...>
+                                          <div
+                                            className="flex flex-col items-center text-center group cursor-pointer"
+                                            style={{opacity:0,transform:"translateY..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="relative mb-4 transition-transform duration-300 group-hover:s..."
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                                        <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} ...>
+                                          <div
+                                            className="flex flex-col items-center text-center group cursor-pointer"
+                                            style={{opacity:0,transform:"translateY..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="relative mb-4 transition-transform duration-300 group-hover:s..."
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                              <Artwork>
+                                <section ref={{current:null}} id="artwork" className="relative p...">
+                                  <div
+                                    className="absolute inset-0 z-0 h-[120%] -top-[10%]"
+-                                   bis_skin_checked="1"
+                                  >
+                                    ...
+                                      <PopChildMeasure isPresent={true} childRef={{current:null}} sizeRef={{...}}>
+                                        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} ...>
+                                          <div
+                                            className="absolute inset-0"
+                                            style={{opacity:0,transform:"translateY..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <img>
+                                            <ImagePreload>
+                                            <div
+                                              className="absolute inset-0 bg-black/60"
+-                                             bis_skin_checked="1"
+                                            >
+                                  <div
+                                    className="container relative z-10"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="grid lg:grid-cols-2 gap-12 items-center"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="text-white"
+-                                       bis_skin_checked="1"
+                                      >
+                                      <div
+                                        className="bg-card/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border borde..."
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex justify-between items-center mb-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="flex gap-2"
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+                                            className="flex gap-2"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="h-2 rounded-full transition-all bg-primary w-6"
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="w-2 h-2 rounded-full transition-all bg-muted"
+-                                             bis_skin_checked="1"
+                                            >
+                                        <div
+                                          className="overflow-hidden"
+-                                         bis_skin_checked="1"
+                                        >
+                                          ...
+                                            <motion.div initial={{opacity:0,x:20}} animate={{opacity:1,x:0}} ...>
+                                              <div
+                                                style={{opacity:0,transform:"translateX..."}}
+                                                ref={function useMotionRef.useCallback}
+-                                               bis_skin_checked="1"
+                                              >
+                              <div
+                                className="bg-muted/30"
+-                               bis_skin_checked="1"
+                              >
+                                <DetailedSkills>
+                                  <section className="py-20 bg-s...">
+                                    <div
+                                      className="container"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="grid lg:grid-cols-2 gap-8 mb-12 items-center"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+-                                         bis_skin_checked="1"
+                                        >
+                                        <div
+                                          className="flex justify-start lg:justify-end"
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+                                        className="grid md:grid-cols-2 gap-6"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} ...>
+                                          <div
+                                            className="bg-card rounded-xl p-6 shadow-sm border hover:shadow-md transit..."
+                                            style={{opacity:0,transform:"translateY..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex items-start gap-4 mb-4"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="p-3 bg-secondary rounded-lg"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="flex-1"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <h3>
+                                                <div
+                                                  className="h-2 w-full bg-secondary rounded-full overflow-hidden"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <motion.div initial={{width:0}} whileInView={{width:"90%"}} ...>
+                                                    <div
+                                                      className="h-full rounded-full bg-orange-500"
+                                                      style={{width:"0px"}}
+                                                      ref={function useMotionRef.useCallback}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                            ...
+                                        <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} ...>
+                                          <div
+                                            className="bg-card rounded-xl p-6 shadow-sm border hover:shadow-md transit..."
+                                            style={{opacity:0,transform:"translateY..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex items-start gap-4 mb-4"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="p-3 bg-secondary rounded-lg"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="flex-1"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <h3>
+                                                <div
+                                                  className="h-2 w-full bg-secondary rounded-full overflow-hidden"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <motion.div initial={{width:0}} whileInView={{width:"87%"}} ...>
+                                                    <div
+                                                      className="h-full rounded-full bg-blue-500"
+                                                      style={{width:"0px"}}
+                                                      ref={function useMotionRef.useCallback}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                            ...
+                                        <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} ...>
+                                          <div
+                                            className="bg-card rounded-xl p-6 shadow-sm border hover:shadow-md transit..."
+                                            style={{opacity:0,transform:"translateY..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex items-start gap-4 mb-4"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="p-3 bg-secondary rounded-lg"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="flex-1"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <h3>
+                                                <div
+                                                  className="h-2 w-full bg-secondary rounded-full overflow-hidden"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <motion.div initial={{width:0}} whileInView={{width:"85%"}} ...>
+                                                    <div
+                                                      className="h-full rounded-full bg-yellow-400"
+                                                      style={{width:"0px"}}
+                                                      ref={function useMotionRef.useCallback}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                            ...
+                                        <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} ...>
+                                          <div
+                                            className="bg-card rounded-xl p-6 shadow-sm border hover:shadow-md transit..."
+                                            style={{opacity:0,transform:"translateY..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex items-start gap-4 mb-4"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="p-3 bg-secondary rounded-lg"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="flex-1"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <h3>
+                                                <div
+                                                  className="h-2 w-full bg-secondary rounded-full overflow-hidden"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <motion.div initial={{width:0}} whileInView={{width:"55%"}} ...>
+                                                    <div
+                                                      className="h-full rounded-full bg-pink-500"
+                                                      style={{width:"0px"}}
+                                                      ref={function useMotionRef.useCallback}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                            ...
+                                        <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} ...>
+                                          <div
+                                            className="bg-card rounded-xl p-6 shadow-sm border hover:shadow-md transit..."
+                                            style={{opacity:0,transform:"translateY..."}}
+                                            ref={function useMotionRef.useCallback}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="flex items-start gap-4 mb-4"
+-                                             bis_skin_checked="1"
+                                            >
+                                              <div
+                                                className="p-3 bg-secondary rounded-lg"
+-                                               bis_skin_checked="1"
+                                              >
+                                              <div
+                                                className="flex-1"
+-                                               bis_skin_checked="1"
+                                              >
+                                                <h3>
+                                                <div
+                                                  className="h-2 w-full bg-secondary rounded-full overflow-hidden"
+-                                                 bis_skin_checked="1"
+                                                >
+                                                  <motion.div initial={{width:0}} whileInView={{width:"80%"}} ...>
+                                                    <div
+                                                      className="h-full rounded-full bg-red-500"
+                                                      style={{width:"0px"}}
+                                                      ref={function useMotionRef.useCallback}
+-                                                     bis_skin_checked="1"
+                                                    >
+                                            ...
+                              <ContactInfo>
+                                <section className="py-20 bg-b...">
+                                  <div
+                                    className="container"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="grid md:grid-cols-3 gap-8"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="flex gap-4"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex-shrink-0"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="w-12 h-12 bg-primary rounded-lg flex items-center justify-cente..."
+-                                           bis_skin_checked="1"
+                                          >
+                                        <div
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+                                        className="flex gap-4"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex-shrink-0"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="w-12 h-12 bg-primary rounded-lg flex items-center justify-cente..."
+-                                           bis_skin_checked="1"
+                                          >
+                                        <div
+-                                         bis_skin_checked="1"
+                                        >
+                                      <div
+                                        className="flex gap-4"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex-shrink-0"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="w-12 h-12 bg-primary rounded-lg flex items-center justify-cente..."
+-                                           bis_skin_checked="1"
+                                          >
+                                        <div
+-                                         bis_skin_checked="1"
+                                        >
+                              <Footer>
+                                <footer className="relative b...">
+                                  <div
+                                    className="absolute inset-0 z-0"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <GridBackground gridSize="6:6">
+                                      <motion.div data-slot="grid-backg..." className="relative s..." style={{...}}>
+                                        <div
+                                          data-slot="grid-background"
+                                          className="relative size-full overflow-hidden bg-transparent"
+                                          style={{--border-style:"solid"}}
+                                          ref={function useMotionRef.useCallback}
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+                                            className="absolute inset-0 size-full border-slate-700/50"
+                                            style={{display:"grid",gridTemplateColumns:"repeat(6, ...",gridTemplateRows:"repeat...", ...}}
+-                                           bis_skin_checked="1"
+                                          >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                            <div
+                                              className="relative border-slate-700/50"
+                                              style={{borderTopWidth:"1px",borderLeftWidth:"1px",borderTopStyle:"solid", ...}}
+-                                             bis_skin_checked="1"
+                                            >
+                                          <div
+                                            className="relative z-10 size-full"
+-                                           bis_skin_checked="1"
+                                          >
+                                  <div
+                                    className="container relative z-10 pt-16 pb-8"
+-                                   bis_skin_checked="1"
+                                  >
+                                    <div
+                                      className="grid lg:grid-cols-12 gap-12 mb-12"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="lg:col-span-4"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="flex items-center gap-4 mb-6"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <img>
+                                          <div
+                                            className="flex items-center gap-4"
+-                                           bis_skin_checked="1"
+                                          >
+                                            <span>
+                                            <div
+                                              className="h-8 w-px bg-border"
+-                                             bis_skin_checked="1"
+                                            >
+                                            ...
+                                        ...
+                                      <div
+                                        className="lg:col-span-8 lg:pl-12"
+-                                       bis_skin_checked="1"
+                                      >
+                                        <div
+                                          className="grid md:grid-cols-3 gap-8"
+-                                         bis_skin_checked="1"
+                                        >
+                                          <div
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+-                                           bis_skin_checked="1"
+                                          >
+                                          <div
+-                                           bis_skin_checked="1"
+                                          >
+                                            <h6>
+                                            <div
+                                              className="space-y-3"
+-                                             bis_skin_checked="1"
+                                            >
+                                    <div
+                                      className="pt-8 border-t border-border/50 flex flex-col items-center gap-6"
+-                                     bis_skin_checked="1"
+                                    >
+                                      <div
+                                        className="flex gap-6"
+-                                       bis_skin_checked="1"
+                                      >
+                                      ...
+                        ...
+                      ...
         ...
-      ...
 
-[00:00:06.246] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[00:02:11.025] Server  LOG      ✓ Compiled in 54ms
-[00:02:13.060] Browser ERROR   React instrumentation encountered an error: %o {}
-[00:02:13.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:13.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:13.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:13.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:13.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:13.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:14.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:14.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:14.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:15.054] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:15.054] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:15.054] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:16.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:16.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:16.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:16.060] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:18.063] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:18.063] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:18.064] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:18.064] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:18.064] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:18.064] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:18.064] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:19.053] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:19.053] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:19.053] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:21.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:21.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:21.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:21.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:21.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:21.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:21.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:23.056] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:23.056] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:23.056] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:23.056] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:23.056] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:23.056] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:23.056] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:23.056] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:24.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:24.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:24.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:24.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:27.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:27.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:27.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:27.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:27.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:27.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:27.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:27.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:27.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:27.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:27.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:28.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:28.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:28.057] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:29.054] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:29.054] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:29.054] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:29.054] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:30.052] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:30.052] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:30.052] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:30.052] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:32.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:32.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:32.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:32.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:32.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:32.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:32.055] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:33.054] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:33.054] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:33.054] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:33.054] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:35.053] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:35.053] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:35.053] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:35.053] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:35.053] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:35.053] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:35.053] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:36.424] Server  LOG      ✓ Compiled in 36ms
-[00:02:37.051] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:37.051] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:37.051] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:37.051] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:02:37.051] Browser ERROR   Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render.
-[00:03:00.853] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[00:04:11.052] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[00:04:42.766] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:00:07.568] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:09:24.648] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:20:11.728] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:20:13.221] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:20:56.492] Server  LOG      ✓ Compiled in 59ms
+[00:21:43.069] Server  LOG      ✓ Compiled in 98ms
+[00:22:25.308] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:22:27.479] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:22:29.354] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:22:32.478] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:22:37.734] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:28:44.438] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:28:46.342] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:28:48.490] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:28:49.958] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:28:51.590] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:28:53.058] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:31:15.300] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:35:40.975] Server  LOG      ✓ Compiled in 42ms
+[00:36:59.914] Server  LOG      ✓ Compiled in 30ms
+[00:39:25.360] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:40:30.801] Server  LOG      ✓ Compiled in 30ms
+[00:40:36.887] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:40:48.480] Server  LOG      ✓ Compiled in 28ms
+[00:40:52.182] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:42:02.229] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior

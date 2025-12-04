@@ -1000,6 +1000,10 @@
     height: 1.2rem;
   }
 
+  .h-\[1em\] {
+    height: 1em;
+  }
+
   .h-\[120\%\] {
     height: 120%;
   }
@@ -1090,6 +1094,10 @@
 
   .w-\[1\.2rem\] {
     width: 1.2rem;
+  }
+
+  .w-\[2px\] {
+    width: 2px;
   }
 
   .w-\[310px\] {
@@ -1358,6 +1366,10 @@
 
   .overflow-hidden {
     overflow: hidden;
+  }
+
+  .rounded {
+    border-radius: .25rem;
   }
 
   .rounded-2xl {
@@ -2917,6 +2929,12 @@
   @media (min-width: 64rem) {
     .lg\:justify-end {
       justify-content: flex-end;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:justify-start {
+      justify-content: flex-start;
     }
   }
 
