@@ -103,9 +103,12 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$facebook$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Facebook$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/facebook.js [app-rsc] (ecmascript) <export default as Facebook>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$instagram$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Instagram$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/instagram.js [app-rsc] (ecmascript) <export default as Instagram>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$twitter$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Twitter$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/twitter.js [app-rsc] (ecmascript) <export default as Twitter>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/linkedin.js [app-rsc] (ecmascript) <export default as Linkedin>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$github$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Github$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/github.js [app-rsc] (ecmascript) <export default as Github>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$react$2d$fontawesome$2f$dist$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@fortawesome/react-fontawesome/dist/index.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$free$2d$brands$2d$svg$2d$icons$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@fortawesome/free-brands-svg-icons/index.mjs [app-rsc] (ecmascript)");
+;
+;
 ;
 ;
 const socialLinks = [
@@ -123,7 +126,14 @@ const socialLinks = [
     },
     {
         name: "Twitter",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$twitter$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Twitter$3e$__["Twitter"],
+        icon: ({ className })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$react$2d$fontawesome$2f$dist$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FontAwesomeIcon"], {
+                icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$free$2d$brands$2d$svg$2d$icons$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["faXTwitter"],
+                className: className
+            }, void 0, false, {
+                fileName: "[project]/src/components/SocialLinks.tsx",
+                lineNumber: 23,
+                columnNumber: 13
+            }, ("TURBOPACK compile-time value", void 0)),
         href: "https://x.com/karthickkisking",
         color: "hover:text-sky-500"
     },
@@ -141,22 +151,12 @@ const socialLinks = [
     },
     {
         name: "Behance",
-        icon: ({ className })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                role: "img",
-                viewBox: "0 0 24 24",
-                fill: "currentColor",
-                className: className,
-                xmlns: "http://www.w3.org/2000/svg",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                    d: "M22 7h-7v-2h7v2zm1.726 10c-.05.368-.53 3.113-4.172 3.113-2.07 0-3.63-1.377-3.63-3.15 0-1.59 1.035-2.79 2.665-2.79 1.49 0 2.313.98 2.432 1.872h-2.912c-.06-.63-.372-1.08-.96-1.08-.66 0-1.108.52-1.108 1.523 0 1.04.49 1.55 1.14 1.55.81 0 1.11-.61 1.13-1.005h5.415zm-9.35-6.415c0-2.366-1.436-4.585-4.49-4.585-3.08 0-4.88 2.19-4.88 4.936 0 2.82 1.83 5.064 5.005 5.064 3.036 0 4.62-2.3 4.62-4.42 0-.25-.012-.49-.03-.72h-7.08c.19 1.56 1.21 2.63 2.66 2.63 1.09 0 1.95-.67 2.17-1.78h2.52v.03c-.28 1.95-1.75 3.55-4.72 3.55-3.86 0-5.6-2.61-5.6-5.8 0-3.21 1.92-5.85 5.6-5.85 2.8 0 4.25 1.76 4.25 4.05 0 .28-.02.55-.05.81h-2.005z"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/SocialLinks.tsx",
-                    lineNumber: 45,
-                    columnNumber: 17
-                }, ("TURBOPACK compile-time value", void 0))
+        icon: ({ className })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$react$2d$fontawesome$2f$dist$2f$index$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FontAwesomeIcon"], {
+                icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$fortawesome$2f$free$2d$brands$2d$svg$2d$icons$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["faBehance"],
+                className: className
             }, void 0, false, {
                 fileName: "[project]/src/components/SocialLinks.tsx",
-                lineNumber: 38,
+                lineNumber: 43,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
         href: "https://www.behance.net/karlekarthier",
@@ -174,7 +174,7 @@ function SocialLinks() {
                     children: "Connect on Social Media"
                 }, void 0, false, {
                     fileName: "[project]/src/components/SocialLinks.tsx",
-                    lineNumber: 57,
+                    lineNumber: 54,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -191,12 +191,12 @@ function SocialLinks() {
                                         className: "w-8 h-8 transition-transform group-hover:scale-110"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/SocialLinks.tsx",
-                                        lineNumber: 68,
+                                        lineNumber: 65,
                                         columnNumber: 33
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/SocialLinks.tsx",
-                                    lineNumber: 67,
+                                    lineNumber: 64,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -204,29 +204,29 @@ function SocialLinks() {
                                     children: social.name
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/SocialLinks.tsx",
-                                    lineNumber: 70,
+                                    lineNumber: 67,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, social.name, true, {
                             fileName: "[project]/src/components/SocialLinks.tsx",
-                            lineNumber: 60,
+                            lineNumber: 57,
                             columnNumber: 25
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/SocialLinks.tsx",
-                    lineNumber: 58,
+                    lineNumber: 55,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/SocialLinks.tsx",
-            lineNumber: 56,
+            lineNumber: 53,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/SocialLinks.tsx",
-        lineNumber: 55,
+        lineNumber: 52,
         columnNumber: 9
     }, this);
 }
