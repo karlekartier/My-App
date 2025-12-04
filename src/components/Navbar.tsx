@@ -7,6 +7,7 @@ import { cn } from "@/utils/cn";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
+import { motion } from "motion/react";
 
 import { Home, User, Briefcase, Mail, Layers } from "lucide-react";
 
@@ -22,6 +23,7 @@ export function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
     const [scrolled, setScrolled] = React.useState(false);
     const [isVersionOpen, setIsVersionOpen] = React.useState(false);
+    const [hovered, setHovered] = React.useState<string | null>(null);
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -53,13 +55,22 @@ export function Navbar() {
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-6">
+                <nav className="hidden md:flex items-center gap-2">
                     {navItems.map((item) => (
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                            onMouseEnter={() => setHovered(item.name)}
+                            onMouseLeave={() => setHovered(null)}
+                            className="relative flex items-center gap-2 px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors rounded-md"
                         >
+                            {hovered === item.name && (
+                                <motion.span
+                                    layoutId="nav-pill"
+                                    className="absolute inset-0 bg-primary/10 rounded-md -z-10"
+                                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                />
+                            )}
                             <item.icon className="h-4 w-4" />
                             {item.name}
                         </Link>

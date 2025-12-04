@@ -1,19 +1,50 @@
 "use client";
 
 import * as React from "react";
-import { Send, Loader2, CheckCircle2, XCircle } from "lucide-react";
+import { Send, Loader2, CheckCircle2, XCircle, Bell } from "lucide-react";
 import { cn } from "@/utils/cn";
+import {
+    AlertDialog,
+    AlertDialogContent,
+    AlertDialogDescription,
+    AlertDialogHeader,
+    AlertDialogTitle,
+} from "@/components/ui/base-alert-dialog";
 
 export function ContactForm() {
     const [isLoading, setIsLoading] = React.useState(false);
-    const [status, setStatus] = React.useState<"idle" | "success" | "error">("idle");
-    const [errorMessage, setErrorMessage] = React.useState("");
+    const [dialogOpen, setDialogOpen] = React.useState(false);
+    const [dialogContent, setDialogContent] = React.useState<{
+        title: string;
+        description: string;
+        type: "success" | "error";
+    }>({ title: "", description: "", type: "success" });
+    const [showSlowMessage, setShowSlowMessage] = React.useState(false);
+
+    React.useEffect(() => {
+        let timer: NodeJS.Timeout;
+        if (isLoading) {
+            timer = setTimeout(() => setShowSlowMessage(true), 5000);
+        } else {
+            setShowSlowMessage(false);
+        }
+        return () => clearTimeout(timer);
+    }, [isLoading]);
+
+    const hasWarmedUp = React.useRef(false);
+
+    const warmUpBackend = () => {
+        if (hasWarmedUp.current) return;
+        hasWarmedUp.current = true;
+        fetch("https://backend-contactus-cojf.onrender.com/", { method: "HEAD", mode: "no-cors" }).catch(() => {
+            // Ignore errors, this is just a warm-up
+        });
+    };
 
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
         setIsLoading(true);
-        setStatus("idle");
-        setErrorMessage("");
+        setDialogOpen(false);
 
         const formData = new FormData(event.currentTarget);
         const data = {
@@ -32,15 +63,28 @@ export function ContactForm() {
             const result = await res.json();
 
             if (res.ok && result.success) {
-                setStatus("success");
+                setDialogContent({
+                    title: "Message Sent!",
+                    description: "Thank you for reaching out. I'll get back to you as soon as possible.",
+                    type: "success",
+                });
+                setDialogOpen(true);
                 (event.target as HTMLFormElement).reset();
             } else {
-                setStatus("error");
-                setErrorMessage(result.message || "Failed to send message.");
+                setDialogContent({
+                    title: "Failed to Send",
+                    description: result.message || "Failed to send message. Please try again.",
+                    type: "error",
+                });
+                setDialogOpen(true);
             }
         } catch (error) {
-            setStatus("error");
-            setErrorMessage("Something went wrong. Please try again.");
+            setDialogContent({
+                title: "Error",
+                description: "Something went wrong. Please try again later.",
+                type: "error",
+            });
+            setDialogOpen(true);
             console.error(error);
         } finally {
             setIsLoading(false);
@@ -48,7 +92,7 @@ export function ContactForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6" onMouseEnter={warmUpBackend} onFocus={warmUpBackend}>
             <div className="grid sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
@@ -112,19 +156,25 @@ export function ContactForm() {
                 )}
             </button>
 
-            {status === "success" && (
-                <div className="p-4 rounded-md bg-green-500/10 text-green-600 flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5" />
-                    Message sent successfully!
-                </div>
+            {showSlowMessage && isLoading && (
+                <p className="text-xs text-muted-foreground text-center animate-pulse">
+                    Connecting to server... This might take up to 30s on the first request.
+                </p>
             )}
 
-            {status === "error" && (
-                <div className="p-4 rounded-md bg-red-500/10 text-red-600 flex items-center gap-2">
-                    <XCircle className="h-5 w-5" />
-                    {errorMessage}
-                </div>
-            )}
+            <AlertDialog open={dialogOpen} onOpenChange={setDialogOpen}>
+                <AlertDialogContent showDismissButton={true}>
+                    <AlertDialogHeader>
+                        <AlertDialogTitle className={cn("flex items-center gap-2", dialogContent.type === "success" ? "text-green-600" : "text-red-600")}>
+                            {dialogContent.type === "success" ? <CheckCircle2 className="h-5 w-5" /> : <XCircle className="h-5 w-5" />}
+                            {dialogContent.title}
+                        </AlertDialogTitle>
+                        <AlertDialogDescription>
+                            {dialogContent.description}
+                        </AlertDialogDescription>
+                    </AlertDialogHeader>
+                </AlertDialogContent>
+            </AlertDialog>
         </form>
     );
 }
