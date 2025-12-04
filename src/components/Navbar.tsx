@@ -111,7 +111,8 @@ export function Navbar() {
                     <ThemeToggle />
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="p-2 text-muted-foreground hover:text-foreground"
+                        className="p-3 text-muted-foreground hover:text-foreground"
+                        aria-label="Toggle menu"
                     >
                         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                     </button>
@@ -127,7 +128,7 @@ export function Navbar() {
                                 key={item.name}
                                 href={item.href}
                                 onClick={() => setIsOpen(false)}
-                                className="flex items-center gap-3 text-sm font-medium text-muted-foreground hover:text-primary transition-colors p-2 rounded-md hover:bg-muted"
+                                className="flex items-center gap-3 text-base font-medium text-muted-foreground hover:text-primary transition-colors p-3 rounded-md hover:bg-muted"
                             >
                                 <item.icon className="h-5 w-5" />
                                 {item.name}
