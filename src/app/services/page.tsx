@@ -22,6 +22,7 @@ import {
 import { cn } from "@/utils/cn";
 import Image from "next/image";
 import { ASSETS_PREFIX } from "@/utils/constants";
+import Link from "next/link";
 
 export default function ServicesPage() {
     return (
@@ -262,12 +263,12 @@ export default function ServicesPage() {
                         <p className="text-xl text-muted-foreground mb-8">
                             Let’s turn your ideas into working digital assets.
                         </p>
-                        <a
+                        <Link
                             href="/contact"
                             className="inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
                         >
                             <MessageCircle className="mr-2 h-5 w-5" /> Contact Me
-                        </a>
+                        </Link>
                     </motion.div>
                 </div>
             </section>
