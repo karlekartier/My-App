@@ -1,5 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, Send } from "lucide-react";
 import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
 import { GridBackground } from "@/components/ui/grid-background";
@@ -49,11 +50,11 @@ export function Footer() {
                             <div>
                                 <h6 className="font-bold mb-4">Useful Links</h6>
                                 <ul className="space-y-3">
-                                    <li><a href="#home" className="text-muted-foreground hover:text-primary transition-colors">Home</a></li>
-                                    <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Services</a></li>
-                                    <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">My Works</a></li>
-                                    <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
-                                    <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Blog</a></li>
+                                    <li><Link href="/#home" className="text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
+                                    <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
+                                    <li><Link href="/#works" className="text-muted-foreground hover:text-primary transition-colors">My Works</Link></li>
+                                    <li><Link href="/#about" className="text-muted-foreground hover:text-primary transition-colors">About</Link></li>
+                                    <li><Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
                                 </ul>
                             </div>
 

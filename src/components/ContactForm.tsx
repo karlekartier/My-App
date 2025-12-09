@@ -33,13 +33,8 @@ export function ContactForm() {
 
     const hasWarmedUp = React.useRef(false);
 
-    const warmUpBackend = () => {
-        if (hasWarmedUp.current) return;
-        hasWarmedUp.current = true;
-        fetch("https://backend-contactus-cojf.onrender.com/", { method: "HEAD", mode: "no-cors" }).catch(() => {
-            // Ignore errors, this is just a warm-up
-        });
-    };
+    // Backend is now local Next.js API (Serverless), no warm-up needed.
+    const warmUpBackend = () => { };
 
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -54,7 +49,7 @@ export function ContactForm() {
         };
 
         try {
-            const res = await fetch("https://backend-contactus-cojf.onrender.com/contact", {
+            const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
@@ -156,11 +151,7 @@ export function ContactForm() {
                 )}
             </button>
 
-            {showSlowMessage && isLoading && (
-                <p className="text-xs text-muted-foreground text-center animate-pulse">
-                    Connecting to server... This might take up to 30s on the first request.
-                </p>
-            )}
+
 
             <AlertDialog open={dialogOpen} onOpenChange={setDialogOpen}>
                 <AlertDialogContent showDismissButton={true}>
