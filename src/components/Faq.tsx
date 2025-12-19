@@ -10,14 +10,14 @@ const faqs = [
         question: "What services do you offer?",
         answer: (
             <>
-                <p>I specialize in Digital Marketing, Web Design, UI/UX Development, & Motion Graphics.</p>
-                <p className="mb-0">From building SEO-friendly websites to creating engaging designs and brand campaigns, I help businesses strengthen their online presence.</p>
+                <p>I specialize in **Frontend Development (React, Next.js, Bootstrap 5)**, UI/UX Development, & Motion Graphics.</p>
+                <p className="mb-0">From building responsive, high-performance web applications to creating engaging designs and brand campaigns, I help businesses strengthen their online presence.</p>
             </>
         ),
     },
     {
-        question: "Can you design and market a complete website for my business?",
-        answer: "Yes! I can handle end-to-end — from UI/UX design, development, SEO optimization, & social media marketing — to ensure your website not only looks great but also performs well in search engines.",
+        question: "Can you design and develop a complete website for my business?",
+        answer: "Yes! I can handle end-to-end — from UI/UX design & prototyping to building fully responsive, SEO-optimized web applications using React and Next.js.",
     },
     {
         question: "Do you provide freelance or full-time services?",
@@ -25,7 +25,7 @@ const faqs = [
     },
     {
         question: "What tools and platforms do you work with?",
-        answer: "I work with All Adobe Creative Suite, Canva, SEO tools, Google Ads, Meta Ads, & front-end technologies like HTML, CSS, & JavaScript.",
+        answer: "I work with React, Next.js, Bootstrap 5, SASS, the Adobe Creative Suite, and modern frontend tools like VS Code and Git.",
     },
     {
         question: "How do I get in touch with you for collaborations?",

@@ -149,7 +149,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e
 ;
 const metadata = {
     title: "Karthick Kishore | Portfolio",
-    description: "Digital Marketer & Motion Graphics Expert",
+    description: "Frontend Developer & UI/UX Designer",
     icons: {
         icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/favicon/kk_logo.svg`
     }

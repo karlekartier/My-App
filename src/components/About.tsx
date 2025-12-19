@@ -25,10 +25,10 @@ const education = [
         description: "Graduated with First Class (81%). Certified by Madras University.",
     },
     {
-        year: "2021-2025",
-        title: "Digital Marketer & Designer",
+        year: "2021-Present",
+        title: "Frontend Developer",
         institution: "RSoft Technologies Pvt. Ltd.",
-        description: "Specialized in SEO, Social Media, Motion Graphics & Web Design.",
+        description: "Specializing in React, Next.js, and building high-performance web applications.",
     },
 ];
 
@@ -46,10 +46,10 @@ export function About() {
                     >
                         <h2 className="text-3xl font-bold mb-6">About Me</h2>
                         <p className="text-lg text-muted-foreground mb-6">
-                            I'm a passionate <strong>Digital Marketer, Designer, & Motion Graphics Artist</strong> specializing in front-end development, branding, & AI-driven strategies.
+                            <strong>Frontend Developer</strong> with 4+ years of experience building responsive, high-performance web applications using <strong>Bootstrap 5, React, and Next.js.</strong>
                         </p>
                         <p className="text-muted-foreground mb-8">
-                            With expertise in <strong>UI/UX, web technologies,</strong> & marketing analytics, I craft engaging, result-oriented digital experiences that blend creativity & technology.
+                            Strong in translating <strong>UI/UX designs into clean, reusable components</strong> and optimizing performance for better user experience. Experienced in Git, API integration, and modern frontend workflows.
                         </p>
 
                         <div className="bg-card p-6 rounded-xl border shadow-sm">

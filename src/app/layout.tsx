@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Karthick Kishore | Portfolio",
-  description: "Digital Marketer & Motion Graphics Expert",
+  description: "Frontend Developer & UI/UX Designer",
   icons: {
     icon: `${ASSETS_PREFIX}/assets/favicon/kk_logo.svg`,
   },

@@ -3,7 +3,6 @@
 import * as React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { FileCode, Palette, FileJson, Code, Layers } from "lucide-react";
 import { cn } from "@/utils/cn";
 import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
 
@@ -23,8 +22,15 @@ const skills = [
         description: "Designing responsive, visually engaging layouts with Flexbox, Grid, animations, and transitions, optimized using SASS for scalability and maintainability.",
     },
     {
+        title: "Bootstrap 5",
+        icon: `${ASSETS_PREFIX}/assets/images/icons/bootstrap-logo.svg`,
+        progress: 88,
+        color: "bg-purple-600",
+        description: "Building responsive, mobile-first sites with the world's most popular front-end open source toolkit.",
+    },
+    {
         title: "JavaScript",
-        icon: Code, // Fallback to Lucide icon
+        icon: `${ASSETS_PREFIX}/assets/images/icons/javascript-logo.svg`,
         progress: 85,
         color: "bg-yellow-400",
         description: "Enhancing interactivity and functionality in web applications using JavaScript, leveraging tools like Node.js for backend scripting and Figma for interactive UI/UX prototyping.",
@@ -49,18 +55,11 @@ export function DetailedSkills() {
     return (
         <section className="py-20 bg-secondary/20">
             <div className="container">
-                <div className="grid lg:grid-cols-2 gap-8 mb-12 items-center">
-                    <div>
-                        <h2 className="text-3xl font-bold mb-4">My Skills & Expertise</h2>
-                        <p className="text-muted-foreground">
-                            With a blend of development and design skills, I bring creativity and functionality together to deliver high-quality digital experiences.
-                        </p>
-                    </div>
-                    <div className="flex justify-start lg:justify-end">
-                        <a href="#services" className="px-6 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors font-medium">
-                            See all services
-                        </a>
-                    </div>
+                <div className="text-center max-w-2xl mx-auto mb-16">
+                    <h2 className="text-3xl font-bold mb-4">My Skills & Expertise</h2>
+                    <p className="text-muted-foreground">
+                        A comprehensive overview of my technical proficiency and the technologies I use to build modern web solutions.
+                    </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
@@ -70,16 +69,12 @@ export function DetailedSkills() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="bg-card rounded-xl p-6 shadow-sm border hover:shadow-md transition-shadow"
                         >
                             <div className="flex items-start gap-4 mb-4">
                                 <div className="p-3 bg-secondary rounded-lg">
-                                    {typeof skill.icon === "string" ? (
-                                        <Image src={skill.icon} alt={skill.title} width={32} height={32} className="w-8 h-8" />
-                                    ) : (
-                                        <skill.icon className="w-8 h-8 text-primary" />
-                                    )}
+                                    <Image src={skill.icon} alt={skill.title} width={32} height={32} className="w-8 h-8" />
                                 </div>
                                 <div className="flex-1">
                                     <h3 className="text-xl font-bold mb-2 flex items-center justify-between">

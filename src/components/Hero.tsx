@@ -43,10 +43,10 @@ export function Hero() {
                             <span>A Passionate</span>
                             <WordRotate
                                 words={[
-                                    "Web Developer",
+                                    "Frontend Developer",
+                                    "React & Next.js Expert",
                                     "UI/UX Designer",
-                                    "Motion Graphic Artist",
-                                    "SEO specialist",
+                                    "Bootstrap Developer",
                                 ]}
                                 className="font-bold text-foreground"
                             />

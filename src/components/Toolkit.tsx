@@ -9,6 +9,20 @@ import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
 
 const tabs = [
     {
+        id: "frontend",
+        label: "Front-End-Dev",
+        icon: Layout,
+        content: {
+            title: "Front-End Development",
+            description: (
+                <p>
+                    Crafting seamless, responsive, & user-friendly web experiences <strong>using HTML, CSS, Bootstrap 5, React, & Next.js.</strong> With a focus on clean code & modern UI/UX principles, I ensure visually stunning & high-performing sites that enhance user engagement.
+                </p>
+            ),
+            image: `${ASSETS_PREFIX}/assets/images/vs_deploy.webp`,
+        },
+    },
+    {
         id: "adobe",
         label: "Adobe Creative Suite",
         icon: PenTool,
@@ -54,20 +68,6 @@ const tabs = [
         },
     },
     {
-        id: "frontend",
-        label: "Front-End-Dev",
-        icon: Layout,
-        content: {
-            title: "Front-End Development",
-            description: (
-                <p>
-                    Crafting seamless, responsive, & user-friendly web experiences <strong>using HTML, CSS, Bootstrap 5, & SASS.</strong> With a focus on clean code & modern UI/UX principles, I ensure visually stunning & high-performing websites that enhance user engagement.
-                </p>
-            ),
-            image: `${ASSETS_PREFIX}/assets/images/vs_deploy.webp`,
-        },
-    },
-    {
         id: "ai",
         label: "Ai-tool",
         icon: Brain,
@@ -91,7 +91,7 @@ const tabs = [
 ];
 
 export function Toolkit() {
-    const [activeTab, setActiveTab] = React.useState(tabs[0].id);
+    const [activeTab, setActiveTab] = React.useState("frontend");
 
     return (
         <section id="toolkit" className="py-20">

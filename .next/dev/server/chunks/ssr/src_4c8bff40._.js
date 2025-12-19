@@ -669,10 +669,10 @@ function Hero() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$magicui$2f$word$2d$rotate$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["WordRotate"], {
                                                 words: [
-                                                    "Web Developer",
+                                                    "Frontend Developer",
+                                                    "React & Next.js Expert",
                                                     "UI/UX Designer",
-                                                    "Motion Graphic Artist",
-                                                    "SEO specialist"
+                                                    "Bootstrap Developer"
                                                 ],
                                                 className: "font-bold text-foreground"
                                             }, void 0, false, {
@@ -918,10 +918,10 @@ const education = [
         description: "Graduated with First Class (81%). Certified by Madras University."
     },
     {
-        year: "2021-2025",
-        title: "Digital Marketer & Designer",
+        year: "2021-Present",
+        title: "Frontend Developer",
         institution: "RSoft Technologies Pvt. Ltd.",
-        description: "Specialized in SEO, Social Media, Motion Graphics & Web Design."
+        description: "Specializing in React, Next.js, and building high-performance web applications."
     }
 ];
 function About() {
@@ -960,15 +960,21 @@ function About() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-lg text-muted-foreground mb-6",
                                 children: [
-                                    "I'm a passionate ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                        children: "Digital Marketer, Designer, & Motion Graphics Artist"
+                                        children: "Frontend Developer"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
                                         lineNumber: 49,
-                                        columnNumber: 46
+                                        columnNumber: 29
                                     }, this),
-                                    " specializing in front-end development, branding, & AI-driven strategies."
+                                    " with 4+ years of experience building responsive, high-performance web applications using ",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                        children: "Bootstrap 5, React, and Next.js."
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/About.tsx",
+                                        lineNumber: 49,
+                                        columnNumber: 154
+                                    }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/About.tsx",
@@ -978,15 +984,15 @@ function About() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-muted-foreground mb-8",
                                 children: [
-                                    "With expertise in ",
+                                    "Strong in translating ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                        children: "UI/UX, web technologies,"
+                                        children: "UI/UX designs into clean, reusable components"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
                                         lineNumber: 52,
-                                        columnNumber: 47
+                                        columnNumber: 51
                                     }, this),
-                                    " & marketing analytics, I craft engaging, result-oriented digital experiences that blend creativity & technology."
+                                    " and optimizing performance for better user experience. Experienced in Git, API integration, and modern frontend workflows."
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/About.tsx",
@@ -1208,6 +1214,32 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e
 ;
 const tabs = [
     {
+        id: "frontend",
+        label: "Front-End-Dev",
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$panels$2d$top$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Layout$3e$__["Layout"],
+        content: {
+            title: "Front-End Development",
+            description: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                children: [
+                    "Crafting seamless, responsive, & user-friendly web experiences ",
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                        children: "using HTML, CSS, Bootstrap 5, React, & Next.js."
+                    }, void 0, false, {
+                        fileName: "[project]/src/components/Toolkit.tsx",
+                        lineNumber: 19,
+                        columnNumber: 84
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    " With a focus on clean code & modern UI/UX principles, I ensure visually stunning & high-performing sites that enhance user engagement."
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/components/Toolkit.tsx",
+                lineNumber: 18,
+                columnNumber: 17
+            }, ("TURBOPACK compile-time value", void 0)),
+            image: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/vs_deploy.webp`
+        }
+    },
+    {
         id: "adobe",
         label: "Adobe Creative Suite",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$pen$2d$tool$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__PenTool$3e$__["PenTool"],
@@ -1223,14 +1255,14 @@ const tabs = [
                                 children: "vector animations, comic-style graphics, & engaging explainer videos"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Toolkit.tsx",
-                                lineNumber: 20,
+                                lineNumber: 34,
                                 columnNumber: 34
                             }, ("TURBOPACK compile-time value", void 0)),
                             " that bring ideas to life."
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Toolkit.tsx",
-                        lineNumber: 19,
+                        lineNumber: 33,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1240,14 +1272,14 @@ const tabs = [
                                 children: "design, storytelling, & digital growth,"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Toolkit.tsx",
-                                lineNumber: 23,
+                                lineNumber: 37,
                                 columnNumber: 42
                             }, ("TURBOPACK compile-time value", void 0)),
                             " I bring creativity and technical expertise to every project I work on."
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Toolkit.tsx",
-                        lineNumber: 22,
+                        lineNumber: 36,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
@@ -1271,7 +1303,7 @@ const tabs = [
                                 children: "SEO & Content Strategy"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Toolkit.tsx",
-                                lineNumber: 39,
+                                lineNumber: 53,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1279,13 +1311,13 @@ const tabs = [
                                 children: "Implementing search engine optimization (SEO) best practices, keyword research, and content marketing strategies to improve online visibility."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Toolkit.tsx",
-                                lineNumber: 40,
+                                lineNumber: 54,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Toolkit.tsx",
-                        lineNumber: 38,
+                        lineNumber: 52,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1295,7 +1327,7 @@ const tabs = [
                                 children: "Social Media & Ads"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Toolkit.tsx",
-                                lineNumber: 43,
+                                lineNumber: 57,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1303,13 +1335,13 @@ const tabs = [
                                 children: "Expertise in running targeted campaigns on platforms like Google Ads, Facebook, and Instagram to maximize brand reach and engagement."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Toolkit.tsx",
-                                lineNumber: 44,
+                                lineNumber: 58,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Toolkit.tsx",
-                        lineNumber: 42,
+                        lineNumber: 56,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1319,7 +1351,7 @@ const tabs = [
                                 children: "Analytics & Optimization"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Toolkit.tsx",
-                                lineNumber: 47,
+                                lineNumber: 61,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1327,49 +1359,23 @@ const tabs = [
                                 children: "Leveraging data-driven insights to enhance campaign performance and conversion rates."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Toolkit.tsx",
-                                lineNumber: 48,
+                                lineNumber: 62,
                                 columnNumber: 25
                             }, ("TURBOPACK compile-time value", void 0))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Toolkit.tsx",
-                        lineNumber: 46,
+                        lineNumber: 60,
                         columnNumber: 21
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Toolkit.tsx",
-                lineNumber: 37,
+                lineNumber: 51,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
             image: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/svg/light/digitalmarketing.svg`,
             darkImage: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/svg/dark/digitalmarketingdark.svg`
-        }
-    },
-    {
-        id: "frontend",
-        label: "Front-End-Dev",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$panels$2d$top$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Layout$3e$__["Layout"],
-        content: {
-            title: "Front-End Development",
-            description: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    "Crafting seamless, responsive, & user-friendly web experiences ",
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                        children: "using HTML, CSS, Bootstrap 5, & SASS."
-                    }, void 0, false, {
-                        fileName: "[project]/src/components/Toolkit.tsx",
-                        lineNumber: 64,
-                        columnNumber: 84
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    " With a focus on clean code & modern UI/UX principles, I ensure visually stunning & high-performing websites that enhance user engagement."
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/components/Toolkit.tsx",
-                lineNumber: 63,
-                columnNumber: 17
-            }, ("TURBOPACK compile-time value", void 0)),
-            image: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/vs_deploy.webp`
         }
     },
     {
@@ -1440,7 +1446,7 @@ const tabs = [
     }
 ];
 function Toolkit() {
-    const [activeTab, setActiveTab] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"](tabs[0].id);
+    const [activeTab, setActiveTab] = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"]("frontend");
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "toolkit",
         className: "py-20",
@@ -2098,11 +2104,9 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$code$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Code$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/code.js [app-ssr] (ecmascript) <export default as Code>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$cn$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/utils/cn.ts [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/utils/constants.ts [app-ssr] (ecmascript)");
 "use client";
-;
 ;
 ;
 ;
@@ -2124,8 +2128,15 @@ const skills = [
         description: "Designing responsive, visually engaging layouts with Flexbox, Grid, animations, and transitions, optimized using SASS for scalability and maintainability."
     },
     {
+        title: "Bootstrap 5",
+        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/icons/bootstrap-logo.svg`,
+        progress: 88,
+        color: "bg-purple-600",
+        description: "Building responsive, mobile-first sites with the world's most popular front-end open source toolkit."
+    },
+    {
         title: "JavaScript",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$code$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Code$3e$__["Code"],
+        icon: `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/icons/javascript-logo.svg`,
         progress: 85,
         color: "bg-yellow-400",
         description: "Enhancing interactivity and functionality in web applications using JavaScript, leveraging tools like Node.js for backend scripting and Figma for interactive UI/UX prototyping."
@@ -2152,52 +2163,28 @@ function DetailedSkills() {
             className: "container",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "grid lg:grid-cols-2 gap-8 mb-12 items-center",
+                    className: "text-center max-w-2xl mx-auto mb-16",
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-3xl font-bold mb-4",
-                                    children: "My Skills & Expertise"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/DetailedSkills.tsx",
-                                    lineNumber: 54,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-muted-foreground",
-                                    children: "With a blend of development and design skills, I bring creativity and functionality together to deliver high-quality digital experiences."
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/DetailedSkills.tsx",
-                                    lineNumber: 55,
-                                    columnNumber: 25
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/DetailedSkills.tsx",
-                            lineNumber: 53,
-                            columnNumber: 21
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex justify-start lg:justify-end",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                href: "#services",
-                                className: "px-6 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors font-medium",
-                                children: "See all services"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/DetailedSkills.tsx",
-                                lineNumber: 60,
-                                columnNumber: 25
-                            }, this)
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "text-3xl font-bold mb-4",
+                            children: "My Skills & Expertise"
                         }, void 0, false, {
                             fileName: "[project]/src/components/DetailedSkills.tsx",
                             lineNumber: 59,
+                            columnNumber: 21
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-muted-foreground",
+                            children: "A comprehensive overview of my technical proficiency and the technologies I use to build modern web solutions."
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/DetailedSkills.tsx",
+                            lineNumber: 60,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/DetailedSkills.tsx",
-                    lineNumber: 52,
+                    lineNumber: 58,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2215,8 +2202,8 @@ function DetailedSkills() {
                                 once: true
                             },
                             transition: {
-                                delay: index * 0.1,
-                                duration: 0.5
+                                duration: 0.5,
+                                delay: index * 0.1
                             },
                             className: "bg-card rounded-xl p-6 shadow-sm border hover:shadow-md transition-shadow",
                             children: [
@@ -2225,7 +2212,7 @@ function DetailedSkills() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "p-3 bg-secondary rounded-lg",
-                                            children: typeof skill.icon === "string" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                 src: skill.icon,
                                                 alt: skill.title,
                                                 width: 32,
@@ -2233,18 +2220,12 @@ function DetailedSkills() {
                                                 className: "w-8 h-8"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/DetailedSkills.tsx",
-                                                lineNumber: 79,
-                                                columnNumber: 41
-                                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(skill.icon, {
-                                                className: "w-8 h-8 text-primary"
-                                            }, void 0, false, {
-                                                fileName: "[project]/src/components/DetailedSkills.tsx",
-                                                lineNumber: 81,
-                                                columnNumber: 41
+                                                lineNumber: 77,
+                                                columnNumber: 37
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/DetailedSkills.tsx",
-                                            lineNumber: 77,
+                                            lineNumber: 76,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2262,13 +2243,13 @@ function DetailedSkills() {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/src/components/DetailedSkills.tsx",
-                                                            lineNumber: 87,
+                                                            lineNumber: 82,
                                                             columnNumber: 41
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/components/DetailedSkills.tsx",
-                                                    lineNumber: 85,
+                                                    lineNumber: 80,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2290,24 +2271,24 @@ function DetailedSkills() {
                                                         className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$utils$2f$cn$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("h-full rounded-full", skill.color)
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/DetailedSkills.tsx",
-                                                        lineNumber: 90,
+                                                        lineNumber: 85,
                                                         columnNumber: 41
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/DetailedSkills.tsx",
-                                                    lineNumber: 89,
+                                                    lineNumber: 84,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/DetailedSkills.tsx",
-                                            lineNumber: 84,
+                                            lineNumber: 79,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/DetailedSkills.tsx",
-                                    lineNumber: 76,
+                                    lineNumber: 75,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2315,29 +2296,29 @@ function DetailedSkills() {
                                     children: skill.description
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/DetailedSkills.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 95,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, index, true, {
                             fileName: "[project]/src/components/DetailedSkills.tsx",
-                            lineNumber: 68,
+                            lineNumber: 67,
                             columnNumber: 25
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/src/components/DetailedSkills.tsx",
-                    lineNumber: 66,
+                    lineNumber: 65,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/DetailedSkills.tsx",
-            lineNumber: 51,
+            lineNumber: 57,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/DetailedSkills.tsx",
-        lineNumber: 50,
+        lineNumber: 56,
         columnNumber: 9
     }, this);
 }
