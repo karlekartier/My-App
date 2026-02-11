@@ -102,7 +102,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "D:\\Karl\\karthi\\myapp",
+    "outputFileTracingRoot": "C:\\Users\\karth",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -292,12 +292,12 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "D:\\Karl\\karthi\\myapp"
+      "root": "C:\\Users\\karth"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "D:\\Karl\\karthi\\myapp",
-  "relativeAppDir": "",
+  "appDir": "C:\\Users\\karth\\Documents\\github\\My-App",
+  "relativeAppDir": "Documents\\github\\My-App",
   "files": [
     ".next\\routes-manifest.json",
     ".next\\server\\pages-manifest.json",

@@ -12,15 +12,19 @@ const skills = [
     },
     {
         title: "Analytics & Optimization",
-        icon: `${ASSETS_PREFIX}/assets/images/icons/google-ads.svg`,
+        icon: `${ASSETS_PREFIX}/assets/images/icons/google-analytics.svg`,
     },
     {
-        title: "Development & Coding Tools",
-        icon: `${ASSETS_PREFIX}/assets/images/icons/vs-code.svg`,
+        title: "Google_Antigravity",
+        icon: `${ASSETS_PREFIX}/assets/images/icons/Google_Antigravit.svg`,
     },
     {
         title: "ChatGPT & AI Tools",
         icon: `${ASSETS_PREFIX}/assets/images/icons/chatgpt.svg`,
+    },
+    {
+        title: "GitHub",
+        icon: `${ASSETS_PREFIX}/assets/images/icons/github.svg`,
     },
 ];
 
