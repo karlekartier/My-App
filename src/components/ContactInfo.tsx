@@ -1,7 +1,8 @@
 "use client";
 
-import * as React from "react";
+import Link from "next/link";
 import { MessageSquare, HelpCircle, Globe, ArrowRight } from "lucide-react";
+import { BASE_PATH } from "@/utils/constants";
 
 const items = [
     {
@@ -9,14 +10,14 @@ const items = [
         title: "Chat Help",
         description: "Instant assistance with real-time responses for seamless user experience.",
         linkText: "Talk to me",
-        href: "#",
+        href: "/contact",
     },
     {
         icon: HelpCircle,
         title: "FAQ",
         description: "Quick answers to common queries, ensuring clarity and easy navigation.",
         linkText: "Learn more",
-        href: "#",
+        href: "/#about",
     },
     {
         icon: Globe,
@@ -44,13 +45,13 @@ export function ContactInfo() {
                                 <p className="text-muted-foreground mb-3 leading-relaxed">
                                     {item.description}
                                 </p>
-                                <a
+                                <Link
                                     href={item.href}
                                     className="inline-flex items-center text-primary font-medium hover:underline"
                                 >
                                     {item.linkText}
                                     <ArrowRight className="w-4 h-4 ml-2" />
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     ))}
