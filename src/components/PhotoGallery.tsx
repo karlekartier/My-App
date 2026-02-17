@@ -12,9 +12,10 @@ import { Button } from "@/components/ui/button";
 const GALLERY_ITEMS = [
     // Bike
     { src: "bike/20180502_135814-1.jpg", category: "Bike" },
-    { src: "bike/20221016_155224.heif", category: "Bike" },
-    { src: "bike/20221016_155313.heif", category: "Bike" },
-    { src: "bike/20221016_160447.heif", category: "Bike" },
+    { src: "bike/20221016_155224.jpg", category: "Bike" },
+    { src: "bike/20221016_155313.jpg", category: "Bike" },
+    { src: "bike/20221016_160447.jpg", category: "Bike" },
+    // Removed broken HEIF files
 
     // Car
     { src: "car/20241030_133948.jpg", category: "Car" },
@@ -28,7 +29,7 @@ const GALLERY_ITEMS = [
     { src: "family/20241021_154311.jpg", category: "Family" },
     { src: "family/20250330_134628.jpg", category: "Family" },
     { src: "family/20250330_134715.jpg", category: "Family" },
-    { src: "family/SRP_10417.JPG", category: "Family" },
+    // Removed SRP_10417.JPG (Missing)
     { src: "family/SRP_10420.JPG", category: "Family" },
     { src: "family/SRP_10421.JPG", category: "Family" },
     { src: "family/SRP_10422.JPG", category: "Family" },
@@ -52,7 +53,7 @@ const GALLERY_ITEMS = [
     { src: "in_childhood/New Doc 2019-06-26 22.18.58_1.jpg", category: "In Childhood" },
 
     // Sis
-    { src: "sis/20230618_162046.jpg", category: "Sis" },
+    // Removed 20230618_162046.jpg (Missing)
     { src: "sis/20241021_135447.jpg", category: "Sis" },
     { src: "sis/20241021_135451.jpg", category: "Sis" },
     { src: "sis/20241021_154226.jpg", category: "Sis" },
@@ -77,7 +78,7 @@ const GALLERY_ITEMS = [
     { src: "20250209_171013.jpg", category: "Karle" },
     { src: "20250209_171018.jpg", category: "Karle" },
     { src: "20251005_173934.jpg", category: "Karle" },
-    { src: "20260117_174926.heic", category: "Karle" },
+    // Removed HEIC
     { src: "IMG-20200124-WA0003.jpg", category: "Karle" },
     { src: "IMG-20200821-WA0002.jpg", category: "Karle" },
     { src: "IMG-20200923-WA0036.jpg", category: "Karle" },
@@ -149,7 +150,7 @@ export function PhotoGallery() {
                 {visibleImages.length > 0 ? (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         <AnimatePresence mode="popLayout">
-                            {visibleImages.map((item) => (
+                            {visibleImages.map((item, index) => (
                                 <motion.div
                                     key={item.src}
                                     layout
@@ -164,6 +165,7 @@ export function PhotoGallery() {
                                         src={`${ASSETS_PREFIX}/assets/images/Gallery/${item.src}`}
                                         alt={`Gallery Image - ${item.category}`}
                                         fill
+                                        priority={index < 4} // Priorities first 4 images
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     />

@@ -119,17 +119,18 @@ const GALLERY_ITEMS = [
         category: "Bike"
     },
     {
-        src: "bike/20221016_155224.heif",
+        src: "bike/20221016_155224.jpg",
         category: "Bike"
     },
     {
-        src: "bike/20221016_155313.heif",
+        src: "bike/20221016_155313.jpg",
         category: "Bike"
     },
     {
-        src: "bike/20221016_160447.heif",
+        src: "bike/20221016_160447.jpg",
         category: "Bike"
     },
+    // Removed broken HEIF files
     // Car
     {
         src: "car/20241030_133948.jpg",
@@ -168,10 +169,7 @@ const GALLERY_ITEMS = [
         src: "family/20250330_134715.jpg",
         category: "Family"
     },
-    {
-        src: "family/SRP_10417.JPG",
-        category: "Family"
-    },
+    // Removed SRP_10417.JPG (Missing)
     {
         src: "family/SRP_10420.JPG",
         category: "Family"
@@ -243,10 +241,7 @@ const GALLERY_ITEMS = [
         category: "In Childhood"
     },
     // Sis
-    {
-        src: "sis/20230618_162046.jpg",
-        category: "Sis"
-    },
+    // Removed 20230618_162046.jpg (Missing)
     {
         src: "sis/20241021_135447.jpg",
         category: "Sis"
@@ -336,10 +331,7 @@ const GALLERY_ITEMS = [
         src: "20251005_173934.jpg",
         category: "Karle"
     },
-    {
-        src: "20260117_174926.heic",
-        category: "Karle"
-    },
+    // Removed HEIC
     {
         src: "IMG-20200124-WA0003.jpg",
         category: "Karle"
@@ -426,12 +418,12 @@ function PhotoGallery() {
                         children: category
                     }, category, false, {
                         fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                        lineNumber: 132,
+                        lineNumber: 133,
                         columnNumber: 21
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                lineNumber: 130,
+                lineNumber: 131,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -440,7 +432,7 @@ function PhotoGallery() {
                     className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
                         mode: "popLayout",
-                        children: visibleImages.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        children: visibleImages.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                 layout: true,
                                 initial: {
                                     opacity: 0,
@@ -464,11 +456,12 @@ function PhotoGallery() {
                                         src: `${__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/Gallery/${item.src}`,
                                         alt: `Gallery Image - ${item.category}`,
                                         fill: true,
+                                        priority: index < 4,
                                         className: "object-cover transition-transform duration-700 group-hover:scale-110",
                                         sizes: "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                                        lineNumber: 163,
+                                        lineNumber: 164,
                                         columnNumber: 37
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -480,12 +473,12 @@ function PhotoGallery() {
                                                     className: "w-6 h-6 text-white"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                                                    lineNumber: 174,
+                                                    lineNumber: 176,
                                                     columnNumber: 45
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                                                lineNumber: 173,
+                                                lineNumber: 175,
                                                 columnNumber: 41
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -495,34 +488,34 @@ function PhotoGallery() {
                                                     children: item.category
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                                                    lineNumber: 177,
+                                                    lineNumber: 179,
                                                     columnNumber: 45
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                                                lineNumber: 176,
+                                                lineNumber: 178,
                                                 columnNumber: 41
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                                        lineNumber: 172,
+                                        lineNumber: 174,
                                         columnNumber: 37
                                     }, this)
                                 ]
                             }, item.src, true, {
                                 fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                                lineNumber: 153,
+                                lineNumber: 154,
                                 columnNumber: 33
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                        lineNumber: 151,
+                        lineNumber: 152,
                         columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                    lineNumber: 150,
+                    lineNumber: 151,
                     columnNumber: 21
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex items-center justify-center h-40",
@@ -531,17 +524,17 @@ function PhotoGallery() {
                         children: "No images found in this category."
                     }, void 0, false, {
                         fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                        lineNumber: 188,
+                        lineNumber: 190,
                         columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                    lineNumber: 187,
+                    lineNumber: 189,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                lineNumber: 148,
+                lineNumber: 149,
                 columnNumber: 13
             }, this),
             totalPages > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -557,12 +550,12 @@ function PhotoGallery() {
                             className: "h-4 w-4"
                         }, void 0, false, {
                             fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                            lineNumber: 203,
+                            lineNumber: 205,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                        lineNumber: 196,
+                        lineNumber: 198,
                         columnNumber: 21
                     }, this),
                     Array.from({
@@ -575,7 +568,7 @@ function PhotoGallery() {
                             children: page
                         }, page, false, {
                             fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                            lineNumber: 207,
+                            lineNumber: 209,
                             columnNumber: 25
                         }, this)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -588,18 +581,18 @@ function PhotoGallery() {
                             className: "h-4 w-4"
                         }, void 0, false, {
                             fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                            lineNumber: 225,
+                            lineNumber: 227,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                        lineNumber: 218,
+                        lineNumber: 220,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                lineNumber: 195,
+                lineNumber: 197,
                 columnNumber: 17
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -638,12 +631,12 @@ function PhotoGallery() {
                                     className: "w-8 h-8"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                                    lineNumber: 251,
+                                    lineNumber: 253,
                                     columnNumber: 33
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                                lineNumber: 247,
+                                lineNumber: 249,
                                 columnNumber: 29
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -657,34 +650,34 @@ function PhotoGallery() {
                                     priority: true
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                                    lineNumber: 255,
+                                    lineNumber: 257,
                                     columnNumber: 33
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                                lineNumber: 254,
+                                lineNumber: 256,
                                 columnNumber: 29
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                        lineNumber: 240,
+                        lineNumber: 242,
                         columnNumber: 25
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                    lineNumber: 233,
+                    lineNumber: 235,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-                lineNumber: 231,
+                lineNumber: 233,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/github/My-App/src/components/PhotoGallery.tsx",
-        lineNumber: 128,
+        lineNumber: 129,
         columnNumber: 9
     }, this);
 }

@@ -11,7 +11,9 @@ export default function GalleryPage() {
                 <div className="container mx-auto">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 border-b border-border/40 pb-6">
                         <div>
-                            <p className="text-sm text-muted-foreground mb-2">Home » Gallery Grid View</p>
+                            <p className="text-sm text-muted-foreground mb-2">
+                                <a href="/" className="hover:text-foreground transition-colors">Home</a> » Gallery Grid View
+                            </p>
                             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
                                 Gallery Grid
                             </h1>
