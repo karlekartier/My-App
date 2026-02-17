@@ -134,8 +134,13 @@ const navItems = [
     },
     {
         name: "Portfolio",
-        href: "/#portfolio",
+        href: "/portfolio",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$briefcase$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Briefcase$3e$__["Briefcase"]
+    },
+    {
+        name: "Gallery",
+        href: "/gallery",
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__["Layers"]
     },
     {
         name: "Contact",
@@ -180,20 +185,20 @@ function Navbar() {
                                 className: "h-8 w-8"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                lineNumber: 47,
+                                lineNumber: 48,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "KarthickKishore"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                lineNumber: 54,
+                                lineNumber: 55,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                        lineNumber: 46,
+                        lineNumber: 47,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -215,21 +220,21 @@ function Navbar() {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                            lineNumber: 68,
+                                            lineNumber: 69,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(item.icon, {
                                             className: "h-4 w-4"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                            lineNumber: 74,
+                                            lineNumber: 75,
                                             columnNumber: 29
                                         }, this),
                                         item.name
                                     ]
                                 }, item.name, true, {
                                     fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                    lineNumber: 60,
+                                    lineNumber: 61,
                                     columnNumber: 25
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -244,13 +249,13 @@ function Navbar() {
                                                 className: "h-4 w-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                                lineNumber: 85,
+                                                lineNumber: 86,
                                                 columnNumber: 34
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                        lineNumber: 81,
+                                        lineNumber: 82,
                                         columnNumber: 25
                                     }, this),
                                     isVersionOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -265,13 +270,13 @@ function Navbar() {
                                                         children: "Current"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                                        lineNumber: 92,
+                                                        lineNumber: 93,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                                lineNumber: 90,
+                                                lineNumber: 91,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -282,30 +287,30 @@ function Navbar() {
                                                 children: "v1.0 (Legacy)"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                                lineNumber: 94,
+                                                lineNumber: 95,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                        lineNumber: 89,
+                                        lineNumber: 90,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                lineNumber: 80,
+                                lineNumber: 81,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$components$2f$theme$2d$toggle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ThemeToggle"], {}, void 0, false, {
                                 fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                lineNumber: 106,
+                                lineNumber: 107,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                        lineNumber: 58,
+                        lineNumber: 59,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -313,7 +318,7 @@ function Navbar() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$components$2f$theme$2d$toggle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ThemeToggle"], {}, void 0, false, {
                                 fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                lineNumber: 111,
+                                lineNumber: 112,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -324,30 +329,30 @@ function Navbar() {
                                     className: "h-6 w-6"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 118,
                                     columnNumber: 35
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                     className: "h-6 w-6"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 118,
                                     columnNumber: 63
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                lineNumber: 112,
+                                lineNumber: 113,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                        lineNumber: 110,
+                        lineNumber: 111,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                lineNumber: 45,
+                lineNumber: 46,
                 columnNumber: 13
             }, this),
             isOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -363,30 +368,30 @@ function Navbar() {
                                     className: "h-5 w-5"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 134,
                                     columnNumber: 33
                                 }, this),
                                 item.name
                             ]
                         }, item.name, true, {
                             fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                            lineNumber: 127,
+                            lineNumber: 128,
                             columnNumber: 29
                         }, this))
                 }, void 0, false, {
                     fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                    lineNumber: 125,
+                    lineNumber: 126,
                     columnNumber: 21
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-                lineNumber: 124,
+                lineNumber: 125,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/github/My-App/src/components/Navbar.tsx",
-        lineNumber: 37,
+        lineNumber: 38,
         columnNumber: 9
     }, this);
 }
@@ -1579,11 +1584,13 @@ __turbopack_context__.s([
     ()=>ContactInfo
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$message$2d$square$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MessageSquare$3e$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/lucide-react/dist/esm/icons/message-square.js [app-client] (ecmascript) <export default as MessageSquare>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$question$2d$mark$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__HelpCircle$3e$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/lucide-react/dist/esm/icons/circle-question-mark.js [app-client] (ecmascript) <export default as HelpCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/lucide-react/dist/esm/icons/globe.js [app-client] (ecmascript) <export default as Globe>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/lucide-react/dist/esm/icons/arrow-right.js [app-client] (ecmascript) <export default as ArrowRight>");
 "use client";
+;
 ;
 ;
 const items = [
@@ -1592,14 +1599,14 @@ const items = [
         title: "Chat Help",
         description: "Instant assistance with real-time responses for seamless user experience.",
         linkText: "Talk to me",
-        href: "#"
+        href: "/contact"
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$question$2d$mark$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__HelpCircle$3e$__["HelpCircle"],
         title: "FAQ",
         description: "Quick answers to common queries, ensuring clarity and easy navigation.",
         linkText: "Learn more",
-        href: "#"
+        href: "/#about"
     },
     {
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__["Globe"],
@@ -1627,17 +1634,17 @@ function ContactInfo() {
                                         className: "w-6 h-6 text-primary-foreground"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/github/My-App/src/components/ContactInfo.tsx",
-                                        lineNumber: 39,
+                                        lineNumber: 40,
                                         columnNumber: 37
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/github/My-App/src/components/ContactInfo.tsx",
-                                    lineNumber: 38,
+                                    lineNumber: 39,
                                     columnNumber: 33
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/github/My-App/src/components/ContactInfo.tsx",
-                                lineNumber: 37,
+                                lineNumber: 38,
                                 columnNumber: 29
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1647,7 +1654,7 @@ function ContactInfo() {
                                         children: item.title
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/github/My-App/src/components/ContactInfo.tsx",
-                                        lineNumber: 43,
+                                        lineNumber: 44,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1655,10 +1662,10 @@ function ContactInfo() {
                                         children: item.description
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/github/My-App/src/components/ContactInfo.tsx",
-                                        lineNumber: 44,
+                                        lineNumber: 45,
                                         columnNumber: 33
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: item.href,
                                         className: "inline-flex items-center text-primary font-medium hover:underline",
                                         children: [
@@ -1667,40 +1674,40 @@ function ContactInfo() {
                                                 className: "w-4 h-4 ml-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/github/My-App/src/components/ContactInfo.tsx",
-                                                lineNumber: 52,
+                                                lineNumber: 53,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/github/My-App/src/components/ContactInfo.tsx",
-                                        lineNumber: 47,
+                                        lineNumber: 48,
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/github/My-App/src/components/ContactInfo.tsx",
-                                lineNumber: 42,
+                                lineNumber: 43,
                                 columnNumber: 29
                             }, this)
                         ]
                     }, index, true, {
                         fileName: "[project]/Documents/github/My-App/src/components/ContactInfo.tsx",
-                        lineNumber: 36,
+                        lineNumber: 37,
                         columnNumber: 25
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/Documents/github/My-App/src/components/ContactInfo.tsx",
-                lineNumber: 34,
+                lineNumber: 35,
                 columnNumber: 17
             }, this)
         }, void 0, false, {
             fileName: "[project]/Documents/github/My-App/src/components/ContactInfo.tsx",
-            lineNumber: 33,
+            lineNumber: 34,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/Documents/github/My-App/src/components/ContactInfo.tsx",
-        lineNumber: 32,
+        lineNumber: 33,
         columnNumber: 9
     }, this);
 }

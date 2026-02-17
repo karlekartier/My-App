@@ -9,13 +9,14 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { BASE_PATH, ASSETS_PREFIX } from "@/utils/constants";
 import { motion } from "motion/react";
 
-import { Home, User, Briefcase, Mail, Layers } from "lucide-react";
+import { Home, User, Briefcase, Mail, Layers, Images } from "lucide-react";
 
 const navItems = [
     { name: "Home", href: "/", icon: Home },
     { name: "About", href: "/#about", icon: User },
     { name: "Services", href: "/services", icon: Layers },
     { name: "Portfolio", href: "/portfolio", icon: Briefcase },
+    { name: "Gallery", href: "/gallery", icon: Images },
     { name: "Contact", href: "/contact", icon: Mail },
 ];
 
