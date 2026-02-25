@@ -67,6 +67,12 @@
       "namedRegex": "^/favicon\\.ico(?:/)?$"
     },
     {
+      "page": "/gallery",
+      "regex": "^/gallery(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/gallery(?:/)?$"
+    },
+    {
       "page": "/portfolio",
       "regex": "^/portfolio(?:/)?$",
       "routeKeys": {},

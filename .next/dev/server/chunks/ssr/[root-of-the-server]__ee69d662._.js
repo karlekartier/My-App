@@ -162,8 +162,7 @@ const PROJECTS = [
             "Frontend Development"
         ],
         liveLink: "https://karlekartier.github.io/kafeel/",
-        imageLight: `${__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/portfolio/kafeel-resume.png`,
-        // Only one image available
+        imageLight: `${__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/portfolio/kafeel-resume-light.png`,
         imageDark: `${__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$utils$2f$constants$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ASSETS_PREFIX"]}/assets/images/portfolio/kafeel-resume.png`
     },
     {
@@ -185,7 +184,7 @@ function PortfolioPage() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$components$2f$Navbar$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Navbar"], {}, void 0, false, {
                 fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                lineNumber: 57,
+                lineNumber: 56,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -198,7 +197,7 @@ function PortfolioPage() {
                             children: "Portfolio"
                         }, void 0, false, {
                             fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                            lineNumber: 62,
+                            lineNumber: 61,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -206,18 +205,18 @@ function PortfolioPage() {
                             children: "A selection of my best work in web development and motion graphics. From responsive web applications to engaging visual content."
                         }, void 0, false, {
                             fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                            lineNumber: 65,
+                            lineNumber: 64,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                    lineNumber: 61,
+                    lineNumber: 60,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                lineNumber: 60,
+                lineNumber: 59,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -231,7 +230,7 @@ function PortfolioPage() {
                                 children: "Web Development"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                                lineNumber: 75,
+                                lineNumber: 74,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -242,13 +241,13 @@ function PortfolioPage() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                                lineNumber: 76,
+                                lineNumber: 75,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                        lineNumber: 74,
+                        lineNumber: 73,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -257,18 +256,18 @@ function PortfolioPage() {
                                 ...project
                             }, index, false, {
                                 fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                                lineNumber: 83,
+                                lineNumber: 82,
                                 columnNumber: 25
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                        lineNumber: 81,
+                        lineNumber: 80,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                lineNumber: 73,
+                lineNumber: 72,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -282,7 +281,7 @@ function PortfolioPage() {
                                 children: "Motion Graphics"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                                lineNumber: 91,
+                                lineNumber: 90,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -290,35 +289,35 @@ function PortfolioPage() {
                                 children: "A collection of my motion graphics and video editing work."
                             }, void 0, false, {
                                 fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                                lineNumber: 92,
+                                lineNumber: 91,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                        lineNumber: 90,
+                        lineNumber: 89,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$components$2f$VideoGallery$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["VideoGallery"], {}, void 0, false, {
                         fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                        lineNumber: 97,
+                        lineNumber: 96,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                lineNumber: 89,
+                lineNumber: 88,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$components$2f$Footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Footer"], {}, void 0, false, {
                 fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-                lineNumber: 100,
+                lineNumber: 99,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/github/My-App/src/app/portfolio/page.tsx",
-        lineNumber: 56,
+        lineNumber: 55,
         columnNumber: 9
     }, this);
 }

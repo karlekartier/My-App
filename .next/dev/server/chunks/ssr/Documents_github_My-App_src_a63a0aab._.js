@@ -248,6 +248,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$play$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Play$3e$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/lucide-react/dist/esm/icons/play.js [app-ssr] (ecmascript) <export default as Play>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/lucide-react/dist/esm/icons/chevron-left.js [app-ssr] (ecmascript) <export default as ChevronLeft>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/lucide-react/dist/esm/icons/chevron-right.js [app-ssr] (ecmascript) <export default as ChevronRight>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/github/My-App/src/components/ui/button.tsx [app-ssr] (ecmascript)");
 "use client";
 ;
@@ -279,26 +281,33 @@ const VIDEOS = [
     "https://youtu.be/VhC_VLWspUg",
     "https://youtu.be/ka4rz6paMwQ"
 ];
-const INITIAL_VISIBLE_COUNT = 6;
-const LOAD_INCREMENT = 6;
+const ITEMS_PER_PAGE = 6;
 function getYouTubeId(url) {
     const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
     const match = url.match(regExp);
     return match && match[2].length === 11 ? match[2] : null;
 }
 function VideoGallery() {
-    const [visibleCount, setVisibleCount] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(INITIAL_VISIBLE_COUNT);
+    const [currentPage, setCurrentPage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(1);
     const [playingVideo, setPlayingVideo] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
-    const handleLoadMore = ()=>{
-        setVisibleCount((prev)=>Math.min(prev + LOAD_INCREMENT, VIDEOS.length));
+    const totalPages = Math.ceil(VIDEOS.length / ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const visibleVideos = VIDEOS.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+    const handlePageChange = (page)=>{
+        setCurrentPage(page);
+        setPlayingVideo(null); // Stop any playing video when changing pages
     };
-    const visibleVideos = VIDEOS.slice(0, visibleCount);
-    const hasMore = visibleCount < VIDEOS.length;
+    const handlePrevious = ()=>{
+        if (currentPage > 1) handlePageChange(currentPage - 1);
+    };
+    const handleNext = ()=>{
+        if (currentPage < totalPages) handlePageChange(currentPage + 1);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "space-y-12",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+                className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[400px]",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
                     children: visibleVideos.map((url, index)=>{
                         const videoId = getYouTubeId(url);
@@ -329,7 +338,7 @@ function VideoGallery() {
                                 className: "absolute inset-0 w-full h-full"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
-                                lineNumber: 71,
+                                lineNumber: 80,
                                 columnNumber: 37
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "relative w-full h-full cursor-pointer",
@@ -345,7 +354,7 @@ function VideoGallery() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 93,
                                         columnNumber: 41
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -356,63 +365,103 @@ function VideoGallery() {
                                                 className: "w-6 h-6 text-white fill-white ml-1"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
-                                                lineNumber: 97,
+                                                lineNumber: 106,
                                                 columnNumber: 49
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
-                                            lineNumber: 96,
+                                            lineNumber: 105,
                                             columnNumber: 45
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
-                                        lineNumber: 95,
+                                        lineNumber: 104,
                                         columnNumber: 41
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
-                                lineNumber: 79,
+                                lineNumber: 88,
                                 columnNumber: 37
                             }, this)
                         }, url, false, {
                             fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
-                            lineNumber: 62,
+                            lineNumber: 71,
                             columnNumber: 29
                         }, this);
                     })
                 }, void 0, false, {
                     fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
-                    lineNumber: 56,
+                    lineNumber: 65,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
-                lineNumber: 55,
+                lineNumber: 64,
                 columnNumber: 13
             }, this),
-            hasMore && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-center pt-8",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
-                    onClick: handleLoadMore,
-                    size: "lg",
-                    variant: "outline",
-                    className: "min-w-[200px]",
-                    children: "Load More Videos"
-                }, void 0, false, {
-                    fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
-                    lineNumber: 110,
-                    columnNumber: 21
-                }, this)
-            }, void 0, false, {
+            totalPages > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex items-center justify-center gap-2 pt-8",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                        variant: "outline",
+                        size: "icon",
+                        onClick: handlePrevious,
+                        disabled: currentPage === 1,
+                        className: "h-10 w-10 disabled:opacity-50",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {
+                            className: "h-4 w-4"
+                        }, void 0, false, {
+                            fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
+                            lineNumber: 126,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
+                        lineNumber: 119,
+                        columnNumber: 21
+                    }, this),
+                    Array.from({
+                        length: totalPages
+                    }, (_, i)=>i + 1).map((page)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                            variant: currentPage === page ? "default" : "outline",
+                            size: "icon",
+                            onClick: ()=>handlePageChange(page),
+                            className: "h-10 w-10",
+                            children: page
+                        }, page, false, {
+                            fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
+                            lineNumber: 130,
+                            columnNumber: 25
+                        }, this)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
+                        variant: "outline",
+                        size: "icon",
+                        onClick: handleNext,
+                        disabled: currentPage === totalPages,
+                        className: "h-10 w-10 disabled:opacity-50",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
+                            className: "h-4 w-4"
+                        }, void 0, false, {
+                            fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
+                            lineNumber: 148,
+                            columnNumber: 25
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
+                        lineNumber: 141,
+                        columnNumber: 21
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
-                lineNumber: 109,
+                lineNumber: 118,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/github/My-App/src/components/VideoGallery.tsx",
-        lineNumber: 54,
+        lineNumber: 63,
         columnNumber: 9
     }, this);
 }
@@ -505,6 +554,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$briefcase$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Briefcase$3e$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/lucide-react/dist/esm/icons/briefcase.js [app-ssr] (ecmascript) <export default as Briefcase>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/lucide-react/dist/esm/icons/mail.js [app-ssr] (ecmascript) <export default as Mail>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/lucide-react/dist/esm/icons/layers.js [app-ssr] (ecmascript) <export default as Layers>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$images$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Images$3e$__ = __turbopack_context__.i("[project]/Documents/github/My-App/node_modules/lucide-react/dist/esm/icons/images.js [app-ssr] (ecmascript) <export default as Images>");
 "use client";
 ;
 ;
@@ -540,7 +590,7 @@ const navItems = [
     {
         name: "Gallery",
         href: "/gallery",
-        icon: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__["Layers"]
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$github$2f$My$2d$App$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$images$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Images$3e$__["Images"]
     },
     {
         name: "Contact",

@@ -1,32 +1,16 @@
-[00:00:01.114] Server  LOG      ✓ Ready in 832ms
-[00:00:14.990] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[00:00:28.865] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:55:59.957] Server  LOG      ✓ Compiled in 219ms
-[00:56:00.670] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__5b724f7a._.css
-[00:56:01.871] Server  LOG      ✓ Compiled in 74ms
-[00:56:02.670] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__5b724f7a._.css
-[00:56:03.815] Server  LOG      ✓ Compiled in 48ms
-[00:56:17.670] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[01:04:46.089] Server  LOG      ✓ Compiled in 67ms
-[01:04:46.676] Browser ERROR   React instrumentation encountered an error: %o {}
-[01:04:46.676] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__5b724f7a._.css
-[01:04:49.402] Server  LOG      ✓ Compiled in 50ms
-[01:04:51.681] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__5b724f7a._.css
-[01:06:35.596] Browser WARN    Image with src "/assets/images/Gallery/bike/20180502_135814-1.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:00:01.067] Server  LOG      ✓ Ready in 793ms
+[00:00:09.777] Server  WARN     ⚠ Cross origin request detected from 192.168.1.2 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:00:10.006] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:00:15.369] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:05:52.534] Server  LOG      ✓ Compiled in 120ms
+[00:06:19.512] Server  LOG      ✓ Compiled in 133ms
+[00:06:57.752] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:08:01.720] Browser WARN    Image with src "/assets/images/portfolio/optimista-dark.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[01:09:17.409] Browser WARN    Image with src "/assets/images/Gallery/bike/20180502_135814-1.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[01:11:47.963] Browser WARN    Image with src "/assets/images/Gallery/bike/20180502_135814-1.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[01:15:52.266] Server  LOG      ✓ Compiled in 69ms
-[01:15:52.666] Browser ERROR   React instrumentation encountered an error: %o {}
-[01:15:52.666] Browser ERROR   unhandledRejection: Error: No link element found for chunk /_next/static/chunks/%5Broot-of-the-server%5D__5b724f7a._.css
-[01:16:24.844] Browser WARN    Image with src "/assets/images/Gallery/20201010_135020.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
-Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[01:22:35.986] Server  LOG      ✓ Compiled in 47ms
-[01:29:17.921] Server  LOG      ✓ Compiled in 48ms
-[01:37:13.708] Server  LOG      ✓ Compiled in 49ms
-[01:39:29.555] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[01:39:31.513] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[01:41:24.166] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[01:41:27.188] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:08:02.538] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:13:00.066] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:13:03.735] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:14:54.034] Server  LOG      ✓ Compiled in 36ms
+[00:14:55.994] Server  LOG      ✓ Compiled in 31ms
+[00:23:10.502] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
