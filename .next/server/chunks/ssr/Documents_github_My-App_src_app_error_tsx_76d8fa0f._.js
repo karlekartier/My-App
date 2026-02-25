@@ -1,3 +1,0 @@
-module.exports=[73081,a=>{"use strict";var b=a.i(65449),c=a.i(50013);function d({error:a,reset:d}){return(0,c.useEffect)(()=>{console.error(a)},[a]),(0,b.jsxs)("div",{className:"flex min-h-[400px] flex-col items-center justify-center p-4 text-center",children:[(0,b.jsx)("h2",{className:"mb-4 text-2xl font-bold",children:"Something went wrong!"}),(0,b.jsx)("p",{className:"mb-6 text-muted-foreground",children:"We apologize for the inconvenience. Please try again."}),(0,b.jsx)("button",{onClick:()=>d(),className:"rounded-md bg-primary px-4 py-2 text-primary-foreground hover:bg-primary/90",children:"Try again"})]})}a.s(["default",()=>d])}];
-
-//# sourceMappingURL=Documents_github_My-App_src_app_error_tsx_76d8fa0f._.js.map
