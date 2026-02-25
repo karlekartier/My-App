@@ -36,8 +36,7 @@ const PROJECTS = [
             "Complete end-to-end development including UI/UX design, responsive implementation, backend integration with APIs, testing across devices, and deployment.",
         techStack: ["HTML/CSS", "JavaScript", "Frontend Development"],
         liveLink: "https://karlekartier.github.io/kafeel/",
-        imageLight: `${ASSETS_PREFIX}/assets/images/portfolio/kafeel-resume.png`,
-        // Only one image available
+        imageLight: `${ASSETS_PREFIX}/assets/images/portfolio/kafeel-resume-light.png`,
         imageDark: `${ASSETS_PREFIX}/assets/images/portfolio/kafeel-resume.png`,
     },
     {

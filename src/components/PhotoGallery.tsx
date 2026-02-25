@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
-import { Maximize2, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Maximize2, X, ChevronLeft, ChevronRight, User, Bike, Car, Users, Baby, Heart } from "lucide-react";
 import { ASSETS_PREFIX } from "@/utils/constants";
 import { cn } from "@/utils/cn";
 import { Button } from "@/components/ui/button";
@@ -90,7 +90,15 @@ const GALLERY_ITEMS = [
     { src: "dsc_0446_001.jpg", category: "Karle" },
 ];
 
-const CATEGORIES = ["Karle", "Bike", "Car", "Family", "Friends", "In Childhood", "Sis"];
+const CATEGORIES = [
+    { name: "Karle", icon: User },
+    { name: "Bike", icon: Bike },
+    { name: "Car", icon: Car },
+    { name: "Family", icon: Users },
+    { name: "Friends", icon: Users },
+    { name: "In Childhood", icon: Baby },
+    { name: "Sis", icon: Heart },
+];
 
 const ITEMS_PER_PAGE = 9;
 
@@ -129,20 +137,24 @@ export function PhotoGallery() {
         <div className="space-y-10">
             {/* Filter Buttons */}
             <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-12">
-                {CATEGORIES.map((category) => (
-                    <button
-                        key={category}
-                        onClick={() => handleCategoryChange(category)}
-                        className={cn(
-                            "px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
-                            activeCategory === category
-                                ? "bg-primary text-primary-foreground shadow-md"
-                                : "bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted"
-                        )}
-                    >
-                        {category}
-                    </button>
-                ))}
+                {CATEGORIES.map((cat) => {
+                    const Icon = cat.icon;
+                    return (
+                        <button
+                            key={cat.name}
+                            onClick={() => handleCategoryChange(cat.name)}
+                            className={cn(
+                                "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
+                                activeCategory === cat.name
+                                    ? "bg-primary text-primary-foreground shadow-md"
+                                    : "bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted"
+                            )}
+                        >
+                            <Icon className="w-4 h-4" />
+                            {cat.name}
+                        </button>
+                    );
+                })}
             </div>
 
             {/* Grid */}

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Play } from "lucide-react";
+import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const VIDEOS = [
@@ -30,8 +30,7 @@ const VIDEOS = [
     "https://youtu.be/ka4rz6paMwQ",
 ];
 
-const INITIAL_VISIBLE_COUNT = 6;
-const LOAD_INCREMENT = 6;
+const ITEMS_PER_PAGE = 6;
 
 function getYouTubeId(url: string) {
     const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
@@ -40,15 +39,25 @@ function getYouTubeId(url: string) {
 }
 
 export function VideoGallery() {
-    const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT);
+    const [currentPage, setCurrentPage] = useState(1);
     const [playingVideo, setPlayingVideo] = useState<string | null>(null);
 
-    const handleLoadMore = () => {
-        setVisibleCount((prev) => Math.min(prev + LOAD_INCREMENT, VIDEOS.length));
+    const totalPages = Math.ceil(VIDEOS.length / ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const visibleVideos = VIDEOS.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+    const handlePageChange = (page: number) => {
+        setCurrentPage(page);
+        setPlayingVideo(null); // Stop any playing video when changing pages
     };
 
-    const visibleVideos = VIDEOS.slice(0, visibleCount);
-    const hasMore = visibleCount < VIDEOS.length;
+    const handlePrevious = () => {
+        if (currentPage > 1) handlePageChange(currentPage - 1);
+    };
+
+    const handleNext = () => {
+        if (currentPage < totalPages) handlePageChange(currentPage + 1);
+    };
 
     return (
         <div className="space-y-12">
@@ -105,15 +114,38 @@ export function VideoGallery() {
                 </AnimatePresence>
             </div>
 
-            {hasMore && (
-                <div className="flex justify-center pt-8">
+            {totalPages > 1 && (
+                <div className="flex items-center justify-center gap-2 pt-8">
                     <Button
-                        onClick={handleLoadMore}
-                        size="lg"
                         variant="outline"
-                        className="min-w-[200px]"
+                        size="icon"
+                        onClick={handlePrevious}
+                        disabled={currentPage === 1}
+                        className="h-10 w-10 disabled:opacity-50"
                     >
-                        Load More Videos
+                        <ChevronLeft className="h-4 w-4" />
+                    </Button>
+
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                        <Button
+                            key={page}
+                            variant={currentPage === page ? "default" : "outline"}
+                            size="icon"
+                            onClick={() => handlePageChange(page)}
+                            className="h-10 w-10"
+                        >
+                            {page}
+                        </Button>
+                    ))}
+
+                    <Button
+                        variant="outline"
+                        size="icon"
+                        onClick={handleNext}
+                        disabled={currentPage === totalPages}
+                        className="h-10 w-10 disabled:opacity-50"
+                    >
+                        <ChevronRight className="h-4 w-4" />
                     </Button>
                 </div>
             )}
