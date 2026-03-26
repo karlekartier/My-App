@@ -10,12 +10,34 @@ import { Button } from "@/components/ui/button";
 
 // Image Data with Categories
 const GALLERY_ITEMS = [
+    // Karle (Root Images)
+    { src: "20201010_135020.jpg", category: "Karle" },
+    { src: "20211010_093327.jpg", category: "Karle" },
+    { src: "20211010_093337.jpg", category: "Karle" },
+    { src: "20230319_153146.jpg", category: "Karle" },
+    { src: "20230319_153308.jpg", category: "Karle" },
+    { src: "20230319_153310.jpg", category: "Karle" },
+    { src: "20230319_153325.jpg", category: "Karle" },
+    { src: "20230814_135234.jpg", category: "Karle" },
+    { src: "20230814_135246.jpg", category: "Karle" },
+    { src: "20240831_124435.jpg", category: "Karle" },
+    { src: "20250110_163148.jpg", category: "Karle" },
+    { src: "20250209_171010.jpg", category: "Karle" },
+    { src: "20250209_171013.jpg", category: "Karle" },
+    { src: "20250209_171018.jpg", category: "Karle" },
+    { src: "20251005_173934.jpg", category: "Karle" },
+    { src: "IMG-20200124-WA0003.jpg", category: "Karle" },
+    { src: "IMG-20200923-WA0036.jpg", category: "Karle" },
+    { src: "IMG-20200923-WA0037.jpg", category: "Karle" },
+    { src: "IMG-20210630-WA0013.jpg", category: "Karle" },
+    { src: "IMG_20200928_173142.jpg", category: "Karle" },
+    { src: "New Doc 2019-12-14 18.40.10_1.jpg", category: "Karle" },
+
     // Bike
     { src: "bike/20180502_135814-1.jpg", category: "Bike" },
     { src: "bike/20221016_155224.jpg", category: "Bike" },
     { src: "bike/20221016_155313.jpg", category: "Bike" },
     { src: "bike/20221016_160447.jpg", category: "Bike" },
-    // Removed broken HEIF files
 
     // Car
     { src: "car/20241030_133948.jpg", category: "Car" },
@@ -24,22 +46,9 @@ const GALLERY_ITEMS = [
     { src: "car/20260215_123324.jpg", category: "Car" },
     { src: "car/IMG-20250901-WA0021.jpg", category: "Car" },
 
-    // Family
-    { src: "family/20240113_104511.jpg", category: "Family" },
-    { src: "family/20241021_154311.jpg", category: "Family" },
-    { src: "family/20250330_134628.jpg", category: "Family" },
-    { src: "family/20250330_134715.jpg", category: "Family" },
-    // Removed SRP_10417.JPG (Missing)
-    { src: "family/SRP_10420.JPG", category: "Family" },
-    { src: "family/SRP_10421.JPG", category: "Family" },
-    { src: "family/SRP_10422.JPG", category: "Family" },
-    { src: "family/SRP_10426.JPG", category: "Family" },
-    { src: "family/SRP_10431.JPG", category: "Family" },
-    { src: "family/SRP_10654.JPG", category: "Family" },
-
     // Friends
-    { src: "friends/IMG-20200115-WA0043.jpg", category: "Friends" },
     { src: "friends/IMG-20200116-WA0016.jpg", category: "Friends" },
+    { src: "friends/IMG-20200821-WA0002.jpg", category: "Friends" },
     { src: "friends/IMG-20200821-WA0012.jpg", category: "Friends" },
     { src: "friends/IMG-20201122-WA0026.jpg", category: "Friends" },
     { src: "friends/IMG_20201018_120631_160.jpg", category: "Friends" },
@@ -51,53 +60,14 @@ const GALLERY_ITEMS = [
     { src: "in_childhood/New Doc 2019-06-26 21.58.18_5.jpg", category: "In Childhood" },
     { src: "in_childhood/New Doc 2019-06-26 22.16.28_1.jpg", category: "In Childhood" },
     { src: "in_childhood/New Doc 2019-06-26 22.18.58_1.jpg", category: "In Childhood" },
-
-    // Sis
-    // Removed 20230618_162046.jpg (Missing)
-    { src: "sis/20241021_135447.jpg", category: "Sis" },
-    { src: "sis/20241021_135451.jpg", category: "Sis" },
-    { src: "sis/20241021_154226.jpg", category: "Sis" },
-    { src: "sis/20241021_154229.jpg", category: "Sis" },
-    { src: "sis/20241021_154231.jpg", category: "Sis" },
-    { src: "sis/20241021_154309.jpg", category: "Sis" },
-
-    // Karle (Root Images)
-    { src: "20201010_135020.jpg", category: "Karle" },
-    { src: "20211010_093327.jpg", category: "Karle" },
-    { src: "20211010_093337.jpg", category: "Karle" },
-    { src: "20230319_153146.jpg", category: "Karle" },
-    { src: "20230319_153308.jpg", category: "Karle" },
-    { src: "20230319_153310.jpg", category: "Karle" },
-    { src: "20230319_153325.jpg", category: "Karle" },
-    { src: "20230814_135234.jpg", category: "Karle" },
-    { src: "20230814_135246.jpg", category: "Karle" },
-    { src: "20240616_142139.jpg", category: "Karle" },
-    { src: "20240831_124435.jpg", category: "Karle" },
-    { src: "20250110_163148.jpg", category: "Karle" },
-    { src: "20250209_171010.jpg", category: "Karle" },
-    { src: "20250209_171013.jpg", category: "Karle" },
-    { src: "20250209_171018.jpg", category: "Karle" },
-    { src: "20251005_173934.jpg", category: "Karle" },
-    // Removed HEIC
-    { src: "IMG-20200124-WA0003.jpg", category: "Karle" },
-    { src: "IMG-20200821-WA0002.jpg", category: "Karle" },
-    { src: "IMG-20200923-WA0036.jpg", category: "Karle" },
-    { src: "IMG-20200923-WA0037.jpg", category: "Karle" },
-    { src: "IMG-20210630-WA0013.jpg", category: "Karle" },
-    { src: "IMG_20200928_173142.jpg", category: "Karle" },
-    { src: "New Doc 2019-12-14 18.40.10_1.jpg", category: "Karle" },
-    { src: "SRP_9609.JPG", category: "Karle" },
-    { src: "dsc_0446_001.jpg", category: "Karle" },
 ];
 
 const CATEGORIES = [
     { name: "Karle", icon: User },
     { name: "Bike", icon: Bike },
     { name: "Car", icon: Car },
-    { name: "Family", icon: Users },
     { name: "Friends", icon: Users },
     { name: "In Childhood", icon: Baby },
-    { name: "Sis", icon: Heart },
 ];
 
 const ITEMS_PER_PAGE = 9;
