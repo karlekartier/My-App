@@ -1,11 +1,12 @@
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
-import { Toolkit } from "@/components/Toolkit";
-import { SkillsOverview } from "@/components/SkillsOverview";
+import { Experience } from "@/components/Experience";
+import { Education } from "@/components/Education";
+import { ToolsShowcase } from "@/components/ToolsShowcase";
+import { CoreSpecializations } from "@/components/CoreSpecializations";
 import { Artwork } from "@/components/Artwork";
-import { DetailedSkills } from "@/components/DetailedSkills";
-import { ContactInfo } from "@/components/ContactInfo";
+import { Faq } from "@/components/Faq";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -13,18 +14,13 @@ export default function Home() {
     <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
-      <div className="bg-muted/30">
-        <About />
-      </div>
-      <Toolkit />
-      <div className="bg-muted/30">
-        <SkillsOverview />
-      </div>
+      <About />
+      <Experience />
+      <Education />
+      <ToolsShowcase />
+      <CoreSpecializations />
       <Artwork />
-      <div className="bg-muted/30">
-        <DetailedSkills />
-      </div>
-      <ContactInfo />
+      <Faq />
       <Footer />
     </main>
   );

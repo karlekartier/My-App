@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="gemini-grad" x1="20" y1="20" x2="140" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1ba0e2"/>
+      <stop offset="50%" stop-color="#9b72cb"/>
+      <stop offset="100%" stop-color="#d96570"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="36" fill="#0f172a"/>
+  <!-- Gemini star shape -->
+  <path d="M80 20C80 53.137 53.137 80 20 80C53.137 80 80 106.863 80 140C80 106.863 106.863 80 140 80C106.863 80 80 53.137 80 20Z" fill="url(#gemini-grad)"/>
+</svg>

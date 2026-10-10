@@ -35,44 +35,45 @@ export function Hero() {
                     </div>
 
                     <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl">
-                        Hai I'm <TypingText text="Karthick Kishore" className="text-primary" speed={20} repeat={true} />
+                        Hai I&apos;m <TypingText text="Karthick Kishore" className="text-primary" speed={20} repeat={true} />
                     </h1>
 
-                    <div className="text-xl text-muted-foreground max-w-[600px] flex flex-col gap-2">
+                    <div className="text-lg md:text-xl text-muted-foreground max-w-[620px] flex flex-col gap-2.5">
                         <div className="flex flex-wrap gap-2 items-center justify-center lg:justify-start">
-                            <span>A Passionate</span>
+                            <span>Dynamic</span>
                             <WordRotate
                                 words={[
-                                    "Frontend Developer",
-                                    "React & Next.js Expert",
-                                    "UI/UX Designer",
-                                    "Bootstrap Developer",
+                                    "Digital Marketing Manager",
+                                    "SEO, AEO & GEO Lead",
+                                    "Google Ads Specialist",
+                                    "Full-Stack Web Developer",
+                                    "Motion Graphic Designer",
                                 ]}
                                 className="font-bold text-foreground"
                             />
                         </div>
-                        <p>
+                        <p className="text-sm md:text-base leading-relaxed">
                             <strong>
                                 <SlidingNumber value={4} />+ years of experience
                             </strong>{" "}
-                            in crafting visually compelling designs & digital experiences.
+                            driving organic growth through <strong>SEO, AEO &amp; GEO</strong>, managing ROI-driven Google Ads CPC campaigns, and building web apps from Adobe UI design to Git, AWS &amp; cPanel live deployment.
                         </p>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <div className="flex flex-wrap gap-3.5 pt-2 justify-center lg:justify-start">
                         <a
                             href={`${ASSETS_PREFIX}/assets/pdf/kkr.pdf`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8"
+                            className="inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-semibold transition-all bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-6 shadow-xs hover:shadow-md"
                         >
                             Resume <Download className="ml-2 h-4 w-4" />
                         </a>
                         <Link
                             href="/contact"
-                            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8"
+                            className="inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-semibold transition-all border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-6 shadow-xs"
                         >
-                            Contact me <Mail className="ml-2 h-4 w-4" />
+                            Contact Me <Mail className="ml-2 h-4 w-4" />
                         </Link>
                     </div>
                 </motion.div>

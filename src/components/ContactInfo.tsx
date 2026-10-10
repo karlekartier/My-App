@@ -17,7 +17,7 @@ const items = [
         title: "FAQ",
         description: "Quick answers to common queries, ensuring clarity and easy navigation.",
         linkText: "Learn more",
-        href: "/#about",
+        href: "/#faq",
     },
     {
         icon: Globe,
