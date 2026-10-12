@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import { Award, Briefcase, Search, Globe, Code2, Server, CheckCircle2, TrendingUp, UserCheck } from "lucide-react";
 import { ASSETS_PREFIX } from "@/utils/constants";
 import { cn } from "@/utils/cn";
+import { Counter } from "@/components/ui/counter";
 
 export function About() {
     return (
@@ -30,7 +31,7 @@ export function About() {
                         </h2>
 
                         <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                            With over 4+ years of cross-disciplinary expertise, I bridge the gap between high-impact <strong>data-driven digital marketing</strong> and <strong>scalable web application development</strong>.
+                            With over 5+ years of cross-disciplinary expertise, I bridge the gap between high-impact <strong>data-driven digital marketing</strong> and <strong>scalable web application development</strong>.
                         </p>
 
                         <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
@@ -160,17 +161,23 @@ export function About() {
 
                             {/* Stat Highlights */}
                             <div className="grid grid-cols-3 gap-2 pt-4 mt-4 border-t border-border/60 text-center">
-                                <div>
-                                    <p className="text-xl font-extrabold text-foreground">4+</p>
-                                    <p className="text-[10px] text-muted-foreground font-medium">Years Exp.</p>
+                                <div className="p-1.5 rounded-xl transition-colors hover:bg-muted/40">
+                                    <p className="text-xl sm:text-2xl font-extrabold text-foreground">
+                                        <Counter value={5} suffix="+" />
+                                    </p>
+                                    <p className="text-[10px] text-muted-foreground font-medium mt-0.5">Years Exp.</p>
                                 </div>
-                                <div>
-                                    <p className="text-xl font-extrabold text-primary">15+</p>
-                                    <p className="text-[10px] text-muted-foreground font-medium">Industry Tools</p>
+                                <div className="p-1.5 rounded-xl transition-colors hover:bg-muted/40">
+                                    <p className="text-xl sm:text-2xl font-extrabold text-primary">
+                                        <Counter value={15} suffix="+" />
+                                    </p>
+                                    <p className="text-[10px] text-muted-foreground font-medium mt-0.5">Industry Tools</p>
                                 </div>
-                                <div>
-                                    <p className="text-xl font-extrabold text-foreground">100%</p>
-                                    <p className="text-[10px] text-muted-foreground font-medium">ROI Focus</p>
+                                <div className="p-1.5 rounded-xl transition-colors hover:bg-muted/40">
+                                    <p className="text-xl sm:text-2xl font-extrabold text-foreground">
+                                        <Counter value={100} suffix="%" />
+                                    </p>
+                                    <p className="text-[10px] text-muted-foreground font-medium mt-0.5">ROI Focus</p>
                                 </div>
                             </div>
                         </div>

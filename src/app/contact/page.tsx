@@ -315,8 +315,8 @@ export default function ContactPage() {
             {/* ReUI CTA-6 Section (Closing Banner on Contact Page) */}
             <ContactCTA6 />
 
-            {/* Global Footer (Preserved exactly as requested) */}
-            <Footer />
+            {/* Global Footer (With Social Connect Hub on Contact Page) */}
+            <Footer showSocialConnect={true} />
         </main>
     );
 }

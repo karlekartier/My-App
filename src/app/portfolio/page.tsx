@@ -12,6 +12,15 @@ export const metadata: Metadata = {
 
 const PROJECTS = [
     {
+        title: "InsureTech Services",
+        description:
+            "Multi-industry enterprise web application delivering specialized service portals and estimators for Insurance, IT & Engineering, Publishing Systems, and Healthcare RCM.",
+        techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+        liveLink: "https://insure-tech-fafh10520-karlekartiers-projects.vercel.app/",
+        imageLight: `${ASSETS_PREFIX}/assets/images/portfolio/inturetech.png`,
+        imageDark: `${ASSETS_PREFIX}/assets/images/portfolio/inturetech.png`,
+    },
+    {
         title: "Optimista",
         description:
             "Complete end-to-end development including UI/UX design, responsive implementation, backend integration with APIs, testing across devices, and deployment.",
@@ -27,8 +36,7 @@ const PROJECTS = [
         techStack: ["React", "Bootstrap", "Responsive Design"],
         liveLink: "https://www.playabacusindia.com/",
         imageLight: `${ASSETS_PREFIX}/assets/images/portfolio/ipaplayabacusindai.png`,
-        // Only one image available
-        imageDark: `${ASSETS_PREFIX}/assets/images/portfolio/ipaplayabacusindai.png`,
+        imageDark: `${ASSETS_PREFIX}/assets/images/portfolio/ipaplayabacusindaidark.png`,
     },
     {
         title: "Kafeel",

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, type Variants } from "motion/react";
 import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -38,8 +38,32 @@ function getYouTubeId(url: string) {
     return match && match[2].length === 11 ? match[2] : null;
 }
 
+const pageVariants: Variants = {
+    enter: (dir: number) => ({
+        opacity: 0,
+        x: dir > 0 ? 24 : dir < 0 ? -24 : 0,
+    }),
+    center: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.28,
+            ease: "easeInOut",
+        },
+    },
+    exit: (dir: number) => ({
+        opacity: 0,
+        x: dir > 0 ? -24 : dir < 0 ? 24 : 0,
+        transition: {
+            duration: 0.2,
+            ease: "easeInOut",
+        },
+    }),
+};
+
 export function VideoGallery() {
     const [currentPage, setCurrentPage] = useState(1);
+    const [direction, setDirection] = useState(0);
     const [playingVideo, setPlayingVideo] = useState<string | null>(null);
 
     const totalPages = Math.ceil(VIDEOS.length / ITEMS_PER_PAGE);
@@ -47,6 +71,8 @@ export function VideoGallery() {
     const visibleVideos = VIDEOS.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
     const handlePageChange = (page: number) => {
+        if (page === currentPage) return;
+        setDirection(page > currentPage ? 1 : -1);
         setCurrentPage(page);
         setPlayingVideo(null); // Stop any playing video when changing pages
     };
@@ -61,56 +87,62 @@ export function VideoGallery() {
 
     return (
         <div className="space-y-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[400px]">
-                <AnimatePresence>
-                    {visibleVideos.map((url, index) => {
-                        const videoId = getYouTubeId(url);
-                        if (!videoId) return null;
+            <div className="min-h-[420px] overflow-hidden">
+                <AnimatePresence mode="wait" custom={direction}>
+                    <motion.div
+                        key={currentPage}
+                        custom={direction}
+                        variants={pageVariants}
+                        initial="enter"
+                        animate="center"
+                        exit="exit"
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    >
+                        {visibleVideos.map((url) => {
+                            const videoId = getYouTubeId(url);
+                            if (!videoId) return null;
 
-                        return (
-                            <motion.div
-                                key={url}
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.9 }}
-                                transition={{ duration: 0.3, delay: index * 0.05 }}
-                                className="relative aspect-video rounded-xl overflow-hidden bg-muted shadow-sm group"
-                            >
-                                {playingVideo === videoId ? (
-                                    <iframe
-                                        src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                                        title="YouTube video player"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowFullScreen
-                                        className="absolute inset-0 w-full h-full"
-                                    ></iframe>
-                                ) : (
-                                    <div
-                                        className="relative w-full h-full cursor-pointer"
-                                        onClick={() => setPlayingVideo(videoId)}
-                                    >
-                                        {/* Thumbnail */}
-                                        <img
-                                            src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
-                                            alt="Video Thumbnail"
-                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                            onError={(e) => {
-                                                // Fallback to hqdefault if maxresdefault doesn't exist
-                                                (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-                                            }}
-                                        />
+                            return (
+                                <div
+                                    key={url}
+                                    className="relative aspect-video rounded-xl overflow-hidden bg-muted shadow-sm group border border-border/50 hover:border-primary/40 transition-all duration-300 hover:shadow-md"
+                                >
+                                    {playingVideo === videoId ? (
+                                        <iframe
+                                            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                                            title="YouTube video player"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                            className="absolute inset-0 w-full h-full"
+                                        ></iframe>
+                                    ) : (
+                                        <div
+                                            className="relative w-full h-full cursor-pointer"
+                                            onClick={() => setPlayingVideo(videoId)}
+                                        >
+                                            {/* Thumbnail */}
+                                            <img
+                                                src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+                                                alt="Video Thumbnail"
+                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                onError={(e) => {
+                                                    // Fallback to hqdefault if maxresdefault doesn't exist
+                                                    (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                                                }}
+                                            />
 
-                                        {/* Play Button Overlay */}
-                                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                                            <div className="h-14 w-14 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
-                                                <Play className="w-6 h-6 text-white fill-white ml-1" />
+                                            {/* Play Button Overlay */}
+                                            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                                                <div className="h-14 w-14 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-lg">
+                                                    <Play className="w-6 h-6 text-white fill-white ml-1" />
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                )}
-                            </motion.div>
-                        );
-                    })}
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </motion.div>
                 </AnimatePresence>
             </div>
 

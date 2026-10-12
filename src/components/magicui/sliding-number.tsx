@@ -20,7 +20,7 @@ export function SlidingNumber({
     decimalPlaces?: number;
     className?: string;
 }) {
-    const spring = useSpring(value, { mass: 0.8, stiffness: 75, damping: 15 });
+    const spring = useSpring(0, { mass: 0.8, stiffness: 75, damping: 15 });
     const display = useTransform(spring, (current) =>
         current.toFixed(decimalPlaces).padStart(padStart, "0")
     );

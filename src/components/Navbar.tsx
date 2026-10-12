@@ -12,17 +12,11 @@ import {
     ChevronDown,
     Home,
     User,
-    Briefcase,
-    GraduationCap,
-    Wrench,
     FolderGit2,
     Images,
     Mail,
     Layers,
-    Sparkles,
-    ChevronRight,
-    Compass,
-    HelpCircle
+    Compass
 } from "lucide-react";
 import { ASSETS_PREFIX } from "@/utils/constants";
 import { motion, AnimatePresence } from "motion/react";
@@ -35,75 +29,27 @@ interface SubPageItem {
     badge?: string;
 }
 
-const pageTree: { category: string; items: SubPageItem[] }[] = [
+const navPages: SubPageItem[] = [
     {
-        category: "Career & Credentials",
-        items: [
-            {
-                name: "Experience",
-                href: "/#experience",
-                icon: Briefcase,
-                description: "Professional journey & company roles",
-                badge: "Current",
-            },
-            {
-                name: "Education",
-                href: "/#education",
-                icon: GraduationCap,
-                description: "Degrees, academic records & certifications",
-            },
-            {
-                name: "Tools & Tech",
-                href: "/#tools",
-                icon: Wrench,
-                description: "SEO, Web Dev & Adobe Creative suites",
-                badge: "23+ Tools",
-            },
-        ],
+        name: "Portfolio",
+        href: "/portfolio",
+        icon: FolderGit2,
+        description: "Live projects, case studies & web apps",
+        badge: "Showcase",
     },
     {
-        category: "Showcase & Works",
-        items: [
-            {
-                name: "Specializations",
-                href: "/#capabilities",
-                icon: Sparkles,
-                description: "AEO/GEO Core, Web Apps & Deployments",
-                badge: "Pillars",
-            },
-            {
-                name: "Artwork Showcase",
-                href: "/#artwork",
-                icon: Images,
-                description: "Forest Night & Forest Dark vector art",
-                badge: "3200px UHD",
-            },
-            {
-                name: "FAQ & Support",
-                href: "/#faq",
-                icon: HelpCircle,
-                description: "Frequently asked questions & direct chat",
-            },
-            {
-                name: "Portfolio",
-                href: "/portfolio",
-                icon: FolderGit2,
-                description: "Live projects, case studies & web apps",
-                badge: "Showcase",
-            },
-            {
-                name: "Gallery",
-                href: "/gallery",
-                icon: Images,
-                description: "Creative artwork, motion reels & visuals",
-            },
-            {
-                name: "Services",
-                href: "/services",
-                icon: Layers,
-                description: "SEO, PPC advertising & dynamic web logic",
-            },
-        ],
+        name: "Gallery",
+        href: "/gallery",
+        icon: Images,
+        description: "Creative artwork, motion reels & visuals",
+        badge: "Visuals",
+    },
+    {
+        name: "Services",
+        href: "/services",
+        icon: Layers,
+        description: "SEO, PPC advertising & dynamic web logic",
+        badge: "Solutions",
     },
 ];
 
@@ -211,7 +157,7 @@ export function Navbar() {
                         <span>About Me</span>
                     </Link>
 
-                    {/* 3. Pages in Tree Components Dropdown */}
+                    {/* 3. Pages Dropdown */}
                     <div className="relative" ref={dropdownRef}>
                         <button
                             onClick={() => setIsPagesDropdownOpen(!isPagesDropdownOpen)}
@@ -219,7 +165,7 @@ export function Navbar() {
                             onMouseLeave={() => setHovered(null)}
                             className={cn(
                                 "relative flex items-center gap-1.5 px-3.5 py-2 text-sm font-semibold transition-colors rounded-xl",
-                                isPagesDropdownOpen
+                                isPagesDropdownOpen || ["/portfolio", "/gallery", "/services"].includes(pathname)
                                     ? "text-primary bg-secondary/80"
                                     : "text-muted-foreground hover:text-foreground"
                             )}
@@ -242,7 +188,7 @@ export function Navbar() {
                             />
                         </button>
 
-                        {/* Dropdown Tree Menu */}
+                        {/* Dropdown Menu */}
                         <AnimatePresence>
                             {isPagesDropdownOpen && (
                                 <motion.div
@@ -250,52 +196,57 @@ export function Navbar() {
                                     animate={{ opacity: 1, y: 0, scale: 1 }}
                                     exit={{ opacity: 0, y: 10, scale: 0.98 }}
                                     transition={{ duration: 0.2 }}
-                                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2.5 w-[560px] bg-card/95 backdrop-blur-xl border border-border/80 rounded-2xl shadow-xl p-4 overflow-hidden z-50"
+                                    className="absolute top-full left-1/2 -translate-x-1/2 mt-2.5 w-80 bg-card/95 backdrop-blur-xl border border-border/80 rounded-2xl shadow-xl p-3 overflow-hidden z-50 space-y-1.5"
                                 >
-                                    <div className="grid grid-cols-2 gap-4">
-                                        {pageTree.map((branch, bIdx) => (
-                                            <div key={bIdx} className="space-y-2">
-                                                {/* Tree Branch Header */}
-                                                <div className="flex items-center gap-2 px-2.5 py-1 text-[11px] font-bold text-muted-foreground uppercase tracking-wider border-b border-border/50 pb-1.5">
-                                                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                                    <span>{branch.category}</span>
-                                                </div>
-
-                                                {/* Tree Branch Items with connecting indent */}
-                                                <div className="space-y-1 relative pl-2 border-l border-border/50 ml-2">
-                                                    {branch.items.map((sub) => {
-                                                        const SubIcon = sub.icon;
-                                                        return (
-                                                            <Link
-                                                                key={sub.name}
-                                                                href={sub.href}
-                                                                onClick={() => setIsPagesDropdownOpen(false)}
-                                                                className="group flex items-start gap-2.5 p-2 rounded-xl hover:bg-secondary/70 transition-all border border-transparent hover:border-border/60"
-                                                            >
-                                                                <div className="p-1.5 rounded-lg bg-secondary text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors shrink-0 mt-0.5">
-                                                                    <SubIcon className="h-4 w-4" />
-                                                                </div>
-                                                                <div className="flex-1 min-w-0">
-                                                                    <div className="flex items-center justify-between gap-1.5">
-                                                                        <span className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">
-                                                                            {sub.name}
-                                                                        </span>
-                                                                        {sub.badge && (
-                                                                            <span className="text-[10px] font-medium px-1.5 py-0.2 rounded-md bg-primary/10 text-primary border border-primary/20">
-                                                                                {sub.badge}
-                                                                            </span>
-                                                                        )}
-                                                                    </div>
-                                                                    <p className="text-[11px] text-muted-foreground line-clamp-1 mt-0.5">
-                                                                        {sub.description}
-                                                                    </p>
-                                                                </div>
-                                                            </Link>
-                                                        );
-                                                    })}
-                                                </div>
-                                            </div>
-                                        ))}
+                                    <div className="flex items-center gap-2 px-2 py-1 text-[11px] font-bold text-muted-foreground uppercase tracking-wider border-b border-border/50 pb-2">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                                        <span>Pages</span>
+                                    </div>
+                                    <div className="space-y-1 pt-1">
+                                        {navPages.map((sub) => {
+                                            const SubIcon = sub.icon;
+                                            const isActive = pathname === sub.href;
+                                            return (
+                                                <Link
+                                                    key={sub.name}
+                                                    href={sub.href}
+                                                    onClick={() => setIsPagesDropdownOpen(false)}
+                                                    className={cn(
+                                                        "group flex items-start gap-3 p-2.5 rounded-xl transition-all border",
+                                                        isActive
+                                                            ? "bg-primary/10 border-primary/30"
+                                                            : "border-transparent hover:bg-secondary/70 hover:border-border/60"
+                                                    )}
+                                                >
+                                                    <div className={cn(
+                                                        "p-2 rounded-lg transition-colors shrink-0 mt-0.5",
+                                                        isActive
+                                                            ? "bg-primary text-primary-foreground"
+                                                            : "bg-secondary text-foreground group-hover:bg-primary group-hover:text-primary-foreground"
+                                                    )}>
+                                                        <SubIcon className="h-4 w-4" />
+                                                    </div>
+                                                    <div className="flex-1 min-w-0">
+                                                        <div className="flex items-center justify-between gap-1.5">
+                                                            <span className={cn(
+                                                                "text-xs font-bold transition-colors",
+                                                                isActive ? "text-primary" : "text-foreground group-hover:text-primary"
+                                                            )}>
+                                                                {sub.name}
+                                                            </span>
+                                                            {sub.badge && (
+                                                                <span className="text-[10px] font-medium px-1.5 py-0.2 rounded-md bg-primary/10 text-primary border border-primary/20">
+                                                                    {sub.badge}
+                                                                </span>
+                                                            )}
+                                                        </div>
+                                                        <p className="text-[11px] text-muted-foreground line-clamp-1 mt-0.5">
+                                                            {sub.description}
+                                                        </p>
+                                                    </div>
+                                                </Link>
+                                            );
+                                        })}
                                     </div>
                                 </motion.div>
                             )}
@@ -372,7 +323,7 @@ export function Navbar() {
                                 <span>About Me</span>
                             </Link>
 
-                            {/* 3. Pages in Tree (Accordion style on mobile) */}
+                            {/* 3. Pages Dropdown on mobile */}
                             <div className="rounded-xl border border-border/60 bg-secondary/30 p-2.5">
                                 <button
                                     onClick={() => setIsMobilePagesExpanded(!isMobilePagesExpanded)}
@@ -380,7 +331,7 @@ export function Navbar() {
                                 >
                                     <div className="flex items-center gap-2">
                                         <Compass className="h-4 w-4 text-primary" />
-                                        <span>Pages (Tree View)</span>
+                                        <span>Pages</span>
                                     </div>
                                     <ChevronDown
                                         className={cn(
@@ -391,37 +342,39 @@ export function Navbar() {
                                 </button>
 
                                 {isMobilePagesExpanded && (
-                                    <div className="mt-2 space-y-3 pt-2 border-t border-border/50">
-                                        {pageTree.map((branch, bIdx) => (
-                                            <div key={bIdx} className="space-y-1.5 pl-1.5">
-                                                <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">
-                                                    {branch.category}
-                                                </p>
-                                                <div className="space-y-1 pl-2 border-l border-primary/30 ml-1">
-                                                    {branch.items.map((sub) => {
-                                                        const SubIcon = sub.icon;
-                                                        return (
-                                                            <Link
-                                                                key={sub.name}
-                                                                href={sub.href}
-                                                                onClick={() => setIsOpen(false)}
-                                                                className="flex items-center justify-between p-2 rounded-lg text-xs font-semibold text-foreground hover:bg-secondary transition-colors"
-                                                            >
-                                                                <div className="flex items-center gap-2">
-                                                                    <SubIcon className="h-3.5 w-3.5 text-primary" />
-                                                                    <span>{sub.name}</span>
-                                                                </div>
-                                                                {sub.badge && (
-                                                                    <span className="text-[9px] px-1.5 py-0.2 rounded bg-primary/10 text-primary border border-primary/20">
-                                                                        {sub.badge}
-                                                                    </span>
-                                                                )}
-                                                            </Link>
-                                                        );
-                                                    })}
-                                                </div>
-                                            </div>
-                                        ))}
+                                    <div className="mt-2 space-y-1 pt-2 border-t border-border/50">
+                                        {navPages.map((sub) => {
+                                            const SubIcon = sub.icon;
+                                            const isActive = pathname === sub.href;
+                                            return (
+                                                <Link
+                                                    key={sub.name}
+                                                    href={sub.href}
+                                                    onClick={() => setIsOpen(false)}
+                                                    className={cn(
+                                                        "flex items-center justify-between p-2 rounded-lg text-xs font-semibold transition-colors",
+                                                        isActive
+                                                            ? "bg-primary/10 text-primary font-bold"
+                                                            : "text-foreground hover:bg-secondary"
+                                                    )}
+                                                >
+                                                    <div className="flex items-center gap-2.5">
+                                                        <div className={cn(
+                                                            "p-1.5 rounded-md",
+                                                            isActive ? "bg-primary text-primary-foreground" : "bg-secondary text-primary"
+                                                        )}>
+                                                            <SubIcon className="h-3.5 w-3.5" />
+                                                        </div>
+                                                        <span>{sub.name}</span>
+                                                    </div>
+                                                    {sub.badge && (
+                                                        <span className="text-[9px] px-1.5 py-0.2 rounded bg-primary/10 text-primary border border-primary/20">
+                                                            {sub.badge}
+                                                        </span>
+                                                    )}
+                                                </Link>
+                                            );
+                                        })}
                                     </div>
                                 )}
                             </div>

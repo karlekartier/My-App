@@ -54,7 +54,7 @@ export function Hero() {
                         </div>
                         <p className="text-sm md:text-base leading-relaxed">
                             <strong>
-                                <SlidingNumber value={4} />+ years of experience
+                                <SlidingNumber value={5} />+ years of experience
                             </strong>{" "}
                             driving organic growth through <strong>SEO, AEO &amp; GEO</strong>, managing ROI-driven Google Ads CPC campaigns, and building web apps from Adobe UI design to Git, AWS &amp; cPanel live deployment.
                         </p>

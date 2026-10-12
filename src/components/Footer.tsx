@@ -3,6 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Mail, Phone, Send, ArrowUpRight, Share2, CheckCircle2 } from "lucide-react";
 import { ASSETS_PREFIX } from "@/utils/constants";
 import { GridBackground } from "@/components/ui/grid-background";
@@ -114,7 +115,15 @@ const socialChannels: SocialChannel[] = [
     }
 ];
 
-export function Footer() {
+interface FooterProps {
+    showSocialConnect?: boolean;
+}
+
+export function Footer({ showSocialConnect }: FooterProps = {}) {
+    const pathname = usePathname();
+    const isContactPage = pathname ? (pathname === "/contact" || pathname.startsWith("/contact/")) : false;
+    const shouldShowSocialConnect = showSocialConnect !== undefined ? showSocialConnect : isContactPage;
+
     const [email, setEmail] = React.useState("");
     const [subscribed, setSubscribed] = React.useState(false);
 
@@ -139,78 +148,80 @@ export function Footer() {
             <div className="absolute bottom-0 right-1/4 w-[500px] h-[250px] bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none" />
 
             <div className="container relative z-10 pt-16 pb-10 px-4 sm:px-6 lg:px-8 mx-auto">
-                {/* 1. TOP HUB: Social Connect Icons Grid */}
-                <div className="mb-14 pb-14 border-b border-border/60">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
-                        <div>
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-2">
-                                <Share2 className="w-3.5 h-3.5" />
-                                <span>Social Connect Hub</span>
+                {/* 1. TOP HUB: Social Connect Icons Grid (Only displayed on Contact page) */}
+                {shouldShowSocialConnect && (
+                    <div className="mb-14 pb-14 border-b border-border/60">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+                            <div>
+                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-2">
+                                    <Share2 className="w-3.5 h-3.5" />
+                                    <span>Social Connect Hub</span>
+                                </div>
+                                <h3 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
+                                    Connect Across All Platforms
+                                </h3>
+                                <p className="text-sm text-muted-foreground mt-1">
+                                    Follow my design drops, repositories, marketing case studies, or message me directly.
+                                </p>
                             </div>
-                            <h3 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
-                                Connect Across All Platforms
-                            </h3>
-                            <p className="text-sm text-muted-foreground mt-1">
-                                Follow my design drops, repositories, marketing case studies, or message me directly.
-                            </p>
+                            <span className="text-xs font-medium text-muted-foreground">
+                                9 Channels • Verified Profiles
+                            </span>
                         </div>
-                        <span className="text-xs font-medium text-muted-foreground">
-                            9 Channels • Verified Profiles
-                        </span>
-                    </div>
 
-                    {/* 9 Social Icons Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-3">
-                        {socialChannels.map((social) => (
-                            <a
-                                key={social.name}
-                                href={social.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={`Connect on ${social.name}`}
-                                className={cn(
-                                    "group relative flex flex-col items-center justify-center p-4 rounded-2xl border border-border/70 bg-card/75 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
-                                    social.bgColor,
-                                    social.borderColor,
-                                    social.glowColor
-                                )}
-                            >
-                                <div className="relative w-8 h-8 mb-2.5 transition-transform duration-300 group-hover:scale-115">
-                                    {social.iconDark ? (
-                                        <>
+                        {/* 9 Social Icons Grid */}
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-9 gap-3">
+                            {socialChannels.map((social) => (
+                                <a
+                                    key={social.name}
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`Connect on ${social.name}`}
+                                    className={cn(
+                                        "group relative flex flex-col items-center justify-center p-4 rounded-2xl border border-border/70 bg-card/75 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
+                                        social.bgColor,
+                                        social.borderColor,
+                                        social.glowColor
+                                    )}
+                                >
+                                    <div className="relative w-8 h-8 mb-2.5 transition-transform duration-300 group-hover:scale-115">
+                                        {social.iconDark ? (
+                                            <>
+                                                <Image
+                                                    src={social.icon}
+                                                    alt={`${social.name} icon`}
+                                                    fill
+                                                    className="object-contain dark:hidden"
+                                                />
+                                                <Image
+                                                    src={social.iconDark}
+                                                    alt={`${social.name} icon`}
+                                                    fill
+                                                    className="object-contain hidden dark:block"
+                                                />
+                                            </>
+                                        ) : (
                                             <Image
                                                 src={social.icon}
                                                 alt={`${social.name} icon`}
                                                 fill
-                                                className="object-contain dark:hidden"
+                                                className="object-contain"
                                             />
-                                            <Image
-                                                src={social.iconDark}
-                                                alt={`${social.name} icon`}
-                                                fill
-                                                className="object-contain hidden dark:block"
-                                            />
-                                        </>
-                                    ) : (
-                                        <Image
-                                            src={social.icon}
-                                            alt={`${social.name} icon`}
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    )}
-                                </div>
-                                <span className="text-xs font-bold text-foreground group-hover:text-primary transition-colors text-center truncate w-full">
-                                    {social.name}
-                                </span>
-                                <span className="text-[10px] text-muted-foreground/80 truncate w-full text-center">
-                                    {social.handle}
-                                </span>
-                                <ArrowUpRight className="w-3 h-3 text-muted-foreground/50 absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </a>
-                        ))}
+                                        )}
+                                    </div>
+                                    <span className="text-xs font-bold text-foreground group-hover:text-primary transition-colors text-center truncate w-full">
+                                        {social.name}
+                                    </span>
+                                    <span className="text-[10px] text-muted-foreground/80 truncate w-full text-center">
+                                        {social.handle}
+                                    </span>
+                                    <ArrowUpRight className="w-3 h-3 text-muted-foreground/50 absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                </a>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                )}
 
                 {/* 2. MAIN FOOTER CONTENT GRID */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 mb-12">
