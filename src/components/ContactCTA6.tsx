@@ -137,12 +137,12 @@ export function ContactCTA6({ className }: { className?: string }) {
                             id="cta-6-title"
                             className="max-w-3xl text-4xl leading-[1.08] font-extrabold tracking-tight text-[oklch(0.98_0.01_285)] text-white sm:text-5xl lg:text-6xl"
                         >
-                            <span className="block">Ship Interfaces</span>
-                            <span className="block">Worth Showing</span>
+                            <span className="block">Build Experiences</span>
+                            <span className="block">Worth Remembering</span>
                         </h2>
 
                         <p className="max-w-xl text-base leading-7 text-balance text-[oklch(0.83_0.02_285)] text-slate-300 sm:text-lg sm:leading-8 font-normal">
-                            Production-grade architectures and refined digital craftsmanship make every release look considered from day one, so you ship polished UI without a redesign pass.
+                            Transforming high-performance web engineering, cinematic motion graphics, and generative search intelligence (AEO &amp; GEO) into measurable business outcomes.
                         </p>
 
                         <button

@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, type Variants } from "motion/react";
 import Image from "next/image";
-import { Maximize2, X, ChevronLeft, ChevronRight, User, Bike, Car, Users, Baby, Heart } from "lucide-react";
+import { Maximize2, X, ChevronLeft, ChevronRight, User, Bike, Car, Users, Baby } from "lucide-react";
 import { ASSETS_PREFIX } from "@/utils/constants";
 import { cn } from "@/utils/cn";
 import { Button } from "@/components/ui/button";
@@ -31,7 +31,7 @@ const GALLERY_ITEMS = [
     { src: "IMG-20200923-WA0037.jpg", category: "Karle" },
     { src: "IMG-20210630-WA0013.jpg", category: "Karle" },
     { src: "IMG_20200928_173142.jpg", category: "Karle" },
-    { src: "New Doc 2019-12-14 18.40.10_1.jpg", category: "Karle" },
+    { src: "NewDoc2019-12-1418.40.10_1.jpg", category: "Karle" },
 
     // Bike
     { src: "bike/20180502_135814-1.jpg", category: "Bike" },
@@ -70,11 +70,35 @@ const CATEGORIES = [
     { name: "In Childhood", icon: Baby },
 ];
 
-const ITEMS_PER_PAGE = 9;
+const ITEMS_PER_PAGE = 6;
+
+const pageVariants: Variants = {
+    enter: (dir: number) => ({
+        opacity: 0,
+        x: dir > 0 ? 24 : dir < 0 ? -24 : 0,
+    }),
+    center: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.28,
+            ease: "easeInOut",
+        },
+    },
+    exit: (dir: number) => ({
+        opacity: 0,
+        x: dir > 0 ? -24 : dir < 0 ? 24 : 0,
+        transition: {
+            duration: 0.2,
+            ease: "easeInOut",
+        },
+    }),
+};
 
 export function PhotoGallery() {
     const [activeCategory, setActiveCategory] = useState("Karle");
     const [currentPage, setCurrentPage] = useState(1);
+    const [direction, setDirection] = useState(0);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     // Filter images based on category
@@ -86,11 +110,15 @@ export function PhotoGallery() {
     const visibleImages = filteredImages.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
     const handleCategoryChange = (category: string) => {
+        if (category === activeCategory) return;
+        setDirection(0);
         setActiveCategory(category);
         setCurrentPage(1); // Reset to first page
     };
 
     const handlePageChange = (page: number) => {
+        if (page === currentPage) return;
+        setDirection(page > currentPage ? 1 : -1);
         setCurrentPage(page);
     };
 
@@ -103,9 +131,9 @@ export function PhotoGallery() {
     };
 
     return (
-        <div className="space-y-10">
+        <div className="space-y-12">
             {/* Filter Buttons */}
-            <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 mb-12">
+            <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-8">
                 {CATEGORIES.map((cat) => {
                     const Icon = cat.icon;
                     return (
@@ -115,8 +143,8 @@ export function PhotoGallery() {
                             className={cn(
                                 "flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300",
                                 activeCategory === cat.name
-                                    ? "bg-primary text-primary-foreground shadow-md"
-                                    : "bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted"
+                                    ? "bg-primary text-primary-foreground shadow-sm"
+                                    : "bg-muted/60 text-muted-foreground hover:text-foreground hover:bg-muted border border-border/40"
                             )}
                         >
                             <Icon className="w-4 h-4" />
@@ -127,19 +155,25 @@ export function PhotoGallery() {
             </div>
 
             {/* Grid */}
-            <div className="min-h-[600px]">
+            <div className={cn(
+                "overflow-hidden transition-[min-height] duration-300",
+                totalPages > 1 ? "min-h-[700px] sm:min-h-[820px] lg:min-h-[920px]" : "min-h-[350px] sm:min-h-[420px]"
+            )}>
                 {visibleImages.length > 0 ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <AnimatePresence mode="popLayout">
+                    <AnimatePresence mode="wait" custom={direction}>
+                        <motion.div
+                            key={`${activeCategory}-${currentPage}`}
+                            custom={direction}
+                            variants={pageVariants}
+                            initial="enter"
+                            animate="center"
+                            exit="exit"
+                            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                        >
                             {visibleImages.map((item, index) => (
-                                <motion.div
+                                <div
                                     key={item.src}
-                                    layout
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.9 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="relative group aspect-[4/5] overflow-hidden rounded-xl bg-muted cursor-pointer shadow-sm hover:shadow-md transition-shadow"
+                                    className="relative group aspect-[4/5] overflow-hidden rounded-xl bg-muted cursor-pointer shadow-sm border border-border/50 hover:border-primary/40 transition-all duration-300 hover:shadow-md"
                                     onClick={() => setSelectedImage(item.src)}
                                 >
                                     <Image
@@ -147,7 +181,7 @@ export function PhotoGallery() {
                                         alt={`Gallery Image - ${item.category}`}
                                         fill
                                         priority={index < 4} // Priorities first 4 images
-                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     />
 
@@ -162,10 +196,10 @@ export function PhotoGallery() {
                                             </p>
                                         </div>
                                     </div>
-                                </motion.div>
+                                </div>
                             ))}
-                        </AnimatePresence>
-                    </div>
+                        </motion.div>
+                    </AnimatePresence>
                 ) : (
                     <div className="flex items-center justify-center h-40">
                         <p className="text-muted-foreground">No images found in this category.</p>
