@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import { BASE_PATH, ASSETS_PREFIX } from '@/utils/constants';
 
 const VERTEX_SHADER_SOURCE = `
   attribute vec2 a_position;
@@ -17,6 +18,7 @@ const FRAGMENT_SHADER_SOURCE = `
 
   uniform vec2 u_resolution;
   uniform float u_time;
+  uniform float u_rot_offset;
   uniform sampler2D u_texture;
   uniform vec2 u_center;
   uniform float u_radius;
@@ -82,8 +84,8 @@ const FRAGMENT_SHADER_SOURCE = `
       // Earth axial tilt (-23.4 deg)
       mat3 tilt = rotateZ(-0.36) * rotateX(0.20);
       
-      // Continuous smooth majestic rotation
-      float rotAngle = 2.15 + u_time * 0.038;
+      // Continuous smooth majestic rotation with interactive offset
+      float rotAngle = 2.15 + u_time * 0.042 + u_rot_offset;
       mat3 rot = rotateY(rotAngle);
 
       vec3 rotNormal = rot * tilt * normal;
@@ -204,6 +206,7 @@ export default function PlanetEarth() {
 
     const uResolution = gl.getUniformLocation(program, 'u_resolution');
     const uTime = gl.getUniformLocation(program, 'u_time');
+    const uRotOffset = gl.getUniformLocation(program, 'u_rot_offset');
     const uCenter = gl.getUniformLocation(program, 'u_center');
     const uRadius = gl.getUniformLocation(program, 'u_radius');
     const uTexture = gl.getUniformLocation(program, 'u_texture');
@@ -211,6 +214,7 @@ export default function PlanetEarth() {
     const texture = gl.createTexture();
     gl.bindTexture(gl.TEXTURE_2D, texture);
 
+    // Initial 1x1 default texture
     gl.texImage2D(
       gl.TEXTURE_2D,
       0,
@@ -223,27 +227,114 @@ export default function PlanetEarth() {
       new Uint8Array([0, 0, 0, 255])
     );
 
-    const setupTexture = (image: HTMLImageElement) => {
-      gl.bindTexture(gl.TEXTURE_2D, texture);
-      gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 1);
-      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-      gl.generateMipmap(gl.TEXTURE_2D);
+    const setupTexture = (source: HTMLImageElement | HTMLCanvasElement) => {
+      try {
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 1);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, source);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+        gl.generateMipmap(gl.TEXTURE_2D);
+      } catch (e) {
+        console.warn('Failed to upload texture to WebGL:', e);
+      }
     };
 
-    const img = new Image();
-    img.src = '/assets/images/earth-night.jpg';
+    // Procedural starry city lights texture generator as an emergency fallback
+    const createProceduralTexture = () => {
+      const pCanvas = document.createElement('canvas');
+      pCanvas.width = 1024;
+      pCanvas.height = 512;
+      const ctx = pCanvas.getContext('2d');
+      if (!ctx) return;
+      ctx.fillStyle = '#020612';
+      ctx.fillRect(0, 0, 1024, 512);
 
-    if (img.complete && img.naturalWidth !== 0) {
-      setupTexture(img);
-    } else {
-      img.onload = () => {
+      // Generate continental light clusters
+      for (let i = 0; i < 2200; i++) {
+        const x = Math.random() * 1024;
+        const y = (0.2 + Math.random() * 0.6) * 512;
+        const r = Math.random() * 2.2;
+        ctx.fillStyle =
+          Math.random() > 0.4
+            ? 'rgba(255, 215, 110, 0.95)'
+            : 'rgba(255, 245, 190, 0.8)';
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      setupTexture(pCanvas);
+    };
+
+    // Candidate URLs for GitHub Pages, local dev, and custom domains
+    const basePath = BASE_PATH || '';
+    const candidates = [
+      `${basePath}/assets/images/earth-night.jpg`,
+      `${ASSETS_PREFIX}/assets/images/earth-night.jpg`,
+      '/My-App/assets/images/earth-night.jpg',
+      '/assets/images/earth-night.jpg',
+      'https://karlekartier.github.io/My-App/assets/images/earth-night.jpg',
+      `${basePath}/assets/images/earth_lights_nasa.jpg`,
+      '/My-App/assets/images/earth_lights_nasa.jpg',
+      '/assets/images/earth_lights_nasa.jpg',
+    ].filter((v, i, a) => v && a.indexOf(v) === i);
+
+    let candidateIdx = 0;
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+
+    const tryNextCandidate = () => {
+      if (candidateIdx < candidates.length) {
+        const nextSrc = candidates[candidateIdx++];
+        img.src = nextSrc;
+      } else {
+        createProceduralTexture();
+      }
+    };
+
+    img.onload = () => {
+      if (img.naturalWidth > 0 && img.naturalHeight > 0) {
         setupTexture(img);
-      };
-    }
+      } else {
+        tryNextCandidate();
+      }
+    };
+
+    img.onerror = () => {
+      tryNextCandidate();
+    };
+
+    tryNextCandidate();
+
+    // Interactive pointer drag handling
+    let isDragging = false;
+    let startX = 0;
+    let currentRotOffset = 0;
+    let targetRotOffset = 0;
+
+    const onPointerDown = (e: PointerEvent) => {
+      isDragging = true;
+      startX = e.clientX;
+      if (canvas) canvas.style.cursor = 'grabbing';
+    };
+
+    const onPointerMove = (e: PointerEvent) => {
+      if (!isDragging) return;
+      const deltaX = e.clientX - startX;
+      startX = e.clientX;
+      targetRotOffset -= deltaX * 0.005;
+    };
+
+    const onPointerUp = () => {
+      isDragging = false;
+      if (canvas) canvas.style.cursor = 'grab';
+    };
+
+    canvas.addEventListener('pointerdown', onPointerDown);
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
 
     let animationFrameId: number;
     const startTime = performance.now();
@@ -275,19 +366,20 @@ export default function PlanetEarth() {
       gl.uniform2f(uResolution, width, height);
       gl.uniform1f(uTime, (now - startTime) / 1000.0);
 
+      // Smooth interpolation for interactive drag rotation
+      currentRotOffset += (targetRotOffset - currentRotOffset) * 0.12;
+      gl.uniform1f(uRotOffset, currentRotOffset);
+
       // Responsive Arc Geometry matching ReUI CTA-14:
-      // Earth strictly sweeps across the right 35% of the banner (x: 65% to 82%)
       let centerX: number;
       let centerY: number;
       let radius: number;
 
       if (width >= 640) {
-        // Desktop & Tablet: Exact intersection at x=0.65*width (bottom) and x=0.82*width (top)
         centerX = width * 1.08;
         centerY = (height * height - 0.1172 * width * width) / (2.0 * height);
         radius = Math.hypot(0.43 * width, -centerY);
       } else {
-        // Mobile: Subtle accent arc anchored to bottom right
         centerX = width * 1.15;
         centerY = -height * 0.35;
         radius = Math.max(width * 0.65, height * 0.75);
@@ -312,6 +404,9 @@ export default function PlanetEarth() {
 
     return () => {
       cancelAnimationFrame(animationFrameId);
+      canvas.removeEventListener('pointerdown', onPointerDown);
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
       gl.deleteProgram(program);
       gl.deleteShader(vertShader);
       gl.deleteShader(fragShader);
@@ -323,9 +418,11 @@ export default function PlanetEarth() {
   return (
     <canvas
       ref={canvasRef}
-      className="w-full h-full object-contain pointer-events-none"
-      style={{ display: 'block' }}
-      aria-hidden="true"
+      className="w-full h-full object-contain cursor-grab active:cursor-grabbing select-none"
+      style={{ display: 'block', touchAction: 'none' }}
+      aria-label="Interactive 3D spinning planet Earth with city lights"
+      role="img"
     />
   );
 }
+

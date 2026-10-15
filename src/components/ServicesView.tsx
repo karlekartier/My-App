@@ -895,7 +895,7 @@ export function ServicesView() {
                             <div className="absolute inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:16px_16px] opacity-35 pointer-events-none" />
 
                             {/* Earth Visual Canvas - Full card coverage for seamless curvature without any clipping */}
-                            <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden select-none">
+                            <div className="absolute inset-0 w-full h-full overflow-hidden select-none">
                                 {/* Ambient atmosphere glow */}
                                 <div className="absolute right-0 top-0 w-[420px] h-[320px] bg-gradient-to-bl from-cyan-500/15 via-blue-600/10 to-transparent rounded-full blur-3xl pointer-events-none" />
                                 <PlanetEarth />
