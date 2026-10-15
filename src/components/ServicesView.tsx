@@ -32,6 +32,7 @@ import {
 } from "lucide-react";
 import { ASSETS_PREFIX } from "@/utils/constants";
 import { cn } from "@/utils/cn";
+import PlanetEarth from "@/components/PlanetEarth";
 
 // 1. Core Services Data
 interface ServiceItem {
@@ -317,6 +318,32 @@ const FAQ_ITEMS: FaqItem[] = [
 export function ServicesView() {
     const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
     const [activeServiceTab, setActiveServiceTab] = useState<string>("all");
+    const [emailInput, setEmailInput] = useState<string>("");
+    const [isSubmittingEmail, setIsSubmittingEmail] = useState<boolean>(false);
+    const [emailSuccess, setEmailSuccess] = useState<boolean>(false);
+
+    const handleEmailSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!emailInput || !emailInput.includes("@")) return;
+        setIsSubmittingEmail(true);
+        try {
+            await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: "Services Consultation Lead",
+                    email: emailInput,
+                    message: "Inquiry from Services CTA (Ready to Turn Your Vision Into a High-Performing Asset).",
+                }),
+            });
+        } catch {
+            // graceful fallback
+        } finally {
+            setIsSubmittingEmail(false);
+            setEmailSuccess(true);
+            setEmailInput("");
+        }
+    };
 
     const toggleFaq = (index: number) => {
         setOpenFaqIndex(openFaqIndex === index ? null : index);
@@ -846,58 +873,118 @@ export function ServicesView() {
                 </div>
             </section>
 
-            {/* CLOSING HIGH-CONVERTING CTA SECTION */}
-            <section className="py-24 bg-gradient-to-b from-background via-secondary/20 to-background border-t border-border/40 text-center relative overflow-hidden">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10" />
-
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            {/* CLOSING HIGH-CONVERTING CTA SECTION - REUI CTA-14 STYLE */}
+            <section className="py-20 lg:py-28 relative overflow-hidden bg-background">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, y: 24 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                        className="rounded-3xl border border-border/80 bg-card/90 backdrop-blur-xl p-8 sm:p-14 shadow-2xl relative overflow-hidden space-y-6"
+                        transition={{ duration: 0.6, ease: "easeOut" }}
+                        className="relative group"
                     >
-                        {/* Background subtle mesh glow */}
-                        <div className="absolute -top-24 -right-24 w-64 h-64 bg-violet-600/20 rounded-full blur-3xl pointer-events-none" />
-                        <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
+                        {/* 12-second pulsing blue bloom effect */}
+                        <div
+                            className="absolute -inset-1 sm:-inset-2 rounded-[32px] sm:rounded-[36px] bg-gradient-to-r from-cyan-500/25 via-blue-600/35 to-indigo-600/25 blur-2xl sm:blur-3xl -z-10 animate-pulse pointer-events-none"
+                            style={{ animationDuration: "12s" }}
+                        />
 
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider">
-                            <Handshake className="w-3.5 h-3.5" />
-                            <span>Let&apos;s Build Together</span>
-                        </div>
+                        {/* Main CTA-14 Card Container */}
+                        <div className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-neutral-800/90 bg-neutral-950 py-8 sm:py-10 px-6 sm:px-10 lg:px-12 text-neutral-100 shadow-2xl">
+                            {/* 3px dot mesh background */}
+                            <div className="absolute inset-0 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:16px_16px] opacity-35 pointer-events-none" />
 
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-tight">
-                            Ready to Turn Your Vision Into a{" "}
-                            <span className="bg-gradient-to-r from-blue-500 via-teal-400 to-indigo-500 bg-clip-text text-transparent">
-                                High-Performing Asset?
-                            </span>
-                        </h2>
+                            {/* Earth Visual Canvas - Full card coverage for seamless curvature without any clipping */}
+                            <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden select-none">
+                                {/* Ambient atmosphere glow */}
+                                <div className="absolute right-0 top-0 w-[420px] h-[320px] bg-gradient-to-bl from-cyan-500/15 via-blue-600/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+                                <PlanetEarth />
+                            </div>
 
-                        <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                            Whether you need a full web application, cinematic video reels, or an AI search strategy, let&apos;s discuss your requirements and get started.
-                        </p>
+                            {/* Left Content Column */}
+                            <div className="relative z-10 max-w-md sm:max-w-lg flex flex-col space-y-3.5 text-left">
+                                {/* Badge */}
+                                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-neutral-800 bg-neutral-900/90 text-neutral-300 text-[11px] font-medium tracking-wide backdrop-blur-sm w-fit shadow-sm">
+                                    <Handshake className="w-3 h-3 text-cyan-400" />
+                                    <span>Let&apos;s Build Together</span>
+                                </div>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                            <Link
-                                href="/contact#contact-intake-card"
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold text-sm shadow-lg shadow-primary/25 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30 transition-all hover:-translate-y-0.5 active:translate-y-0"
-                            >
-                                <Mail className="w-4 h-4" />
-                                <span>Start a Project</span>
-                                <ArrowRight className="w-4 h-4" />
-                            </Link>
+                                {/* Heading */}
+                                <h2 className="text-xl sm:text-2xl lg:text-[28px] font-bold tracking-tight text-white leading-snug">
+                                    Ready to Turn Your Vision Into a{" "}
+                                    <span className="bg-gradient-to-r from-blue-400 via-teal-300 to-indigo-300 bg-clip-text text-transparent">
+                                        High-Performing Asset?
+                                    </span>
+                                </h2>
 
-                            <a
-                                href="https://wa.me/917358198244?text=Hi%20Karthick,%20I'd%20like%20to%20discuss%20a%20project!"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full border border-emerald-500/40 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-sm shadow-sm transition-all hover:-translate-y-0.5 active:translate-y-0"
-                            >
-                                <MessageCircle className="w-4 h-4" />
-                                <span>Direct WhatsApp Chat</span>
-                                <ExternalLink className="w-3.5 h-3.5 opacity-70" />
-                            </a>
+                                {/* Description */}
+                                <p className="text-neutral-400 text-xs sm:text-sm max-w-sm sm:max-w-md leading-relaxed font-normal">
+                                    Whether you need a full web application, cinematic video reels, or an AI search strategy, let&apos;s discuss your requirements and get started.
+                                </p>
+
+                                {/* CTA-14 Input Group Form (Matching ReUI CTA-14) */}
+                                <div className="space-y-2.5 pt-1">
+                                    <form
+                                        onSubmit={handleEmailSubmit}
+                                        className="flex items-center gap-2 max-w-sm"
+                                    >
+                                        <div className="relative flex-1">
+                                            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-neutral-500 text-xs font-mono">
+                                                @
+                                            </div>
+                                            <input
+                                                aria-label="Email address"
+                                                type="email"
+                                                required
+                                                value={emailInput}
+                                                onChange={(e) => setEmailInput(e.target.value)}
+                                                placeholder="Email"
+                                                className="w-full h-9 rounded-lg border border-neutral-800 bg-neutral-900/90 pl-8 pr-3 text-xs sm:text-sm text-neutral-100 placeholder:text-neutral-500 outline-none focus:border-neutral-700 transition-colors"
+                                            />
+                                        </div>
+                                        <button
+                                            type="submit"
+                                            disabled={isSubmittingEmail}
+                                            className="group/btn inline-flex h-9 shrink-0 items-center justify-center gap-1.5 px-3.5 rounded-lg bg-white text-neutral-950 hover:bg-neutral-200 active:scale-[0.98] text-xs sm:text-sm font-medium transition-all disabled:opacity-50"
+                                        >
+                                            <span>{isSubmittingEmail ? "Sending..." : emailSuccess ? "Joined" : "Join"}</span>
+                                            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-0.5" />
+                                        </button>
+                                    </form>
+
+                                    {emailSuccess && (
+                                        <p aria-live="polite" className="text-xs text-emerald-400 flex items-center gap-1.5 animate-in fade-in slide-in-from-top-1">
+                                            <Check className="w-3.5 h-3.5" />
+                                            <span>Thank you! We&apos;ll be in touch with you shortly.</span>
+                                        </p>
+                                    )}
+
+                                    {/* Direct Quick Action Links */}
+                                    <div className="flex flex-wrap items-center gap-3 pt-0.5 text-xs text-neutral-400">
+                                        <Link
+                                            href="/contact#contact-intake-card"
+                                            className="inline-flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors"
+                                        >
+                                            <Mail className="w-3.5 h-3.5 text-cyan-400" />
+                                            <span className="underline underline-offset-4 decoration-neutral-800 hover:decoration-white">Start a Project</span>
+                                            <ArrowRight className="w-3 h-3 text-neutral-500" />
+                                        </Link>
+
+                                        <span className="text-neutral-700 select-none">•</span>
+
+                                        <a
+                                            href="https://wa.me/917358198244?text=Hi%20Karthick,%20I'd%20like%20to%20discuss%20a%20project!"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-1.5 text-neutral-400 hover:text-emerald-400 transition-colors"
+                                        >
+                                            <MessageCircle className="w-3.5 h-3.5 text-emerald-400" />
+                                            <span>Chat on WhatsApp</span>
+                                            <ExternalLink className="w-3 h-3 opacity-60" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
                 </div>
