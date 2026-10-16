@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Karthick Kishore - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #222222;
+      background-color: #ffffff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      line-height: 1.45;
+      font-size: 10.5px;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      height: 297mm;
+      padding: 16mm 18mm 14mm 18mm;
+      position: relative;
+      background: #ffffff;
+      page-break-after: always;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      text-align: center;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #d1d5db;
+      margin-bottom: 16px;
+    }
+    .name {
+      font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      color: #111827;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .subtitle {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #4b5563;
+      text-transform: uppercase;
+    }
+    .main-grid {
+      display: grid;
+      grid-template-columns: 72mm 1fr;
+      column-gap: 12mm;
+      flex: 1;
+    }
+    .col-left {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding-right: 4px;
+    }
+    .col-right {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .section-title {
+      font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: #111827;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #e5e7eb;
+    }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      font-size: 9.5px;
+      color: #374151;
+      margin-bottom: 5px;
+      line-height: 1.35;
+    }
+    .contact-item svg {
+      width: 12px;
+      height: 12px;
+      stroke: #1f2937;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .contact-item a {
+      color: #1f2937;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+    .edu-item {
+      margin-bottom: 9px;
+    }
+    .edu-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #111827;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 1.3;
+    }
+    .edu-sub {
+      font-size: 9px;
+      color: #4b5563;
+      line-height: 1.35;
+      margin-top: 1.5px;
+    }
+    .edu-score {
+      font-size: 9px;
+      color: #1f2937;
+      font-weight: 500;
+      margin-top: 1px;
+    }
+    .skill-category {
+      margin-bottom: 7px;
+    }
+    .skill-cat-title {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .skill-cat-title::before {
+      content: '→';
+      color: #111827;
+      font-weight: 700;
+    }
+    .skill-cat-desc {
+      font-size: 9px;
+      color: #4b5563;
+      line-height: 1.35;
+      padding-left: 12px;
+    }
+    .summary-text {
+      font-size: 9.8px;
+      color: #374151;
+      line-height: 1.55;
+      text-align: justify;
+    }
+    .highlights-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .highlights-list li {
+      position: relative;
+      padding-left: 14px;
+      font-size: 9.5px;
+      color: #374151;
+      line-height: 1.45;
+      margin-bottom: 5px;
+    }
+    .highlights-list li::before {
+      content: '•';
+      position: absolute;
+      left: 2px;
+      top: -1px;
+      color: #111827;
+      font-size: 14px;
+    }
+    .exp-item {
+      margin-bottom: 11px;
+    }
+    .exp-role {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #111827;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      line-height: 1.25;
+    }
+    .exp-company-dates {
+      font-size: 9.5px;
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 1px;
+      margin-bottom: 3.5px;
+    }
+    .exp-desc {
+      font-size: 9.2px;
+      color: #374151;
+      line-height: 1.45;
+      text-align: justify;
+    }
+    .exp-bullets {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 3px;
+    }
+    .exp-bullets li {
+      position: relative;
+      padding-left: 12px;
+      font-size: 9.1px;
+      color: #374151;
+      line-height: 1.4;
+      margin-bottom: 2.5px;
+    }
+    .exp-bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 1px;
+      color: #4b5563;
+      font-weight: bold;
+    }
+    .footer-section {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid #d1d5db;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 3.5px;
+    }
+    .social-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 9px;
+      color: #374151;
+    }
+    .social-item svg {
+      width: 11px;
+      height: 11px;
+      flex-shrink: 0;
+    }
+    .social-item a {
+      color: #374151;
+      text-decoration: none;
+    }
+    .social-item a:hover {
+      text-decoration: underline;
+    }
+    .footer-col-title {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #111827;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .footer-sign-name {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #111827;
+      margin-top: 14px;
+      letter-spacing: 0.5px;
+    }
+    .footer-date-val {
+      font-size: 9px;
+      color: #4b5563;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="page">
+    <header class="header">
+      <h1 class="name">KARTHICK KISHORE</h1>
+      <div class="subtitle">Full-Stack Web Developer &amp; Motion Graphic Designer &amp; AI Search Specialist</div>
+    </header>
+
+    <div class="main-grid">
+      <!-- LEFT COLUMN -->
+      <aside class="col-left">
+        <!-- CONTACT -->
+        <section>
+          <h2 class="section-title">CONTACT</h2>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+91 73581 98244</span>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Tamil Nadu, Chennai - 67</span>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:karthickkishoreking@gmail.com">karthickkishoreking@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <a href="https://karlekartier.github.io/My-App/">karlekartier.github.io/My-App</a>
+          </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+          <h2 class="section-title">EDUCATION</h2>
+          
+          <div class="edu-item">
+            <div class="edu-title">UNDER-GRADUATE (2018–2021)</div>
+            <div class="edu-sub">Bachelor's Degree B.Sc in Computer Science</div>
+            <div class="edu-sub">Vel Tech University, Avadi</div>
+            <div class="edu-score">First Class with 81% &amp; Madras Univ. Certification</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-title">HIGHER SECONDARY (CBSE) 2017</div>
+            <div class="edu-sub">12th Grade at TVIS Velammal Int. School, Ponneri</div>
+            <div class="edu-score">First Class with 58% (Cleared JEE Mains Paper 1)</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-title">SECONDARY SCHOOL (CBSE) 2016</div>
+            <div class="edu-sub">10th Grade at TVIS Velammal Vidyalaya School</div>
+            <div class="edu-score">First Class with 86% (CGPA: 8.6)</div>
+          </div>
+        </section>
+
+        <!-- SKILLS (MODERNIZED) -->
+        <section>
+          <h2 class="section-title">TECHNICAL SKILLS</h2>
+
+          <div class="skill-category">
+            <div class="skill-cat-title">Frontend Frameworks &amp; Langs</div>
+            <div class="skill-cat-desc">Next.js 15/16, React, TypeScript, JavaScript (ES6+), HTML5, CSS3, SASS</div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-title">Styling &amp; Motion UI</div>
+            <div class="skill-cat-desc">Tailwind CSS, Bootstrap 5, Framer Motion, Motion, Lucide Icons, Responsive UX</div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-title">AEO, GEO &amp; Search Authority</div>
+            <div class="skill-cat-desc">Generative Engine Optimization (GEO), Answer Engine (AEO), Schema Entities, Technical SEO</div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-title">Motion Design &amp; Adobe CC</div>
+            <div class="skill-cat-desc">After Effects, Premiere Pro, Photoshop, Illustrator, Vector Graphics, Animate</div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-title">Backend, DevOps &amp; Hosting</div>
+            <div class="skill-cat-desc">Node.js, Express.js, REST APIs, Git/GitHub, Cloudflare, cPanel, Vercel, npm/Gulp</div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATION -->
+        <section>
+          <h2 class="section-title">CERTIFICATION</h2>
+          <div class="edu-title">W3SCHOOLS (2026)</div>
+          <div class="edu-sub">Advanced Front-End Development &amp; Technical SEO</div>
+        </section>
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <main class="col-right">
+        <!-- SUMMARY -->
+        <section>
+          <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
+          <p class="summary-text">
+            Full-Stack Front-End Developer, Motion Graphic Designer, and Search Strategist with <strong>5+ years of experience</strong> engineering visually refined, high-performance web applications and digital assets. Highly skilled in <strong>Next.js, React, TypeScript, Tailwind CSS</strong>, and modern animation systems paired with <strong>Generative Engine Optimization (AEO/GEO)</strong> to build discoverable, conversion-focused user experiences. Proven record of end-to-end ownership spanning architectural design, responsive development, backend API integrations, and cloud hosting deployment.
+          </p>
+        </section>
+
+        <!-- CAREER HIGHLIGHTS -->
+        <section>
+          <h2 class="section-title">CAREER HIGHLIGHTS</h2>
+          <ul class="highlights-list">
+            <li>Delivered full-stack Next.js and React web builds scoring <strong>95+ on Google Lighthouse</strong> and Core Web Vitals audits.</li>
+            <li>Architected component systems using <strong>Tailwind CSS, TypeScript, and Framer Motion</strong>, reducing bounce rates and maximizing engagement.</li>
+            <li>Engineered modern <strong>AEO &amp; GEO (Answer &amp; Generative Engine Optimization)</strong> structured entity models to rank prominently in AI-assisted search.</li>
+            <li>Produced <strong>2000+ visual creatives and 180+ motion graphics videos</strong> integrating brand design into cohesive digital campaigns.</li>
+            <li>Complete product lifecycle ownership: UI/UX prototyping → scalable frontend code → backend email/API pipelines → cloud server deployment.</li>
+          </ul>
+        </section>
+
+        <!-- EXPERIENCE PART 1 -->
+        <section>
+          <h2 class="section-title">EXPERIENCE</h2>
+
+          <div class="exp-item">
+            <div class="exp-role">DIGITAL MARKETING MANAGER</div>
+            <div class="exp-company-dates">IDEAL PLAY ABACUS INDIA PVT. LTD. · Full-time (Jan 2026 – Present)</div>
+            <div style="font-size: 8.8px; color: #6b7280; margin-bottom: 3px;">Chennai, Tamil Nadu, India · On-site</div>
+            <p class="exp-desc">
+              Leading digital marketing initiatives at IPA Abacus India, focusing on performance marketing, content strategy, and lead generation to scale brand presence and franchise admissions across India.
+            </p>
+            <ul class="exp-bullets">
+              <li>Managing multi-channel acquisition funnels, Google Ads PPC campaigns with high-intent keywords, and SEO/AEO/GEO optimization.</li>
+              <li>Scaling franchise inquiry funnels, student enrollment conversions, and pan-India digital reach.</li>
+              <li>Architecting organic search authority with answer engine optimization (AEO) and generative search entity models.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-role">FRONT-END DEVELOPER &amp; DIGITAL STRATEGIST</div>
+            <div class="exp-company-dates">Optimista (Aug 2025 – Present)</div>
+            <p class="exp-desc">
+              Led complete architectural design and development of the official platform (www.optimista.in). Implemented high-performance frontend engineering, interactive components, and responsive workflows.
+            </p>
+            <ul class="exp-bullets">
+              <li>Integrated Express.js backend mail pipelines with automated Nodemailer workflows.</li>
+              <li>Consistently scored 90+ across performance, accessibility, and SEO audits.</li>
+              <li>Managed full server hosting on cPanel including custom DNS, SSL encryption, and production builds.</li>
+              <li>Authored complete brand identity, logo assets, and UI components — officially credited in website footer.</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="page">
+    <header class="header">
+      <h1 class="name">KARTHICK KISHORE</h1>
+      <div class="subtitle">Experience &amp; Portfolio Profile</div>
+    </header>
+
+    <div class="main-grid" style="flex: none; margin-bottom: 24px;">
+      <!-- LEFT COLUMN -->
+      <aside class="col-left">
+        <section>
+          <h2 class="section-title">KEY EXPERTISE</h2>
+          <div class="skill-category">
+            <div class="skill-cat-title">Web Engineering</div>
+            <div class="skill-cat-desc">Next.js, React, TypeScript, Component Libraries, REST APIs, WebGL Integration</div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-cat-title">AEO &amp; GEO Strategies</div>
+            <div class="skill-cat-desc">LLM Search Readiness, JSON-LD Schema Graphs, Entity Grounding, Citation Authority</div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-cat-title">Motion &amp; Video Production</div>
+            <div class="skill-cat-desc">Keyframing, Kinetic Typography, Product Reels, Adobe After Effects &amp; Premiere Pro</div>
+          </div>
+        </section>
+
+        <section style="margin-top: 10px;">
+          <h2 class="section-title">LANGUAGES</h2>
+          <div class="edu-item">
+            <div class="edu-title">ENGLISH</div>
+            <div class="edu-sub">Professional Working Proficiency</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-title">TAMIL</div>
+            <div class="edu-sub">Native Proficiency</div>
+          </div>
+        </section>
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <main class="col-right">
+        <section>
+          <h2 class="section-title">EXPERIENCE (CONTINUED)</h2>
+
+          <div class="exp-item">
+            <div class="exp-role">DIGITAL MARKETING TEAM LEAD</div>
+            <div class="exp-company-dates">Guires Solutions Pvt Ltd (May 2025 – Sep 2025)</div>
+            <p class="exp-desc">
+              Spearheaded technical online presence and user acquisition for Pubrica (US medical research &amp; product brand). Directed SEO overhauls, UI enhancements, and conversion tuning.
+            </p>
+            <ul class="exp-bullets">
+              <li>Scaled organic traffic to 13K+ monthly qualified visitors with a 90%+ site health rating.</li>
+              <li>Leveraged SEMrush, Google Analytics 4, and Google Tag Manager to refine user experience funnels.</li>
+              <li>Orchestrated technical web performance tuning and metadata entity optimization.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-role">FRONT-END DEVELOPER &amp; DIGITAL STRATEGIST</div>
+            <div class="exp-company-dates">60 40 Interior Studio (Mar 2025 – May 2025)</div>
+            <p class="exp-desc">
+              Modernized digital touchpoints and brand landing pages to drive customer inquiries for architectural and interior design projects.
+            </p>
+            <ul class="exp-bullets">
+              <li>Redesigned website layouts, crafting an SEO-first page structure that boosted organic inquiries.</li>
+              <li>Built conversion-optimized responsive landing pages with interactive before/after visual showpieces.</li>
+              <li>Implemented end-to-end event tracking in Google Analytics 4 to monitor customer inquiry funnels.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-role">DIGITAL MARKETING SPECIALIST (SEO) &amp; DESIGNER</div>
+            <div class="exp-company-dates">RSoft Technologies Pvt Ltd (Dec 2021 – Jan 2025)</div>
+            <p class="exp-desc">
+              Directed technical search engine optimization, responsive interface design, and multimedia creative assets over a 3-year tenure.
+            </p>
+            <ul class="exp-bullets">
+              <li>Designed responsive interfaces and modern landing pages supporting enterprise marketing campaigns.</li>
+              <li>Produced 2000+ brand graphics and 180+ motion videos across multiple commercial product lines.</li>
+              <li>Executed comprehensive on-page, off-page, and technical SEO campaigns resulting in sustained top-tier rankings.</li>
+              <li>Managed social channels, high-converting ad collateral, and paid performance campaigns across Google &amp; Meta.</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- BOTTOM FOOTER / SOCIAL & SIGNATURE -->
+    <div class="footer-section">
+      <div>
+        <div class="footer-col-title">SOCIAL &amp; PORTFOLIO</div>
+        <div class="social-links">
+          <div class="social-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <span>GitHub: <a href="https://github.com/karlekartier" target="_blank">github.com/karlekartier</a> (karthickkishore)</span>
+          </div>
+          <div class="social-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LinkedIn: <a href="https://www.linkedin.com/in/karthick-p-b48985208/" target="_blank">linkedin.com/in/karthick-p-b48985208</a></span>
+          </div>
+          <div class="social-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span>Instagram: @Karlekartier</span>
+          </div>
+          <div class="social-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <span>WhatsApp: +91 73581 98244</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">DATE</div>
+        <div class="footer-date-val">October 2026</div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">SIGNATURE</div>
+        <div class="footer-sign-name">KARTHICK P</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
